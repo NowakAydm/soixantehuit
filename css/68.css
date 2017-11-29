@@ -1,0 +1,47 @@
+/* line 1, /var/www/html/soixantehuit/sass/68.sass */
+body {
+  font-family: 'Work Sans', sans-serif;
+  color: black; }
+
+/* line 6, /var/www/html/soixantehuit/sass/68.sass */
+.center {
+  text-align: center; }
+
+/* line 10, /var/www/html/soixantehuit/sass/68.sass */
+.centerblock {
+  margin: auto; }
+
+/* line 14, /var/www/html/soixantehuit/sass/68.sass */
+.bloc {
+  height: 100vh; }
+
+/* line 18, /var/www/html/soixantehuit/sass/68.sass */
+.edito {
+  width: 600px;
+  max-width: 75vw;
+  margin: 20vh auto 100px;
+  padding: 40px; }
+  /* line 23, /var/www/html/soixantehuit/sass/68.sass */
+  .edito h1 {
+    margin: 50px 0;
+    font-size: 4em; }
+  /* line 27, /var/www/html/soixantehuit/sass/68.sass */
+  .edito .langues {
+    margin: 60px auto 0; }
+  /* line 30, /var/www/html/soixantehuit/sass/68.sass */
+  .edito a {
+    color: black;
+    font-size: 120%;
+    margin: 10px; }
+
+/* line 37, /var/www/html/soixantehuit/sass/68.sass */
+.scroll .glyphicon {
+  font-size: 50px; }
+
+/* line 40, /var/www/html/soixantehuit/sass/68.sass */
+#timeline {
+  overflow: scroll;
+  height: 85vh;
+  text-align: left !important; }
+
+/*# sourceMappingURL=68.css.map */
