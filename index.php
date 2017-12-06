@@ -6,17 +6,31 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>SoixanteHuit</title>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="jquery.min.js"></script>
     <script src="68.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/68.css">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/68.css">
 </head>
 
 <body>
 
+    <!--============= EDITO ===============-->
+
     <div class="container bloc" id="home">
-        <div class="edito center" style="background: grey">
+        <?php
+        $OA = json_decode(file_get_contents("https://openagenda.com/agendas/31783764/events.json?limit=300"));
+        $e = $OA->events;
+        
+        for($x=0; $x<$OA->total; $x++)
+        {
+            var_dump($e[$x]->title->fr);
+            echo '<br>';
+        }
+        
+?>
+        
+        <div class="edito center" style="background: grey" start=123>
             <h1>Edito</h1>
             <p>
                 Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sedsfsdfm at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum.
@@ -32,11 +46,21 @@
         </div>
     </div>
 
-    <div class="jumbotron bloc" id="carte">
-        
+    <!--============= 68 ===============-->
+
+    <div class="info-container bloc">
+        <button class="btn btn-xl centerblock close-info">Close</button>            
+    </div>
+    <div class="bloc" id="carte">
+        <button class="btn btn-xl centerblock" id="but">Open</button>
     </div>
 
+    
+    <!--============= AGENDA ===============-->
+
     <div class="jumbotron bloc center" id="agenda">
+    
+<!--
         <div class="col-xs-6" >
             <h2>Details</h2>
             <br>
@@ -60,6 +84,7 @@
                 <script type="text/javascript" src="//openagenda.com/js/embed/cibulCalendarWidget.js"></script>
             </div>
         </div>
+-->
     </div>
 
 </body>
