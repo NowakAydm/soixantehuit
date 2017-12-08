@@ -8,6 +8,7 @@
 
     <script src="jquery.min.js"></script>
     <script src="68.js"></script>
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/68.css">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
@@ -15,21 +16,10 @@
 
 <body>
 
+    
     <!--============= EDITO ===============-->
 
-    <div class="container bloc" id="home">
-        <?php
-        $OA = json_decode(file_get_contents("https://openagenda.com/agendas/31783764/events.json?limit=300"));
-        $e = $OA->events;
-        
-        for($x=0; $x<$OA->total; $x++)
-        {
-            var_dump($e[$x]->title->fr);
-            echo '<br>';
-        }
-        
-?>
-        
+    <div class="container bloc" id="home">        
         <div class="edito center" style="background: grey" start=123>
             <h1>Edito</h1>
             <p>
@@ -42,7 +32,7 @@
 
         </div>
         <div class="scroll center">
-            <i class="glyphicon glyphicon-chevron-down"></i>
+            <span class="glyphicon glyphicon-chevron-down"></span>
         </div>
     </div>
 
@@ -55,38 +45,45 @@
         <button class="btn btn-xl centerblock" id="but">Open</button>
     </div>
 
-    
+        
     <!--============= AGENDA ===============-->
 
-    <div class="jumbotron bloc center" id="agenda">
+    <div class="bloc center" id="agenda">
     
-<!--
-        <div class="col-xs-6" >
-            <h2>Details</h2>
-            <br>
-            <br>
-            <div id="timeline">
-                <iframe style="width:100%;" frameborder="0" scrolling="no" allowtransparency="allowtransparency" class="cibulFrame cbpgbdy" data-oabdy src="//openagenda.com/agendas/31783764/embeds/26127735/events?lang=fr"></iframe>
-                <script type="text/javascript" src="//openagenda.com/js/embed/cibulBodyWidget.js"></script>
+        <div id="timeline">
+            <?php
+                $OA = json_decode(file_get_contents("events.json"));
+//        $OA = json_decode(file_get_contents("https://openagenda.com/agendas/31783764/events.json?limit=300"));
+                $e = $OA->events;
+                for($x=0; $x<$OA->total; $x++) { ?>
+
+            <div class="details lieu<?php echo $e[$x]->location->uid; ?>" id="<?php echo $e[$x]->uid; ?>">
+                <h2> <?php echo $e[$x]->range->fr; ?></h2>
+                <h1> <?php echo $e[$x]->title->fr; ?></h1>
+                <h3> <?php echo $e[$x]->locationName; ?></h3>
+                <hr>
+                <p> <?php echo $e[$x]->longDescription->fr; ?></p>
             </div>
-            
+
+            <?php } ?>
         </div>
-        <div class="col-xs-6">
-            <h2>Recherche</h2>
-            <br>
-            <br>
-            <div class="col-xs-6">
-                <div class="cbpgct cibulCategories" data-oact data-cbctl="31783764/26127735" data-lang="fr"></div>
-                <script type="text/javascript" src="//openagenda.com/js/embed/cibulCategoriesWidget.js"></script>
+        <div id="recherche">
+            <?php for($x=0; $x<$OA->total; $x++){ ?>
+
+            <div class="evenement lieu<?php echo $e[$x]->location->uid; ?>" id="<?php echo $e[$x]->uid; ?>">
+                <div class="image" style="background-image: url('<?php $e[$x]->thumbnail ?>')"></div>
+                <h2> <?php echo $e[$x]->range->fr; ?></h2>
+                <h1> <?php echo $e[$x]->title->fr; ?></h1>
+                <h2> <?php echo $e[$x]->locationName; ?></h2>
+                <h3> <?php echo $e[$x]->category->label; ?></h3>
             </div>
-            <div class="col-xs-6">
-                <div class="cbpgcl cibulCalendar" data-oacl data-cbctl="31783764/26127735|fr" data-lang="fr"></div>
-                <script type="text/javascript" src="//openagenda.com/js/embed/cibulCalendarWidget.js"></script>
-            </div>
+
+            <?php } ?>
         </div>
--->
     </div>
 
+
+    
 </body>
 
 </html>

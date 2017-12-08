@@ -36,5 +36,4 @@ doc.ready(function () {
        $(this).removeClass('info-transition');
    });
 
-    console.log(parseInt($('.edito').attr('start')) + 1);
 });

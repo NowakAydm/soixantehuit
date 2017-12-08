@@ -51,21 +51,87 @@ body {
   position: absolute;
   width: 100%;
   z-index: 100;
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
   transform: translateX(-100%);
   background: red; }
 
-/* line 47, /var/www/html/soixantehuit/sass/68.sass */
+/* line 50, /var/www/html/soixantehuit/sass/68.sass */
 .info-open {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
   transform: none; }
 
-/* line 49, /var/www/html/soixantehuit/sass/68.sass */
+/* line 55, /var/www/html/soixantehuit/sass/68.sass */
 .info-transition {
   transition: all 500ms ease-in-out; }
 
-/* line 52, /var/www/html/soixantehuit/sass/68.sass */
-#timeline {
-  overflow: scroll;
-  height: 85vh;
-  text-align: left !important; }
+/* line 58, /var/www/html/soixantehuit/sass/68.sass */
+#timeline, #recherche {
+  display: inline-block;
+  overflow-y: scroll;
+  height: 100vh;
+  width: 50%;
+  text-align: left !important;
+  margin: -2px; }
+
+/* line 65, /var/www/html/soixantehuit/sass/68.sass */
+.details {
+  padding: 15px; }
+  /* line 67, /var/www/html/soixantehuit/sass/68.sass */
+  .details h1 {
+    font-size: 43px; }
+  /* line 69, /var/www/html/soixantehuit/sass/68.sass */
+  .details h2 {
+    font-size: 36px;
+    line-height: 43.2px; }
+  /* line 72, /var/www/html/soixantehuit/sass/68.sass */
+  .details h3 {
+    font-size: 30px;
+    line-height: 36px; }
+  /* line 75, /var/www/html/soixantehuit/sass/68.sass */
+  .details p {
+    font-size: 18px;
+    line-height: 24px; }
+
+/* line 78, /var/www/html/soixantehuit/sass/68.sass */
+.evenement {
+  display: inline-block;
+  width: 42%;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  margin: 5% 0 0 3%;
+  border: 1px solid black;
+  padding: 10px;
+  overflow: hidden; }
+  /* line 88, /var/www/html/soixantehuit/sass/68.sass */
+  .evenement .image {
+    width: 100%;
+    height: 240px; }
+  /* line 91, /var/www/html/soixantehuit/sass/68.sass */
+  .evenement h1 {
+    font-size: 18px;
+    line-height: 19.6px; }
+  /* line 94, /var/www/html/soixantehuit/sass/68.sass */
+  .evenement h2 {
+    font-size: 14px;
+    line-height: 18.8px; }
+  /* line 97, /var/www/html/soixantehuit/sass/68.sass */
+  .evenement h3 {
+    font-size: 14px;
+    line-height: 18.8px; }
+
+/* line 103, /var/www/html/soixantehuit/sass/68.sass */
+.lieu33873846 {
+  background: #ff6000;
+  color: white; }
+
+/* line 108, /var/www/html/soixantehuit/sass/68.sass */
+.lieu97092341 {
+  background: #00ffff;
+  color: white; }
 
 /*# sourceMappingURL=68.css.map */
