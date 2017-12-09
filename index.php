@@ -8,13 +8,56 @@
 
     <script src="jquery.min.js"></script>
     <script src="68.js"></script>
-<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!--    <link rel="stylesheet" href="css/bootstrap.min.css">-->
     <link rel="stylesheet" href="css/68.css">
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700" rel="stylesheet">
 </head>
 
 <body>
+    <!--============= AGENDA ===============-->
+
+    <div class="bloc center" id="agenda">
+    
+        <div id="timeline">
+            <?php
+            setlocale(LC_CTYPE, "fr");
+//                $OA = json_decode(file_get_contents("events.json"));
+        $OA = json_decode(file_get_contents("https://openagenda.com/agendas/31783764/events.json?limit=300"));
+                $e = $OA->events;
+                for($x=0; $x<$OA->total; $x++) { 
+                    $e[$x]->range->fr = str_replace("2018", "", $e[$x]->range->fr);
+//                    $e[$x]->title->fr = utf8_decode($e[$x]->title->fr);
+                    $e[$x]->title->fr = mb_strtoupper($e[$x]->title->fr, "utf-8");
+//                    $e[$x]->title->fr = utf8_encode($e[$x]->title->fr);
+            ?>
+
+            <div class="details lieu<?php echo $e[$x]->location->uid; ?>" id="<?php echo $e[$x]->uid; ?>">
+                <h2> <?php echo $e[$x]->range->fr; ?></h2>
+                <h1> <?php echo $e[$x]->title->fr; ?></h1>
+                <h3> <?php echo $e[$x]->locationName; ?></h3>
+                <hr>
+                <p> <?php echo $e[$x]->longDescription->fr; ?></p>
+            </div>
+
+            <?php } ?>
+        </div>
+        <div id="recherche">
+            <?php for($x=0; $x<$OA->total; $x++){ ?>
+
+            <div class="evenement" id="<?php echo $e[$x]->uid; ?>">
+                <div class="image" style="background-image: url('<?php echo $e[$x]->image ?>')"></div>
+                <div class="infos lieu<?php echo $e[$x]->location->uid; ?>">
+                    <h3> <?php echo $e[$x]->range->fr; ?></h3>
+                    <h1> <?php echo $e[$x]->title->fr; ?></h1>
+                    <h3> <?php echo $e[$x]->locationName; ?></h3>
+                    <h2> <?php echo $e[$x]->category->label; ?></h2>
+                </div>
+            </div>
+
+            <?php } ?>
+        </div>
+    </div>
 
     
     <!--============= EDITO ===============-->
@@ -44,44 +87,6 @@
     <div class="bloc" id="carte">
         <button class="btn btn-xl centerblock" id="but">Open</button>
     </div>
-
-        
-    <!--============= AGENDA ===============-->
-
-    <div class="bloc center" id="agenda">
-    
-        <div id="timeline">
-            <?php
-                $OA = json_decode(file_get_contents("events.json"));
-//        $OA = json_decode(file_get_contents("https://openagenda.com/agendas/31783764/events.json?limit=300"));
-                $e = $OA->events;
-                for($x=0; $x<$OA->total; $x++) { ?>
-
-            <div class="details lieu<?php echo $e[$x]->location->uid; ?>" id="<?php echo $e[$x]->uid; ?>">
-                <h2> <?php echo $e[$x]->range->fr; ?></h2>
-                <h1> <?php echo $e[$x]->title->fr; ?></h1>
-                <h3> <?php echo $e[$x]->locationName; ?></h3>
-                <hr>
-                <p> <?php echo $e[$x]->longDescription->fr; ?></p>
-            </div>
-
-            <?php } ?>
-        </div>
-        <div id="recherche">
-            <?php for($x=0; $x<$OA->total; $x++){ ?>
-
-            <div class="evenement lieu<?php echo $e[$x]->location->uid; ?>" id="<?php echo $e[$x]->uid; ?>">
-                <div class="image" style="background-image: url('<?php $e[$x]->thumbnail ?>')"></div>
-                <h2> <?php echo $e[$x]->range->fr; ?></h2>
-                <h1> <?php echo $e[$x]->title->fr; ?></h1>
-                <h2> <?php echo $e[$x]->locationName; ?></h2>
-                <h3> <?php echo $e[$x]->category->label; ?></h3>
-            </div>
-
-            <?php } ?>
-        </div>
-    </div>
-
 
     
 </body>
