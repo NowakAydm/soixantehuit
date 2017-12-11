@@ -15,6 +15,17 @@
 </head>
 
 <body>
+    <header>
+        <button id="header-accueil" class="btn btn-blank">
+            ACCUEIL
+        </button>
+        <button id="header-68" class="btn btn-blank">
+            68
+        </button>
+        <button id="header-accueil" class="btn btn-blank">
+            AGENDA
+        </button>
+    </header>
     
     <!--============= EDITO ===============-->
 
