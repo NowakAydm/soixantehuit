@@ -15,50 +15,6 @@
 </head>
 
 <body>
-    <!--============= AGENDA ===============-->
-
-    <div class="bloc center" id="agenda">
-    
-        <div id="timeline">
-            <?php
-            setlocale(LC_CTYPE, "fr");
-//                $OA = json_decode(file_get_contents("events.json"));
-        $OA = json_decode(file_get_contents("https://openagenda.com/agendas/31783764/events.json?limit=300"));
-                $e = $OA->events;
-                for($x=0; $x<$OA->total; $x++) { 
-                    $e[$x]->range->fr = str_replace("2018", "", $e[$x]->range->fr);
-//                    $e[$x]->title->fr = utf8_decode($e[$x]->title->fr);
-                    $e[$x]->title->fr = mb_strtoupper($e[$x]->title->fr, "utf-8");
-//                    $e[$x]->title->fr = utf8_encode($e[$x]->title->fr);
-            ?>
-
-            <div class="details lieu<?php echo $e[$x]->location->uid; ?>" id="<?php echo $e[$x]->uid; ?>">
-                <h2> <?php echo $e[$x]->range->fr; ?></h2>
-                <h1> <?php echo $e[$x]->title->fr; ?></h1>
-                <h3> <?php echo $e[$x]->locationName; ?></h3>
-                <hr>
-                <p> <?php echo $e[$x]->longDescription->fr; ?></p>
-            </div>
-
-            <?php } ?>
-        </div>
-        <div id="recherche">
-            <?php for($x=0; $x<$OA->total; $x++){ ?>
-
-            <div class="evenement" id="<?php echo $e[$x]->uid; ?>">
-                <div class="image" style="background-image: url('<?php echo $e[$x]->image ?>')"></div>
-                <div class="infos lieu<?php echo $e[$x]->location->uid; ?>">
-                    <h3> <?php echo $e[$x]->range->fr; ?></h3>
-                    <h1> <?php echo $e[$x]->title->fr; ?></h1>
-                    <h3> <?php echo $e[$x]->locationName; ?></h3>
-                    <h2> <?php echo $e[$x]->category->label; ?></h2>
-                </div>
-            </div>
-
-            <?php } ?>
-        </div>
-    </div>
-
     
     <!--============= EDITO ===============-->
 
@@ -74,21 +30,80 @@
             </div>
 
         </div>
-        <div class="scroll center">
+        <button class="btn btn-blank scroll centerblock">
             <span class="glyphicon glyphicon-chevron-down"></span>
-        </div>
+        </button>
     </div>
 
     <!--============= 68 ===============-->
 
     <div class="info-container bloc">
-        <button class="btn btn-xl centerblock close-info">Close</button>            
+        <button tabIndex="-1" class="btn btn-xl centerblock close-info">Close</button>            
     </div>
     <div class="bloc" id="carte">
-        <button class="btn btn-xl centerblock" id="but">Open</button>
+        <button tabIndex="0" class="btn btn-xl centerblock" id="but">Open</button>
+    </div>
+    
+    <!--============= AGENDA ===============-->
+
+    <div class="bloc" id="agenda">
+    
+        <div class="agenda-header">
+            <h1>Agenda</h1>
+            <div class="agenda-filtres">
+                Trier par:                
+                <button id="filtre-lieu" class="btn btn-blank">
+                    Lieu
+                    <i class="glyphicon glyphicon-chevron-right"></i>
+                </button>
+                <button id="filtre-date" class="btn btn-blank">
+                    Date
+                    <i class="glyphicon glyphicon-chevron-right"></i>
+                </button>
+                <button id="filtre-categorie" class="btn btn-blank">
+                    Catégorie 
+                    <i class="glyphicon glyphicon-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+        <div id="timeline">
+            <?php
+            setlocale(LC_CTYPE, "fr");
+                $OA = json_decode(file_get_contents("events.json"));
+//        $OA = json_decode(file_get_contents("https://openagenda.com/agendas/31783764/events.json?limit=300"));
+                $e = $OA->events;
+                for($x=0; $x<$OA->total; $x++) { 
+                    $e[$x]->range->fr = str_replace("2018", "", $e[$x]->range->fr);
+                    $e[$x]->title->fr = mb_strtoupper($e[$x]->title->fr, "utf-8");
+            ?>
+
+            <div class="details lieu<?php echo $e[$x]->location->uid; ?>" id="<?php echo $e[$x]->uid; ?>">
+                <h2> <?php echo $e[$x]->range->fr; ?></h2>
+                <h1> <?php echo $e[$x]->title->fr; ?></h1>
+                <h3> <?php echo $e[$x]->locationName; ?></h3>
+                <hr>
+                <p> <?php echo $e[$x]->longDescription->fr; ?></p>
+            </div>
+
+            <?php } ?>
+        </div>
+        <div id="recherche">
+            <?php for($x=0; $x<$OA->total; $x++){ ?>
+
+            <button class="btn btn-blank evenement" id="<?php echo $e[$x]->uid; ?>">
+                <div class="image" style="background-image: url('<?php echo $e[$x]->image ?>')"></div>
+                <div class="infos lieu<?php echo $e[$x]->location->uid; ?>">
+                    <h3> <?php echo $e[$x]->range->fr; ?></h3>
+                    <h1> <?php echo $e[$x]->title->fr; ?></h1>
+                    <h3> <?php echo $e[$x]->locationName; ?></h3>
+                    <h2> <?php echo $e[$x]->category->label; ?></h2>
+                </div>
+            </button>
+
+            <?php } ?>
+        </div>
     </div>
 
-    
 </body>
 
 </html>
