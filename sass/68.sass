@@ -6,6 +6,16 @@ body
     width: 100vw
     overflow-x: hidden
     
+::-webkit-scrollbar
+  width: 12px
+  height: 12px
+
+::-webkit-scrollbar-track
+  background: rgba(0, 0, 0, 0.1)
+
+::-webkit-scrollbar-thumb
+  background: rgba(0, 0, 0, 0.5)
+
 .center 
     text-align: center
 
@@ -22,8 +32,10 @@ body
     border: 0
     &:focus
         background: none
+        -webkit-box-shadow: 0 0 10px
         box-shadow: 0 0 10px
-        
+        border-radius: 3px
+    
 //=========================================
 
 header
@@ -31,18 +43,36 @@ header
     top: 4%
     right: 4%
     .btn
+        position: relative
+        padding: 0 1px
         font-size: 18px
         font-weight: 600
-        margin-left: 30px;
+        margin-left: 30px
+        border-radius: 0
+        border-bottom: dotted 1px black
+        .header-background
+            background: rgba(26, 26, 26, 0.1)
+            width: 100%
+            height: 20px
+            position: absolute
+            z-index: -1
+            top: 12px
+            right: 6px
         
 .edito 
-    width: 600px
-    max-width: 75vw
+    width: 100%
     margin: 20vh auto 100px
     padding: 40px
+    background: rgba(26,26,26,0.1)
+    font-weight: 500
+    -webkit-transform: translateX(-100vw)
+    -moz-transform: translateX(-100vw)
+    -ms-transform: translateX(-100vw)
+    transform: translateX(-100vw)
     h1 
         margin: 50px 0
-        font-size: 4em
+        font-size: 100px
+        font-weight: 700
     .langues 
         margin: 60px auto 0
     a 
@@ -50,17 +80,22 @@ header
         font-size: 120%
         margin: 10px
         cursor: pointer
+.edito-open
+    -webkit-transform: none
+    -moz-transform: none
+    -ms-transform: none
+    transform: none
+.edito-transition
+    transition: all 500ms ease-in-out
 
 
 .scroll
     cursor: pointer
     &:focus
+        -webkit-box-shadow: none
         box-shadow: none
     .glyphicon 
         font-size: 50px
-
-#carte
-    background: pink
 
 .info-container
     position: absolute
@@ -82,8 +117,8 @@ header
 #timeline, #recherche
     display: inline-block
     overflow-y: scroll
-    height: 80vh
-    width: 50%
+    height: 78vh
+    width: 49.5%
     text-align: left !important
     margin: -2px
 
@@ -106,6 +141,7 @@ header
             padding: 0 7px
             vertical-align: bottom
             &:focus
+                -webkit-box-shadow: 0 0 1px
                 box-shadow: 0 0 1px
             .glyphicon
                 font-size: 15px
