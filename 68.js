@@ -20,8 +20,10 @@ doc.ready(function () {
         body.stop().animate({scrollTop: $('#68').position().top}, 1000);
     });
     $('#header-agenda').click(function() {
-        prevScroll = 100;
-        body.stop().animate({scrollTop: 100}, 0);
+        if (doc.scrollTop() < 10) {
+            prevScroll = 20;
+            body.stop().animate({scrollTop: 20}, 0);
+        };
         body.stop().animate({scrollTop: $('#agenda').position().top}, 1000);
     });
 

@@ -5,13 +5,18 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>SoixanteHuit</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=0.80, , user-scalable=no">
+    <meta name="description" content="" />
+    
+<!--todo    Favicon-->
+    
     <script src="jquery.min.js"></script>
     <script src="68.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <!--    <link rel="stylesheet" href="css/bootstrap.min.css">-->
     <link rel="stylesheet" href="css/68.css">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700" rel="stylesheet">
+    
 </head>
 
 <body>
@@ -97,11 +102,21 @@
                 <h1> <?php echo $e[$x]->title->fr; ?></h1>
                 <h3> <?php echo $e[$x]->locationName; ?></h3>
                 <hr>
-                <p> <?php echo $e[$x]->longDescription->fr; ?></p>
+                <p class="description"> <?php echo $e[$x]->longDescription->fr; ?></p>
+                <div class="col-6">
+                    <b><?php echo $e[$x]->locationName; ?></b><br>
+                    <?php echo preg_replace('/\s\d\d\d\d\d\s\w*/', '', $e[$x]->address); ?><br>
+                    <?php echo $e[$x]->postalCode; ?>
+                    <?php echo $e[$x]->city; ?><br>
+                </div>
+                <div class="col-6">
+                    <?php echo $e[$x]->conditions->fr; ?><br>
+                </div>
             </div>
 
             <?php } ?>
         </div>
+
         <div id="recherche">
             <?php for($x=0; $x<$OA->total; $x++){ ?>
 
