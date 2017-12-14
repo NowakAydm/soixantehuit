@@ -11,7 +11,7 @@ body
   height: 10px
 
 ::-webkit-scrollbar-track
-  background: rgba(255, 255, 255, 0.1)
+  background: rgba(255, 255, 255, 0)
 
 ::-webkit-scrollbar-thumb
   background: rgba(255, 255, 255, 0.5)
@@ -35,7 +35,10 @@ body
         -webkit-box-shadow: 0 0 10px
         box-shadow: 0 0 10px
         border-radius: 3px
-    
+.right
+    width: 100%
+    text-align: right
+
 //=========================================
 
 header
@@ -134,7 +137,7 @@ header
     .agenda-filtres
         display: inline-block
         float: right
-        margin: 120px 10% 0 0
+        margin: 120px 5% 0 0
         font-size: 19.5px
         button
             font-size: inherit
@@ -145,6 +148,30 @@ header
                 box-shadow: 0 0 1px
             .glyphicon
                 font-size: 15px
+    .popover, .popover-content 
+        padding: 0
+        border: none
+        border-radius: 0
+        font-family: inherit
+        .list-group
+            margin: 0
+        .list-group-item
+            border-radius: 0 !important
+            padding: 7px 15px
+            font-weight: 500
+            font-size: 17px
+            cursor: pointer
+    .search-lieu
+        width: 90px
+        height: 30px
+        margin: 5px 0 0 75px
+        color: white
+        .glyphicon
+            padding: 5px
+
+.hide-lieu
+    display: none !important
+        
 @media (max-width:850px)
     .agenda-header h1
         display: none
@@ -163,16 +190,28 @@ header
     h3
         font-size: 30px
         line-height: 36px
-    .description
-        margin-bottom: 50px
-    .col-6
-        width: 48%
-        display: inline-block
-        margin-bottom: 50px
-        padding-right: 20px
     hr
         width: 20%
         margin-left: 0%
+    .description
+        margin-bottom: 50px
+        overflow: hidden
+        h2, h3, p
+            margin: 0 auto
+    .col-6
+        width: 48%
+        display: inline-grid
+        margin-bottom: 50px
+        padding-right: 20px
+    a
+        color: inherit
+        text-decoration: dotted underline
+        &:hover
+            text-decoration: underline
+    .right
+        margin-bottom: 25px;
+        #site-officiel
+            text-decoration: none
         
 .evenement
     display: inline-block
@@ -199,8 +238,9 @@ header
         h1
             font-size: 18px
             line-height: 19.6px
-            height: 40px
+            height: 42px
             font-weight: 600
+            white-space: initial
         h2
             font-size: 14px
             line-height: 18.8px
@@ -209,14 +249,59 @@ header
             font-size: 14px
             line-height: 18.8px
             font-weight: 300
-        
+
+// Paris Nanterre
+.lieu49592631
+    background: #ff2a00
+    color: white
+    hr
+        border-color: white
+
+// Amandiers
+.lieu47774204
+    background: #fff65e
+    color: black
+    hr
+        border-color: black
+    
+//Cite de l'archi
+.lieu97092341
+    background: #00ffff
+    color: black
+    hr
+        border-color: black
+
+// Beaux Arts
+.lieu37250659
+    background: #ffc6cf
+    color: black
+    hr
+        border-color: black
+
+// Pompidou
+.lieu44057765
+    background: #00e99d
+    color: white
+    hr
+        border-color: white
+
+// Archives
+.lieu74030026
+    background: #0048dd
+    color: white
+    hr
+        border-color: white
+
+// BNF
+.lieu96612516
+    background: #9783ff
+    color: black
+    hr
+        border-color: black
 
 // Cinematheque
 .lieu33873846
     background: #ff6000
     color: white
-    
-//Cite de l'archi
-.lieu97092341
-    background: #00ffff
-    color: white
+    hr
+        border-color: white

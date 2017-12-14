@@ -13,20 +13,45 @@ function isScrolledIntoView(elem)
 
 doc.ready(function () {
 //----------- Header scroll --------------
-    $('#header-accueil').click(function() {
-        body.stop().animate({scrollTop: 0}, 1000);
-    });
-    $('#header-68').click(function() {
-        body.stop().animate({scrollTop: $('#68').position().top}, 1000);
-    });
-    $('#header-agenda').click(function() {
-        if (doc.scrollTop() < 10) {
-            prevScroll = 20;
-            body.stop().animate({scrollTop: 20}, 0);
-        };
-        body.stop().animate({scrollTop: $('#agenda').position().top}, 1000);
-    });
-
+    if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {  
+        $('#header-accueil').click(function() {
+            document.activeElement.blur();
+            window.scrollTo(0, 0);
+        });
+        $('#header-68').click(function() {
+            document.activeElement.blur();
+            window.scrollTo(0, $('#68').position().top);
+        });
+        $('#header-agenda').click(function() {
+            if (doc.scrollTop() < 10) {
+                prevScroll = 100;
+                window.scrollTo(0, 100);
+                prevScroll = 100;
+            };
+            window.scrollTo(0, $('#agenda').position().top);
+            document.activeElement.blur();
+        }); 
+    }
+    else {
+        $('#header-accueil').click(function() {
+            document.activeElement.blur();
+            body.stop().animate({scrollTop: 0}, 1000);
+        });
+        $('#header-68').click(function() {
+            document.activeElement.blur();
+            body.stop().animate({scrollTop: $('#68').position().top}, 1000);
+        });
+        $('#header-agenda').click(function() {
+            if (doc.scrollTop() < 10) {
+                prevScroll = 100;
+                body.stop().animate({scrollTop: 100}, 0);
+                $('#header-agenda').click();
+            };
+            body.stop().animate({scrollTop: $('#agenda').position().top}, 1000);
+            document.activeElement.blur();
+        });        
+    };
+    
 //----------- Edito scroll --------------
     body.stop().animate({scrollTop: 0}, 10); 
 
@@ -35,7 +60,6 @@ doc.ready(function () {
     setTimeout(function() {
         
         doc.on('scroll', function () {
-            console.log(prevScroll);
             if (prevScroll < 10 && doc.scrollTop() > prevScroll)
                 body.stop().animate({scrollTop: $('#68').position().top}, 1000); 
 
@@ -86,7 +110,9 @@ doc.ready(function () {
    });
     
 //----------- Agenda --------------
-$('#timeline').stop().animate({scrollTop: -99999999}, 1000); 
+    searchReady();
+    
+    $('#timeline').stop().animate({scrollTop: -99999999}, 1000); 
     
     var prevPos = 0;
     $('.evenement').click(function() {

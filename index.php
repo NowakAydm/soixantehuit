@@ -12,7 +12,9 @@
     
     <script src="jquery.min.js"></script>
     <script src="68.js"></script>
+    <script src="search.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <!--    <link rel="stylesheet" href="css/bootstrap.min.css">-->
     <link rel="stylesheet" href="css/68.css">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700" rel="stylesheet">
@@ -64,76 +66,7 @@
         </div>
     </div>
     
-    <!--============= AGENDA ===============-->
-
-    <div class="bloc" id="agenda">
-    
-        <div class="agenda-header">
-            <h1>Agenda</h1>
-            <div class="agenda-filtres">
-                Trier par:                
-                <button id="filtre-lieu" class="btn btn-blank">
-                    Lieu
-                    <i class="glyphicon glyphicon-chevron-right"></i>
-                </button>
-                <button id="filtre-date" class="btn btn-blank">
-                    Date
-                    <i class="glyphicon glyphicon-chevron-right"></i>
-                </button>
-                <button id="filtre-categorie" class="btn btn-blank">
-                    Catégorie 
-                    <i class="glyphicon glyphicon-chevron-right"></i>
-                </button>
-            </div>
-        </div>
-        <div id="timeline">
-            <?php
-            setlocale(LC_CTYPE, "fr");
-                $OA = json_decode(file_get_contents("events.json"));
-//        $OA = json_decode(file_get_contents("https://openagenda.com/agendas/31783764/events.json?limit=300"));
-                $e = $OA->events;
-                for($x=0; $x<$OA->total; $x++) { 
-                    $e[$x]->range->fr = str_replace("2018", "", $e[$x]->range->fr);
-                    $e[$x]->title->fr = mb_strtoupper($e[$x]->title->fr, "utf-8");
-            ?>
-
-            <div class="details lieu<?php echo $e[$x]->location->uid; ?>" id="<?php echo $e[$x]->uid; ?>">
-                <h2> <?php echo $e[$x]->range->fr; ?></h2>
-                <h1> <?php echo $e[$x]->title->fr; ?></h1>
-                <h3> <?php echo $e[$x]->locationName; ?></h3>
-                <hr>
-                <p class="description"> <?php echo $e[$x]->longDescription->fr; ?></p>
-                <div class="col-6">
-                    <b><?php echo $e[$x]->locationName; ?></b><br>
-                    <?php echo preg_replace('/\s\d\d\d\d\d\s\w*/', '', $e[$x]->address); ?><br>
-                    <?php echo $e[$x]->postalCode; ?>
-                    <?php echo $e[$x]->city; ?><br>
-                </div>
-                <div class="col-6">
-                    <?php echo $e[$x]->conditions->fr; ?><br>
-                </div>
-            </div>
-
-            <?php } ?>
-        </div>
-
-        <div id="recherche">
-            <?php for($x=0; $x<$OA->total; $x++){ ?>
-
-            <button class="btn btn-blank evenement" id="<?php echo $e[$x]->uid; ?>">
-                <div class="image" style="background-image: url('<?php echo $e[$x]->image ?>')"></div>
-                <div class="infos lieu<?php echo $e[$x]->location->uid; ?>">
-                    <h3> <?php echo $e[$x]->range->fr; ?></h3>
-                    <h1> <?php echo $e[$x]->title->fr; ?></h1>
-                    <h3> <?php echo $e[$x]->locationName; ?></h3>
-                    <h2> <?php echo $e[$x]->category->label; ?></h2>
-                </div>
-            </button>
-
-            <?php } ?>
-        </div>
-    </div>
-
+    <?php include 'agenda.php'?>
 </body>
 
 </html>
