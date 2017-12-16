@@ -10,9 +10,9 @@
     
 <!--todo    Favicon-->
     
-    <script src="jquery.min.js"></script>
-    <script src="68.js"></script>
-    <script src="search.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/68.js"></script>
+    <script src="js/search.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <!--    <link rel="stylesheet" href="css/bootstrap.min.css">-->
@@ -39,6 +39,31 @@
     
     <!--============= EDITO ===============-->
 
+    <div class="modules">
+        <div class="vertical">
+            <?php echo file_get_contents("assets/modules.svg"); ?>
+        </div>
+    </div>
+    <div class="carte">
+        <div class="vertical">
+            <?php echo file_get_contents("assets/carte.svg"); ?><br>
+        </div>
+    </div>
+    <div class="carte">
+        <div class="vertical">
+            <div class="carte-label">
+                <div class="carte-lieu carte-nanterre">Université<br>Paris<br>Nanterre</div>
+                <div class="carte-lieu carte-amandiers">Nanterre<br>Amandiers</div>
+                <div class="carte-lieu carte-archi">Cité<br>de&nbsp;l’architecture<br>et&nbsp;du&nbsp;patrimoine</div>
+                <div class="carte-lieu carte-beauxarts">Beaux-Arts<br>de&nbsp;Paris</div>
+                <div class="carte-lieu carte-pompidou">Centre<br>Pompidou</div>
+                <div class="carte-lieu carte-archives">Archives<br>Nationales</div>
+                <div class="carte-lieu carte-bnf">Bibliothèque<br>nationale<br>de&nbsp;France</div>
+                <div class="carte-lieu carte-cinematheque">Cinémathèque<br>Francaise</div>
+            </div>
+        </div>
+    </div>
+    
     <div class="container bloc" id="home">        
         <div class="edito edito-open center">
             <h1>EDITO</h1>

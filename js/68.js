@@ -82,7 +82,23 @@ doc.ready(function () {
             };
             
             $('.header-background').parent().css('border-bottom', 'none');
-            $('.header-background.hidden').parent().css('border-bottom', 'dotted 1px black');  
+            $('.header-background.hidden').parent().css('border-bottom', 'dotted 1px black');
+            
+            
+            if (prevScroll < $('#68').position().top) {
+                $('.carte').css('transform', '-webkit-translateY('+prevScroll+'px)');
+                $('.carte').css('transform', '-moz-translateY('+prevScroll+'px)');
+                $('.carte').css('transform', '-ms-translateY('+prevScroll+'px)');
+                $('.carte').css('transform', 'translateY('+prevScroll+'px)');
+                $('.carte svg').css('opacity', '1');
+            }
+            else {
+                $('.carte').css('transform', '-webkit-translateY('+$('#68').position().top+'px)');
+                $('.carte').css('transform', '-moz-translateY('+$('#68').position().top+'px)');
+                $('.carte').css('transform', '-ms-translateY('+$('#68').position().top+'px)');
+                $('.carte').css('transform', 'translateY('+$('#68').position().top+'px)');
+//                $('.carte svg').css('opacity', '0');
+            };
         });
     }, 100);
     
@@ -96,7 +112,7 @@ doc.ready(function () {
        $('.info-container').addClass('info-transition');
        $('.info-container').addClass('info-open');
        $('.info-open button').attr('tabindex', '0');
-       $('#carte button').attr('tabindex', '-1');
+       $('#68 button').attr('tabindex', '-1');
     });
     $('.close-info').click(function() {
        $('.info-open button').attr('tabindex', '-1');
