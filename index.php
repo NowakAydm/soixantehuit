@@ -38,31 +38,6 @@
     </header>
     
     <!--============= EDITO ===============-->
-
-    <div class="modules">
-        <div class="vertical">
-            <?php echo file_get_contents("assets/modules.svg"); ?>
-        </div>
-    </div>
-    <div class="carte">
-        <div class="vertical">
-            <?php echo file_get_contents("assets/carte.svg"); ?><br>
-        </div>
-    </div>
-    <div class="carte">
-        <div class="vertical">
-            <div class="carte-label">
-                <div class="carte-lieu carte-nanterre">Université<br>Paris<br>Nanterre</div>
-                <div class="carte-lieu carte-amandiers">Nanterre<br>Amandiers</div>
-                <div class="carte-lieu carte-archi">Cité<br>de&nbsp;l’architecture<br>et&nbsp;du&nbsp;patrimoine</div>
-                <div class="carte-lieu carte-beauxarts">Beaux-Arts<br>de&nbsp;Paris</div>
-                <div class="carte-lieu carte-pompidou">Centre<br>Pompidou</div>
-                <div class="carte-lieu carte-archives">Archives<br>Nationales</div>
-                <div class="carte-lieu carte-bnf">Bibliothèque<br>nationale<br>de&nbsp;France</div>
-                <div class="carte-lieu carte-cinematheque">Cinémathèque<br>Francaise</div>
-            </div>
-        </div>
-    </div>
     
     <div class="container bloc" id="home">        
         <div class="edito edito-open center">
@@ -83,14 +58,40 @@
     <!--============= 68 ===============-->
 
     <div class="bloc" id="68">
-        <div class="info-container bloc">
-            <button tabIndex="-1" class="btn btn-xl centerblock close-info">Close</button>            
+        <?php include 'infos.php'?>
+        
+        <div class="carte">
+            <div class="vertical">
+                <?php echo file_get_contents("assets/carte.svg"); ?><br>
+            </div>
         </div>
-        <div class="bloc">
-            <button tabIndex="0" class="btn btn-xl centerblock" id="but">Open</button>
+        <div class="modules">
+            <div class="vertical">
+                <?php echo file_get_contents("assets/modules.svg"); ?>
+            </div>
+        </div>
+        <div class="carte">
+            <div class="vertical">
+                <div class="carte-label">
+                    <div class="carte-lieu carte-nanterre">Université<br>Paris<br>Nanterre</div>
+                    <div class="carte-lieu carte-amandiers">Nanterre<br>Amandiers</div>
+                    <div class="carte-lieu carte-archi">Cité<br>de&nbsp;l’architecture<br>et&nbsp;du&nbsp;patrimoine</div>
+                    <div class="carte-lieu carte-beauxarts">Beaux-Arts<br>de&nbsp;Paris</div>
+                    <div class="carte-lieu carte-pompidou">Centre<br>Pompidou</div>
+                    <div class="carte-lieu carte-archives">Archives<br>Nationales</div>
+                    <div class="carte-lieu carte-bnf">Bibliothèque<br>nationale<br>de&nbsp;France</div>
+                    <div class="carte-lieu carte-cinematheque">Cinémathèque<br>Francaise</div>
+                </div>
+            </div>
+        </div>
+        <div class="modules modules-click">
+            <div class="vertical">
+                <?php echo file_get_contents("assets/modules.svg"); ?>
+            </div>
         </div>
     </div>
     
+    <!--============= Agenda ===============-->
     <?php include 'agenda.php'?>
 </body>
 

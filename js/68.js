@@ -21,6 +21,7 @@ doc.ready(function () {
         $('#header-68').click(function() {
             document.activeElement.blur();
             window.scrollTo(0, $('#68').position().top);
+            $('.close-info').click();
         });
         $('#header-agenda').click(function() {
             if (doc.scrollTop() < 10) {
@@ -40,6 +41,7 @@ doc.ready(function () {
         $('#header-68').click(function() {
             document.activeElement.blur();
             body.stop().animate({scrollTop: $('#68').position().top}, 1000);
+            $('.close-info').click();
         });
         $('#header-agenda').click(function() {
             if (doc.scrollTop() < 10) {
@@ -53,7 +55,7 @@ doc.ready(function () {
     };
     
 //----------- Edito scroll --------------
-    body.stop().animate({scrollTop: 0}, 10); 
+    body.stop().animate({scrollTop: 0}, 1); 
 
     prevScroll = 0;
     
@@ -86,20 +88,24 @@ doc.ready(function () {
             
             
             if (prevScroll < $('#68').position().top) {
-                $('.carte').css('transform', '-webkit-translateY('+prevScroll+'px)');
-                $('.carte').css('transform', '-moz-translateY('+prevScroll+'px)');
-                $('.carte').css('transform', '-ms-translateY('+prevScroll+'px)');
-                $('.carte').css('transform', 'translateY('+prevScroll+'px)');
+                $('.carte').css('transform', '-webkit-translateY('+(prevScroll - $('#68').position().top)+'px)');
+                $('.carte').css('transform', '-moz-translateY('+(prevScroll - $('#68').position().top)+'px)');
+                $('.carte').css('transform', '-ms-translateY('+(prevScroll - $('#68').position().top)+'px)');
+                $('.carte').css('transform', 'translateY('+(prevScroll - $('#68').position().top)+'px)');
                 $('.carte svg').css('opacity', '1');
             }
             else {
-                $('.carte').css('transform', '-webkit-translateY('+$('#68').position().top+'px)');
-                $('.carte').css('transform', '-moz-translateY('+$('#68').position().top+'px)');
-                $('.carte').css('transform', '-ms-translateY('+$('#68').position().top+'px)');
-                $('.carte').css('transform', 'translateY('+$('#68').position().top+'px)');
-//                $('.carte svg').css('opacity', '0');
+                $('.carte').css('transform', '-webkit-translateY(0)');
+                $('.carte').css('transform', '-moz-translateY(0)');
+                $('.carte').css('transform', '-ms-translateY(0)');
+                $('.carte').css('transform', 'translateY(0)');
+                $('.carte svg').css('opacity', '0');
             };
         });
+        $('.carte').css('transform', '-webkit-translateY('+(prevScroll - $('#68').position().top)+'px)');
+        $('.carte').css('transform', '-moz-translateY('+(prevScroll - $('#68').position().top)+'px)');
+        $('.carte').css('transform', '-ms-translateY('+(prevScroll - $('#68').position().top)+'px)');
+        $('.carte').css('transform', 'translateY('+(prevScroll - $('#68').position().top)+'px)');
     }, 100);
     
     $('.scroll').click(function() {
@@ -107,18 +113,32 @@ doc.ready(function () {
     });
 
 //----------- 68 --------------
+    $('.module').attr('tabindex', '-1');
 
-    $('#but').click(function() {
-       $('.info-container').addClass('info-transition');
-       $('.info-container').addClass('info-open');
+    $('.modules-click .module').hover(function(){
+     $('#' + $(this).attr('id')).css('opacity', '0.6');
+    }, function() {
+     $('#' + $(this).attr('id')).css('opacity', '1');       
+    });
+   
+    $('.modules-click .module').click(function() {
+       $('#' + $(this).attr('id').replace('module', 'info')).addClass('info-open');
+       $('.info-open').addClass('info-transition');
        $('.info-open button').attr('tabindex', '0');
-       $('#68 button').attr('tabindex', '-1');
+        if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {  
+            window.scrollTo(0, $('#68').position().top);
+        }
+        else {
+            body.stop().animate({scrollTop: $('#68').position().top}, 1000);
+        };
+
+//       $('.modules-click .module').attr('tabindex', '-1');
     });
     $('.close-info').click(function() {
        $('.info-open button').attr('tabindex', '-1');
-       $('#carte button').attr('tabindex', '0');
-       $('.info-container').addClass('info-transition');
-       $('.info-container').removeClass('info-open');
+//       $('.modules-click .module').attr('tabindex', '0');
+       $('.info-open').addClass('info-transition');
+       $('.info-open').removeClass('info-open');
     });
     
    $('.info-container').on('transitionend', function() {

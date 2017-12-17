@@ -39,13 +39,13 @@ body
     width: 100%
     text-align: right
 
-//=========================================
+//==================== Header =====================
 
 header
     position: fixed
     top: 4%
     right: 4%
-    z-index: 10
+    z-index: 100
     .btn
         position: relative
         padding: 0 1px
@@ -69,74 +69,8 @@ header
         right: 2%
         .btn
             font-size: 15px
-    
-            
-.carte, .modules
-    display: table
-    position: absolute
-    height: 100%
-    width: 100%
-    z-index: -1
-    opacity: 1
-    -webkit-transform: translateY(0)
-    -moz-transform: translateY(0)
-    -ms-transform: translateY(0)
-    transform: translateY(0)
-    .vertical
-        display: table-cell
-        vertical-align: middle
-        text-align: center
-        .container
-            position: relative
-            top: -100vh
-    svg
-        margin: auto
-        max-height: 100vh
-        transition: opacity 1000ms ease-in-out
-.carte-label
-    margin: auto
-    width: 75%
-    height: 800px
-    opacity: 0.6
-.carte-lieu
-    position: relative
-    font-size: 25px
-    width: 150px
-    z-index: 20
-    text-align: left
-.carte-nanterre
-    top: 8% 
-    left: 16%
-.carte-amandiers
-    top: 22%
-    left: 4%
-.carte-archi
-    top: 16%
-    left: 18%
-.carte-beauxarts
-    left: 40%
-    top: 21%
-.carte-pompidou
-    left: 55%
-    top: -2%
-.carte-archives
-    top: -13%
-    left: 73%
-.carte-bnf
-    left: 60%
-    top: 15%
-.carte-cinematheque
-    left: 80%
-    top: -8%
-    
-    
-.modules
-    -webkit-transform: translateY(100vh)
-    -moz-transform: translateY(100vh)
-    -ms-transform: translateY(100vh)
-    transform: translateY(100vh)
-//    transition: all 1000ms ease-in-out
-    
+
+//==================== Edito =====================    
 
 .edito 
     width: 90%
@@ -165,15 +99,144 @@ header
     .glyphicon 
         font-size: 50px
 
+//==================== Carte =====================    
+            
+.carte, .modules
+    display: table
+    position: absolute
+    height: 100%
+    width: 100%
+    z-index: -1
+    opacity: 1
+    -webkit-transform: translateY(0)
+    -moz-transform: translateY(0)
+    -ms-transform: translateY(0)
+    transform: translateY(0)
+    .vertical
+        display: table-cell
+        vertical-align: middle
+        text-align: center
+        .container
+            position: relative
+            top: -100vh
+    svg
+        margin: auto
+        max-height: 100vh
+        transition: opacity 1000ms ease-in-out
+
+.carte-label
+    margin: auto
+    width: 75%
+    max-width: 114vh
+    height: 62vw
+    max-height: 100vh
+    opacity: 0.6
+    position: relative
+.carte-lieu
+    position: absolute
+    font-size: 23px
+    width: 150px
+    z-index: 20
+    text-align: left
+.carte-nanterre
+    top: 8% 
+    left: 16%
+.carte-amandiers
+    top: 35%
+    left: 0%
+.carte-archi
+    top: 40%
+    left: 17%
+.carte-beauxarts
+    left: 40%
+    bottom: 40%
+.carte-pompidou
+    left: 53%
+    top: 40%
+.carte-archives
+    top: 38%
+    left: 73%
+.carte-bnf
+    left: 60%
+    bottom: 15%
+.carte-cinematheque
+    left: 80%
+    bottom: 26%
+@media (max-width:1470px)
+    .carte-lieu
+        font-size: 1.5vw
+    
+.modules-click 
+    z-index: 10
+    .module
+        fill: transparent
+
+//==================== Infos =====================
+
+
 .info-container
     position: absolute
     width: 100%
-    z-index: 100
+    z-index: 101
     -webkit-transform: translateX(-100vw)
     -moz-transform: translateX(-100vw)
     -ms-transform: translateX(-100vw)
     transform: translateX(-100vw)
-    background: red
+    background: white
+    .close-info 
+        font-size: 65px
+        margin: 40px 30px
+    .info-sidebar
+        min-height: 100vh
+        .info-lieu
+            display: block
+            position: absolute
+            left: 12vw
+            bottom: -4vh
+            width: 80vh
+            font-size: 80px
+            -webkit-transform: rotate(-90deg)
+            -moz-transform: rotate(-90deg)
+            -o-transform: rotate(-90deg)
+            -ms-transform: rotate(-90deg)
+            transform: rotate(-90deg)
+            transform-origin: left
+            line-height: 7.3vw
+    .info-midbar
+        min-height: 100vh
+        border-left: 3px dotted
+        margin: -2px
+        .info-presentation
+            font-size: 24px
+            font-weight: 300
+            margin: 2vw auto
+            height: 30vh
+        .info-description
+            font-size: 15px
+            font-weight: 500
+            img
+                width: 60%
+                position: absolute
+                bottom: 5%
+                right: 10px
+    .info-programme
+        font-size: 24px
+        font-weight: 300
+        margin: 2vw
+        .info-programmefond
+            width: 155px
+            height: 25px
+            position: relative
+            bottom: 16px
+            right: 9px
+            z-index: -1
+    .info-goagenda
+        font-size: 24px
+        font-weight: 300
+        position: absolute
+        bottom: 5%
+        right: 10%
+
 .info-open
     -webkit-transform: none
     -moz-transform: none
@@ -181,7 +244,9 @@ header
     transform: none
 .info-transition
     transition: all 500ms ease-in-out
-
+    
+//==================== Agenda =====================    
+    
 #agenda
     background: white
 .agenda-header 

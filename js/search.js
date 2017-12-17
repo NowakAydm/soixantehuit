@@ -51,5 +51,13 @@ function addPlace( a ) {
     curPlace = 'lieu'+a;
     $('.evenement').addClass('hide-lieu');
     $('.infos.'+curPlace).parent().removeClass('hide-lieu');
+    $('.infos.'+curPlace).parent().first().click();
     $('#filtre-lieu').click();
+    if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {  
+        window.scrollTo(0, $('#agenda').position().top);
+    }
+    else {
+        body.stop().animate({scrollTop: $('#agenda').position().top}, 1000);
+    };
+    
 };
