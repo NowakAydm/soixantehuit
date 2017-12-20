@@ -156,7 +156,7 @@ header
     svg
         margin: auto
         max-height: 100vh
-        transition: opacity 1000ms ease-in-out
+        transition: opacity 1500ms ease-in-out
 
 .points
     opacity: 0.5
@@ -168,7 +168,7 @@ header
     max-height: 100vh
     opacity: 0
     position: relative
-    transition: opacity 1000ms ease-in-out
+    transition: opacity 1500ms ease-in-out
 .carte-lieu
     position: absolute
     font-size: 23px
@@ -211,6 +211,13 @@ header
     z-index: 10
     .module
         fill: transparent
+.module
+    -webkit-transform: translateY(-100vh)
+    -moz-transform: translateY(-100vh)
+    -ms-transform: translateY(-100vh)
+    transform: translateY(-100vh)
+    transition: transform 2000ms ease-in-out
+    
 
 //==================== Infos =====================
 
@@ -224,6 +231,7 @@ header
     -ms-transform: translateX(-100vw)
     transform: translateX(-100vw)
     background: white
+    overflow-x: hidden
     .close-info 
         font-size: 65px
         margin: 40px 30px
@@ -387,10 +395,9 @@ header
         
 @media (max-width:850px)
     .agenda-header
-        height: 18vh
         .agenda-filtres
             font-size: 15px
-            margin-top: 9vh
+            margin-top: 12vh
             height: 6vh
             .col-sm-6            
                 input
@@ -418,7 +425,7 @@ header
     overflow-x: hidden
     overflow-y: scroll
     height: 78vh
-    width: 49%
+    width: 48.5%
     text-align: left !important
 #timeline
     position: relative
@@ -426,10 +433,6 @@ header
 #recherche
     padding-top: 4px
     float: right
-@media (max-width:850px)
-    #timeline, #recherche
-        height: 82vh
-
     
 .details
     padding: 2.7vw

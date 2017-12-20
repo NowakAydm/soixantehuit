@@ -1,8 +1,6 @@
 <!--
 TOUT DOUX
 
-
-- Animation des modules
 - Responsiveness
     = logo 68 decale
     = reparer le scroll par click sur mobil
@@ -10,8 +8,6 @@ TOUT DOUX
 - favicon
 - description metadata
 - pivoter les chevrons des filtres quand le popover est ouvert
-- filtre par date
-- filtre par categorie fonctionnel
 - footer
 - revoir les bordures en points des infos
 - charger les images en full res quand les thumbs sont charges
@@ -27,11 +23,12 @@ TOUT DOUX
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>SoixanteHuit</title>
-    <meta name="viewport" content="width=device-width, initial-scale=0.80, , user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=0.70, , user-scalable=no">
     <meta name="description" content="" />
 
     <script src="js/jquery.min.js"></script>
     <script type='text/javascript'> 
+        window.scrollTo(0, 0);
         var events = <?php echo file_get_contents('assets/events.json'); ?>.events;      
 //        var events = <?php //echo file_get_contents("https://openagenda.com/agendas/31783764/events.json?limit=300"); ?>.events;
     </script>
