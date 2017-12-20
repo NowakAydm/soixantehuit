@@ -33,6 +33,7 @@ function searchReady() {
     };
     var curDate = 0;
     $('#datetimepicker').datetimepicker({
+        widgetPositioning: {horizontal: 'auto', vertical: 'bottom'},
         locale: 'fr',
         format: 'D/MM',
         minDate: moment('2018/01/01', 'YYYY/MM/DD'),

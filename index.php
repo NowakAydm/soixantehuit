@@ -23,7 +23,7 @@ TOUT DOUX
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>SoixanteHuit</title>
-    <meta name="viewport" content="width=device-width, initial-scale=0.70, , user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=0.8 , user-scalable=no">
     <meta name="description" content="" />
 
     <script src="js/jquery.min.js"></script>
@@ -98,7 +98,7 @@ TOUT DOUX
                 <?php echo file_get_contents("assets/modules.svg"); ?>
             </div>
         </div>
-        <div class="carte">
+        <div class="labels">
             <div class="vertical">
                 <div class="carte-label">
                     <div class="carte-lieu carte-nanterre">Université<br>Paris<br>Nanterre</div>

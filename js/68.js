@@ -130,9 +130,7 @@ doc.ready(function () {
                 if (animated == 0) {
                     startAnimation();
                 };
-                console.log(prevScroll);
             };
-            
         });
         
         $('.carte').css('transform', '-webkit-translateY('+(prevScroll - $('#68').position().top)+'px)');
