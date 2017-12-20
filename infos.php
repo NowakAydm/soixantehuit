@@ -12,7 +12,7 @@
             L’implication dans le projet 68 ou citation. Rumetur reruptam, sum fugit aut paruptibus as rernatur. Ta nimodias vellaborro que lit pelent hit eum utas et rempore plicidest aut et ab ipsandanis dia prores re, odis volore doloreh entur ? Aceaquis doloribus pos dolorepro veles doluptasin plique nit eatum rem es mil mincit fugia cus aut alicitia doluptat. Itatias sum ratust, ut et, ulparum, nulparupid mo qui nimet quat. rempore plicidest aut et ab ipsandanis dia proresre, odis volore doloreh entur ? Aceaquis doloribus pos dolore pro veles doluptasin plique nit eatum rem es mil mincit fugia cus aut alicitia doluptat. Itatias sum ratust, ut et, ulparum, nulparupid mo qui nimet quat.
             <br><br>
             <b>Infos pratiques</b><br>3 rue de l’espsum<br>75000 Paris
-            <a href="http://www.parisnanterre.fr/">
+            <br><a href="http://www.parisnanterre.fr/">
                 <img src='http://www.parisnanterre.fr/uas/UNIVERSITE/LOGO/UPN-header-RVB.jpg'>
             </a>
         </div>
@@ -38,7 +38,7 @@
             L’implication dans le projet 68 ou citation. Rumetur reruptam, sum fugit aut paruptibus as rernatur. Ta nimodias vellaborro que lit pelent hit eum utas et rempore plicidest aut et ab ipsandanis dia prores re, odis volore doloreh entur ? Aceaquis doloribus pos dolorepro veles doluptasin plique nit eatum rem es mil mincit fugia cus aut alicitia doluptat. Itatias sum ratust, ut et, ulparum, nulparupid mo qui nimet quat. rempore plicidest aut et ab ipsandanis dia proresre, odis volore doloreh entur ? Aceaquis doloribus pos dolore pro veles doluptasin plique nit eatum rem es mil mincit fugia cus aut alicitia doluptat. Itatias sum ratust, ut et, ulparum, nulparupid mo qui nimet quat.
             <br><br>
             <b>Infos pratiques</b><br>3 rue de l’espsum<br>75000 Paris
-            <a href="http://www.parisnanterre.fr/">
+            <br><a href="http://www.parisnanterre.fr/">
                 <img src='http://www.parisnanterre.fr/uas/UNIVERSITE/LOGO/UPN-header-RVB.jpg'>
             </a>
         </div>
@@ -54,7 +54,7 @@
 <div id="info-archi" class="info-container bloc">
     <div class="info-sidebar col-md-3 lieu97092341">
         <span tabIndex="-1" class="close-info glyphicon glyphicon-chevron-left"></span>
-        <span class="info-lieu">Cité de&nbsp;l’architecture et&nbsp;du&nbsp;patrimoine</span>
+        <span class="info-lieu" style="font-size: 7vh;">Cité de&nbsp;l’architecture et&nbsp;du&nbsp;patrimoine</span>
     </div>
     <div class="info-midbar col-md-5">
         <div class="info-presentation">
@@ -64,7 +64,7 @@
             L’implication dans le projet 68 ou citation. Rumetur reruptam, sum fugit aut paruptibus as rernatur. Ta nimodias vellaborro que lit pelent hit eum utas et rempore plicidest aut et ab ipsandanis dia prores re, odis volore doloreh entur ? Aceaquis doloribus pos dolorepro veles doluptasin plique nit eatum rem es mil mincit fugia cus aut alicitia doluptat. Itatias sum ratust, ut et, ulparum, nulparupid mo qui nimet quat. rempore plicidest aut et ab ipsandanis dia proresre, odis volore doloreh entur ? Aceaquis doloribus pos dolore pro veles doluptasin plique nit eatum rem es mil mincit fugia cus aut alicitia doluptat. Itatias sum ratust, ut et, ulparum, nulparupid mo qui nimet quat.
             <br><br>
             <b>Infos pratiques</b><br>3 rue de l’espsum<br>75000 Paris
-            <a href="http://www.parisnanterre.fr/">
+            <br><a href="http://www.parisnanterre.fr/">
                 <img src='http://www.parisnanterre.fr/uas/UNIVERSITE/LOGO/UPN-header-RVB.jpg'>
             </a>
         </div>
@@ -90,7 +90,7 @@
             L’implication dans le projet 68 ou citation. Rumetur reruptam, sum fugit aut paruptibus as rernatur. Ta nimodias vellaborro que lit pelent hit eum utas et rempore plicidest aut et ab ipsandanis dia prores re, odis volore doloreh entur ? Aceaquis doloribus pos dolorepro veles doluptasin plique nit eatum rem es mil mincit fugia cus aut alicitia doluptat. Itatias sum ratust, ut et, ulparum, nulparupid mo qui nimet quat. rempore plicidest aut et ab ipsandanis dia proresre, odis volore doloreh entur ? Aceaquis doloribus pos dolore pro veles doluptasin plique nit eatum rem es mil mincit fugia cus aut alicitia doluptat. Itatias sum ratust, ut et, ulparum, nulparupid mo qui nimet quat.
             <br><br>
             <b>Infos pratiques</b><br>3 rue de l’espsum<br>75000 Paris
-            <a href="http://www.parisnanterre.fr/">
+            <br><a href="http://www.parisnanterre.fr/">
                 <img src='http://www.parisnanterre.fr/uas/UNIVERSITE/LOGO/UPN-header-RVB.jpg'>
             </a>
         </div>
@@ -116,7 +116,7 @@
             L’implication dans le projet 68 ou citation. Rumetur reruptam, sum fugit aut paruptibus as rernatur. Ta nimodias vellaborro que lit pelent hit eum utas et rempore plicidest aut et ab ipsandanis dia prores re, odis volore doloreh entur ? Aceaquis doloribus pos dolorepro veles doluptasin plique nit eatum rem es mil mincit fugia cus aut alicitia doluptat. Itatias sum ratust, ut et, ulparum, nulparupid mo qui nimet quat. rempore plicidest aut et ab ipsandanis dia proresre, odis volore doloreh entur ? Aceaquis doloribus pos dolore pro veles doluptasin plique nit eatum rem es mil mincit fugia cus aut alicitia doluptat. Itatias sum ratust, ut et, ulparum, nulparupid mo qui nimet quat.
             <br><br>
             <b>Infos pratiques</b><br>3 rue de l’espsum<br>75000 Paris
-            <a href="http://www.parisnanterre.fr/">
+            <br><a href="http://www.parisnanterre.fr/">
                 <img src='http://www.parisnanterre.fr/uas/UNIVERSITE/LOGO/UPN-header-RVB.jpg'>
             </a>
         </div>
@@ -142,7 +142,7 @@
             L’implication dans le projet 68 ou citation. Rumetur reruptam, sum fugit aut paruptibus as rernatur. Ta nimodias vellaborro que lit pelent hit eum utas et rempore plicidest aut et ab ipsandanis dia prores re, odis volore doloreh entur ? Aceaquis doloribus pos dolorepro veles doluptasin plique nit eatum rem es mil mincit fugia cus aut alicitia doluptat. Itatias sum ratust, ut et, ulparum, nulparupid mo qui nimet quat. rempore plicidest aut et ab ipsandanis dia proresre, odis volore doloreh entur ? Aceaquis doloribus pos dolore pro veles doluptasin plique nit eatum rem es mil mincit fugia cus aut alicitia doluptat. Itatias sum ratust, ut et, ulparum, nulparupid mo qui nimet quat.
             <br><br>
             <b>Infos pratiques</b><br>3 rue de l’espsum<br>75000 Paris
-            <a href="http://www.parisnanterre.fr/">
+            <br><a href="http://www.parisnanterre.fr/">
                 <img src='http://www.parisnanterre.fr/uas/UNIVERSITE/LOGO/UPN-header-RVB.jpg'>
             </a>
         </div>
@@ -168,7 +168,7 @@
             L’implication dans le projet 68 ou citation. Rumetur reruptam, sum fugit aut paruptibus as rernatur. Ta nimodias vellaborro que lit pelent hit eum utas et rempore plicidest aut et ab ipsandanis dia prores re, odis volore doloreh entur ? Aceaquis doloribus pos dolorepro veles doluptasin plique nit eatum rem es mil mincit fugia cus aut alicitia doluptat. Itatias sum ratust, ut et, ulparum, nulparupid mo qui nimet quat. rempore plicidest aut et ab ipsandanis dia proresre, odis volore doloreh entur ? Aceaquis doloribus pos dolore pro veles doluptasin plique nit eatum rem es mil mincit fugia cus aut alicitia doluptat. Itatias sum ratust, ut et, ulparum, nulparupid mo qui nimet quat.
             <br><br>
             <b>Infos pratiques</b><br>3 rue de l’espsum<br>75000 Paris
-            <a href="http://www.parisnanterre.fr/">
+            <br><a href="http://www.parisnanterre.fr/">
                 <img src='http://www.parisnanterre.fr/uas/UNIVERSITE/LOGO/UPN-header-RVB.jpg'>
             </a>
         </div>
@@ -184,16 +184,42 @@
 <div id="info-cinematheque" class="info-container bloc">
     <div class="info-sidebar col-md-3 lieu33873846">
         <span tabIndex="-1" class="close-info glyphicon glyphicon-chevron-left"></span>
-        <span class="info-lieu">Cinémathèque<br>Francaise</span>
+        <span class="info-lieu">Cinémathèque<br>Française</span>
     </div>
     <div class="info-midbar col-md-5">
         <div class="info-presentation">
-            PRÉSENTATION DE L’INSTITUTION LE TIN REPTATUR MODENISIM REPERES MERI DEST UT RESSIME EST VENIS RATUR SOLORUM REIUS SAM UIANDICTE VOLORESSIT QUI AUTATE VELLATEM RE DOLUPTI DOLORUM REMQUIBUS
+            <?php echo mb_strtoupper("
+Véritable carrefour des cinéphilies, Musée
+vivant du cinéma, La Cinémathèque française
+revisite en permanence le cinéma à travers
+toutes les époques, tous les horizons et tous
+les genres.
+            ", "utf-8");            
+            ?>
         </div>
         <div class="info-description">
-            L’implication dans le projet 68 ou citation. Rumetur reruptam, sum fugit aut paruptibus as rernatur. Ta nimodias vellaborro que lit pelent hit eum utas et rempore plicidest aut et ab ipsandanis dia prores re, odis volore doloreh entur ? Aceaquis doloribus pos dolorepro veles doluptasin plique nit eatum rem es mil mincit fugia cus aut alicitia doluptat. Itatias sum ratust, ut et, ulparum, nulparupid mo qui nimet quat. rempore plicidest aut et ab ipsandanis dia proresre, odis volore doloreh entur ? Aceaquis doloribus pos dolore pro veles doluptasin plique nit eatum rem es mil mincit fugia cus aut alicitia doluptat. Itatias sum ratust, ut et, ulparum, nulparupid mo qui nimet quat.
+            En 1936, Henri Langlois, personnage
+visionnaire, crée La Cinémathèque française
+afin de sauver de la destruction les films,
+costumes, décors, affiches et autres trésors du
+cinéma. Il est alors le premier à considérer le
+cinéma comme un art à conserver, restaurer
+et montrer.
+Huit décennies plus tard, dans un bâtiment
+résolument contemporain, entièrement dédié
+au 7e art, La Cinémathèque française dévoile
+plus que jamais le cinéma de manière unique
+grâce à une des plus belle collections au
+monde sur le cinéma et à ses nombreuses
+activités :<b>
+Des expositions autour de personnalités
+majeures ou de grands moments de l’histoire
+du cinéma (Tim Burton, Metropolis, Lanternes
+magiques, Pedro Almodovar, François Truffaut,
+Jacques Tati, Stanley Kubrick, Scorsese,...), des
+</b>films et conférences (40 films par semaine, 4 salles de cinéma), une Bibliothèque du Film (22 500 ouvrages, 500 revues spécialisées, 23 000 affiches, 12 000 films...), des collections (40 000 films, 3 000 costumes, 23 000 affiches, 14 500 dessins, 2 300 objets…), un Musée du cinéma, des activités pour le jeune public et une Librairie.
             <br><br>
-            <b>Infos pratiques</b><br>3 rue de l’espsum<br>75000 Paris
+            <b>Infos pratiques</b><br>3 rue de l’espsum<br>75000 Paris<br>
             <a href="http://www.parisnanterre.fr/">
                 <img src='http://www.parisnanterre.fr/uas/UNIVERSITE/LOGO/UPN-header-RVB.jpg'>
             </a>

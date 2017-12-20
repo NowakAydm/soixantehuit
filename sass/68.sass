@@ -3,18 +3,35 @@
 body 
     font-family: 'Work Sans', sans-serif
     color: black
-    width: 100vw
+    width: 100%
+    max-width: 100%
     overflow-x: hidden
     
 ::-webkit-scrollbar
-  width: 10px
-  height: 10px
+    width: 10px
+    height: 10px
 
 ::-webkit-scrollbar-track
-  background: rgba(255, 255, 255, 0)
+    background: rgba(255, 255, 255, 0.1)
 
 ::-webkit-scrollbar-thumb
-  background: rgba(255, 255, 255, 0.5)
+    background: rgba(255, 255, 255, 0.5)
+
+::-webkit-input-placeholder
+    color: black
+    opacity: 1
+::-moz-placeholder
+    color: black
+    opacity: 1
+:-ms-input-placeholder
+    color: black
+    opacity: 1
+:-moz-placeholder
+    color: black
+    opacity: 1
+::placeholder-shown
+    color: black
+    opacity: 1
 
 .center 
     text-align: center
@@ -43,15 +60,19 @@ body
 
 header
     position: fixed
-    top: 4%
-    right: 4%
+    top: 0
+    right: 0
+    background: white
     z-index: 100
+    height: 90px
+    width: 400px
+    border-bottom-left-radius: 55px
     .btn
         position: relative
         padding: 0 1px
-        font-size: 18px
+        font-size: 22px
         font-weight: 600
-        margin-left: 30px
+        margin: 25px 0 0 45px
         border-radius: 0
         border-bottom: dotted 1px black
         .header-background
@@ -64,24 +85,30 @@ header
             right: 6px
             
 @media (max-width:850px)
-    header 
-        top: 2%
-        right: 2%
+    header
+        height: 65px
+        width: 100.1%
+        border-bottom-left-radius: 0
         .btn
-            font-size: 15px
+            font-size: 19px
+            width: 28vw
+            margin-left: 3vw
+            border-bottom: none !important
+            margin-top: 18px
 
 //==================== Edito =====================    
 
 .edito 
     width: 90%
     margin: 20vh auto 100px
-    padding: 40px
+    padding: 40px 100px
     background: rgba(26,26,26,0.1)
     font-weight: 500
     z-index: 100
+    font-size: 20px
     h1 
         margin: 50px 0
-        font-size: 100px
+        font-size: 75px
         font-weight: 700
     .langues 
         margin: 60px auto 0
@@ -90,7 +117,14 @@ header
         font-size: 120%
         margin: 10px
         cursor: pointer
-
+@media (max-width:850px)
+    .edito
+        padding: 25px
+        width: 95%
+        h1
+            font-size: 40px
+            margin: 20px auto
+            
 .scroll
     cursor: pointer
     &:focus
@@ -124,47 +158,54 @@ header
         max-height: 100vh
         transition: opacity 1000ms ease-in-out
 
+.points
+    opacity: 0.5
 .carte-label
     margin: auto
     width: 75%
     max-width: 114vh
     height: 62vw
     max-height: 100vh
-    opacity: 0.6
+    opacity: 0
     position: relative
+    transition: opacity 1000ms ease-in-out
 .carte-lieu
     position: absolute
     font-size: 23px
     width: 150px
     z-index: 20
     text-align: left
+    font-weight: 500
 .carte-nanterre
-    top: 8% 
-    left: 16%
+    top: 18% 
+    left: 12%
 .carte-amandiers
-    top: 35%
-    left: 0%
+    top: 37%
+    left: 2%
 .carte-archi
-    top: 40%
+    top: 42%
     left: 17%
 .carte-beauxarts
     left: 40%
     bottom: 40%
 .carte-pompidou
     left: 53%
-    top: 40%
+    top: 42%
 .carte-archives
-    top: 38%
-    left: 73%
+    top: 45%
+    left: 70%
 .carte-bnf
-    left: 60%
-    bottom: 15%
+    left: 65%
+    bottom: 13%
 .carte-cinematheque
-    left: 80%
-    bottom: 26%
+    left: 85%
+    bottom: 28%
 @media (max-width:1470px)
     .carte-lieu
         font-size: 1.5vw
+@media (max-width:850px)
+    .carte svg
+        opacity: 0 !important
     
 .modules-click 
     z-index: 10
@@ -188,6 +229,7 @@ header
         margin: 40px 30px
     .info-sidebar
         min-height: 100vh
+        max-width: 350px
         .info-lieu
             display: block
             position: absolute
@@ -201,24 +243,26 @@ header
             -ms-transform: rotate(-90deg)
             transform: rotate(-90deg)
             transform-origin: left
-            line-height: 7.3vw
+            line-height: 9vh
     .info-midbar
-        min-height: 100vh
+        height: 100vh
         border-left: 3px dotted
         margin: -2px
+        padding: 0 3vw
+        overflow-y: auto
         .info-presentation
             font-size: 24px
             font-weight: 300
             margin: 2vw auto
-            height: 30vh
         .info-description
-            font-size: 15px
+            font-size: 17px
             font-weight: 500
             img
                 width: 60%
-                position: absolute
-                bottom: 5%
-                right: 10px
+                position: relative
+                max-width: 250px
+                top: 27px
+                margin-bottom: 65px
     .info-programme
         font-size: 24px
         font-weight: 300
@@ -227,7 +271,7 @@ header
             width: 155px
             height: 25px
             position: relative
-            bottom: 16px
+            bottom: 19px
             right: 9px
             z-index: -1
     .info-goagenda
@@ -235,7 +279,10 @@ header
         font-weight: 300
         position: absolute
         bottom: 5%
-        right: 10%
+        right: 8%
+        .glyphicon
+            font-size: 18px
+            left: 6px
 
 .info-open
     -webkit-transform: none
@@ -250,7 +297,7 @@ header
 #agenda
     background: white
 .agenda-header 
-    height: 200px
+    height: 22vh
     text-align: left
     h1
         display: inline-block
@@ -263,6 +310,8 @@ header
         float: right
         margin: 120px 5% 0 0
         font-size: 19.5px
+        text-align: right
+        position: relative
         button
             font-size: inherit
             padding: 0 7px
@@ -272,13 +321,31 @@ header
                 box-shadow: 0 0 1px
             .glyphicon
                 font-size: 15px
+        .col-sm-6
+            width: 70px !important
+            float: inherit
+            padding: 0
+            input
+                width: 100%
+                height: 28px
+                position: relative
+                bottom: 1px
+                left: 10px
+                font-size: 19.5px
+                padding-right: 18px
+                &:focus
+                    -webkit-box-shadow: 0 0 1px
+                    box-shadow: 0 0 1px
+            #glyphicon
+                position: absolute
+                top: 8px
+                right: -5px
+                font-size: 15px
     .popover, .popover-content 
         padding: 0
         border: none
         border-radius: 4px
         font-family: inherit
-        -webkit-box-shadow: 0 5px 20px 1px black
-        box-shadow: 0 5px 20px 1px black
         .list-group
             margin: 0
         .list-group-item
@@ -288,41 +355,62 @@ header
             font-size: 17px
             cursor: pointer
         .list-categorie li
-            background: black
-            color: white
+            background: white
+            color: black
+            &:hover
+                background: rgba(26, 26, 26, 0.1)
     .search
-        height: 30px
-        color: white
+        height: 35px
         display: inline-block
+        text-align: left
+        float: right
+        position: absolute
+        bottom: -40px
         .glyphicon
             padding: 5px
-    .search-lieu
-        width: 90px
-        margin: 5px 0 0 75px
-    .search-date
-        width: 85px
-        color: white
+            top: 3px
     .search-categorie
-        width: 125px
+        width: 170px
         color: white
+        left: 0
+    .search-lieu
+        width: 85px
+        left: 50%
+    .search-date
+        width: 90px
+        color: white
+        right: -10px
         
             
-.hide-lieu
+.hide-lieu, .hide-categorie, .hide-date
     display: none !important
         
 @media (max-width:850px)
     .agenda-header
-        height: 160px
+        height: 18vh
         .agenda-filtres
             font-size: 15px
-            margin-top: 85px
+            margin-top: 9vh
+            height: 6vh
+            .col-sm-6            
+                input
+                    font-size: 15px
+                    height: 21px
+                #glyphicon
+                    top: 3px
+                    right: -3px
         h1
             display: none
         .search
+            height: 30px
+            bottom: -10px
             .glyphicon
                 padding: 7px
-            .search-lieu
-                margin-left: 35px  
+        .search-categorie
+            width: 140px
+        .search-lieu
+            width: 60px
+
       
 
 #timeline, #recherche
@@ -337,12 +425,19 @@ header
     top: 4px
 #recherche
     padding-top: 4px
-  
+    float: right
+@media (max-width:850px)
+    #timeline, #recherche
+        height: 82vh
+
+    
 .details
-    padding: 15px
+    padding: 2.7vw
+    padding-right: 4vw
     font-size: 18px
     line-height: 24px
     font-weight: 500
+    width: 102.4%
     h1
         font-size: 43px
         font-weight: 700
@@ -358,8 +453,9 @@ header
     .description
         margin-bottom: 50px
         overflow: hidden
+        letter-spacing: 0.1px
         h2, h3, p
-            margin: 0 auto
+            margin: 15px auto
     .col-6
         width: 48%
         display: inline-grid
@@ -412,8 +508,8 @@ header
             line-height: 18.8px
             font-weight: 300
     &:focus
-        -webkit-box-shadow: 0 0 0 4px black
-        box-shadow: 0 0 0 4px black
+        -webkit-box-shadow: 0 0 0 3px black
+        box-shadow: 0 0 0 3px black
         border-radius: 0
 
 // Paris Nanterre

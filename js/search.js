@@ -23,12 +23,48 @@ function searchReady() {
                       <li class='list-group-item' onclick='addCategory(4)'>Exposition</li>\
                     </ul>",
     });
-    
+    function convertDate( a ) {
+        var out = "-";
+        if (a[1] == '/')    //Days
+            out = a.slice(2, 4)+"-0"+a[0];
+        else
+            out = a.slice(3, 5)+"-"+a.slice(0, 2);
+        return (out);
+    };
+    var curDate = 0;
+    $('#datetimepicker').datetimepicker({
+        locale: 'fr',
+        format: 'D/MM',
+        minDate: moment('2018/01/01', 'YYYY/MM/DD'),
+        maxDate: moment('2018/12/31', 'YYYY/MM/DD')
+    });
+    $('#datetimepicker').val('Date');
+    $('#datetimepicker').on('dp.hide', function(){        
+        curDate = $('#datetimepicker').val();
+        $('.search-date').css('background', 'black');
+        $('.search-date').html('<i class="glyphicon glyphicon-remove clear-date"></i>'+$('#datetimepicker').val());
+        $('#datetimepicker').val('Date');
+        $('.evenement').addClass('hide-date');
+        for (var x = 0; x < events.length ; x++) {
+            for (var y = 0 ; y < events[x].timings.length ; y++) {
+                if (events[x].timings[y].start.slice(5, 10) == convertDate(curDate))
+                    $('#'+events[x].uid).removeClass('hide-date');
+            }            
+        }
 
-    $('.search-lieu').css('color', 'white');
+        $('.clear-date').click(function() {
+            $('.search-date').html('');
+            $('.search-date').css('background', 'white');
+            $('.evenement').removeClass('hide-date');
+        });
+    });
+    console.log($('#38576152'));
+    
+    $('.search-lieu .glyphicon').css('color', 'white');
+    $('.search-categorie .glyphicon').css('color', 'white');
 
     $('.clear-lieu').click(function() {
-        $('.search-lieu').css('color', 'white');
+        $('.search-lieu .glyphicon').css('color', 'white');
         $('.search-lieu').removeClass(curPlace);  
         $('.evenement').removeClass('hide-lieu');
     });
@@ -45,13 +81,12 @@ function searchReady() {
 
 var curPlace;
 function addPlace( a ) {
-    $('.search-lieu').css('color', 'inherit');
+    $('.search-lieu .glyphicon').css('color', 'inherit');
     $('.search-lieu').removeClass(curPlace); 
     $('.search-lieu').addClass('lieu'+a); 
     curPlace = 'lieu'+a;
     $('.evenement').addClass('hide-lieu');
     $('.infos.'+curPlace).parent().removeClass('hide-lieu');
-    $('.infos.'+curPlace).parent().first().click();
     $('#filtre-lieu').click();
     if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {  
         window.scrollTo(0, $('#agenda').position().top);
@@ -59,5 +94,34 @@ function addPlace( a ) {
     else {
         body.stop().animate({scrollTop: $('#agenda').position().top}, 1000);
     };
+};
+
+var curCategorie;
+function addCategory( a ) {
+    $('.search-categorie').css('background', 'black');
+    if (a == 1)
+        $('.search-categorie').html('<i class="glyphicon glyphicon-remove clear-categorie"></i>Projection');
+    else if (a == 2)
+        $('.search-categorie').html('<i class="glyphicon glyphicon-remove clear-categorie"></i>Spectacle');
+    else if (a == 3)
+        $('.search-categorie').html('<i class="glyphicon glyphicon-remove clear-categorie"></i>Conférence');
+    else if (a == 4)
+        $('.search-categorie').html('<i class="glyphicon glyphicon-remove clear-categorie"></i>Exposition');
+
+    curCategorie = 'cat'+a;
+    $('.evenement').addClass('hide-categorie');
+    $('.'+curCategorie).removeClass('hide-categorie');
+    $('#filtre-categorie').click();
+    if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {  
+        window.scrollTo(0, $('#agenda').position().top);
+    }
+    else {
+        body.stop().animate({scrollTop: $('#agenda').position().top}, 1000);
+    };
     
+    $('.clear-categorie').click(function() {
+        $('.evenement').removeClass('hide-categorie');
+        $('.search-categorie').css('background', 'white');
+        $('.search-categorie').html("");
+    });
 };

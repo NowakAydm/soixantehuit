@@ -55,7 +55,7 @@ doc.ready(function () {
     };
     
 //----------- Edito scroll --------------
-    body.stop().animate({scrollTop: 0}, 1); 
+    window.scrollTo(0, 0);
 
     prevScroll = 0;
     
@@ -87,7 +87,7 @@ doc.ready(function () {
             $('.header-background.hidden').parent().css('border-bottom', 'dotted 1px black');
             
             
-            if (prevScroll < $('#68').position().top) {
+            if (prevScroll + 10 < $('#68').position().top) {
                 $('.carte').css('transform', '-webkit-translateY('+(prevScroll - $('#68').position().top)+'px)');
                 $('.carte').css('transform', '-moz-translateY('+(prevScroll - $('#68').position().top)+'px)');
                 $('.carte').css('transform', '-ms-translateY('+(prevScroll - $('#68').position().top)+'px)');
@@ -100,8 +100,17 @@ doc.ready(function () {
                 $('.carte').css('transform', '-ms-translateY(0)');
                 $('.carte').css('transform', 'translateY(0)');
                 $('.carte svg').css('opacity', '0');
+                $('.carte-label').css('opacity', '0.7');
+            };
+            
+            if (prevScroll < $('.edito').height()) {
+                $('.carte-label').css('opacity', '0')                
+            }
+            else {
+                $('.carte-label').css('opacity', '0.7');                
             };
         });
+        
         $('.carte').css('transform', '-webkit-translateY('+(prevScroll - $('#68').position().top)+'px)');
         $('.carte').css('transform', '-moz-translateY('+(prevScroll - $('#68').position().top)+'px)');
         $('.carte').css('transform', '-ms-translateY('+(prevScroll - $('#68').position().top)+'px)');
@@ -116,7 +125,7 @@ doc.ready(function () {
     $('.module').attr('tabindex', '-1');
 
     $('.modules-click .module').hover(function(){
-     $('#' + $(this).attr('id')).css('opacity', '0.6');
+     $('#' + $(this).attr('id')).css('opacity', '0.8');
     }, function() {
      $('#' + $(this).attr('id')).css('opacity', '1');       
     });
@@ -153,7 +162,7 @@ doc.ready(function () {
     var prevPos = 0;
     $('.evenement').click(function() {
         var id = $(this).attr('id');
-        var pos = $('#' + id).offset().top - $('#timeline').offset().top + 2;
+        var pos = $('.' + id).offset().top - $('#timeline').offset().top + 2;
 
         $('#timeline').stop().animate({scrollTop: pos + prevPos}, 1000);
         prevPos += pos;
@@ -163,6 +172,6 @@ doc.ready(function () {
     });
 
     $('.agenda-header span').click(function() {
-        $(this).find('.glyphicon')
+        $(this).find('.glyphicon');
     });
 });

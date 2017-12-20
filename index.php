@@ -1,3 +1,25 @@
+<!--
+TOUT DOUX
+
+
+- Animation des modules
+- Responsiveness
+    = logo 68 decale
+    = reparer le scroll par click sur mobil
+    = agenda par onglet
+- favicon
+- description metadata
+- pivoter les chevrons des filtres quand le popover est ouvert
+- filtre par date
+- filtre par categorie fonctionnel
+- footer
+- revoir les bordures en points des infos
+- charger les images en full res quand les thumbs sont charges
+
+
+-->
+
+
 <!DOCTYPE html>
 
 <html>
@@ -7,15 +29,24 @@
     <title>SoixanteHuit</title>
     <meta name="viewport" content="width=device-width, initial-scale=0.80, , user-scalable=no">
     <meta name="description" content="" />
-    
-<!--todo    Favicon-->
-    
+
     <script src="js/jquery.min.js"></script>
+    <script type='text/javascript'> 
+        var events = <?php echo file_get_contents('assets/events.json'); ?>.events;      
+//        var events = <?php //echo file_get_contents("https://openagenda.com/agendas/31783764/events.json?limit=300"); ?>.events;
+    </script>
     <script src="js/68.js"></script>
     <script src="js/search.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/moment.js"></script>
+    <script src="js/moment.fr.js"></script>
+    <link rel="stylesheet" href="css/datepicker.css">
 <!--    <link rel="stylesheet" href="css/bootstrap.min.css">-->
+    <script src="js/bootstrap.min.js"></script>
+<!--
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <script src="js/datepicker.js"></script>
     <link rel="stylesheet" href="css/68.css">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700" rel="stylesheet">
     
@@ -41,13 +72,13 @@
     
     <div class="container bloc" id="home">        
         <div class="edito edito-open center">
-            <h1>EDITO</h1>
+            <h1>soixante-huit</h1>
             <p>
                 Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sedsfsdfm at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum.
             </p>
 
             <div class="langues">
-                <a>FR</a> <a>EN</a>
+                <a><u>FR</u></a> <a>EN</a>
             </div>
         </div>
         <button class="btn btn-blank scroll centerblock">
