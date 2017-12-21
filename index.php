@@ -3,7 +3,6 @@ TOUT DOUX
 
 - Responsiveness
     = logo 68 decale
-    = reparer le scroll par click sur mobil
     = agenda par onglet
 - favicon
 - description metadata
@@ -85,7 +84,7 @@ TOUT DOUX
 
     <!--============= 68 ===============-->
 
-    <div class="bloc" id="68">
+    <div class="bloc soixantehuit" id="68">
         <?php include 'infos.php'?>
         
         <div class="carte">

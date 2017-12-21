@@ -59,7 +59,7 @@ function searchReady() {
             $('.evenement').removeClass('hide-date');
         });
     });
-    
+    console.log($('#68'));
     $('.search-lieu .glyphicon').css('color', 'white');
     $('.search-categorie .glyphicon').css('color', 'white');
 

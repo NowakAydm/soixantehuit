@@ -132,8 +132,14 @@ header
     .glyphicon 
         font-size: 50px
 
-//==================== Carte =====================    
-            
+//==================== Carte =====================   
+
+.soixantehuit
+    width: 100%
+    max-width: 100%
+    overflow: hidden
+    position: absolute
+    
 .carte, .modules, .labels
     display: table
     position: absolute
@@ -161,18 +167,18 @@ header
     opacity: 0.5
 .carte-label
     margin: auto
-    width: 75%
-    max-width: 114vh
+    width: 74%
+    max-width: 86vh
     height: 62vw
-    max-height: 100vh
+    max-height: 73vh
     opacity: 0
     position: relative
     transition: opacity 1500ms ease-in-out
 .carte-lieu
     position: absolute
     font-size: 23px
-    width: 10px
     z-index: 20
+    width: 10px
     text-align: left
     font-weight: 500
 .carte-nanterre
@@ -182,19 +188,20 @@ header
     top: 37%
     left: 2%
 .carte-archi
-    top: 42%
+    top: 39%
     left: 17%
 .carte-beauxarts
     left: 40%
-    bottom: 40%
+    bottom: 43%
+    width: auto
 .carte-pompidou
     left: 53%
     top: 42%
 .carte-archives
-    top: 45%
-    left: 70%
+    top: 44%
+    left: 71%
 .carte-bnf
-    left: 65%
+    left: 60%
     bottom: 13%
 .carte-cinematheque
     left: 85%
@@ -202,6 +209,9 @@ header
 @media (max-width:1470px)
     .carte-lieu
         font-size: 1.5vw
+@media (min-width:1100px)
+    .carte-lieu
+        font-size: 17px
 @media (max-width:850px)
     .carte svg
         opacity: 0 !important
@@ -211,12 +221,33 @@ header
     .module
         fill: transparent
 .module
-    -webkit-transform: translateY(-100vh)
-    -moz-transform: translateY(-100vh)
-    -ms-transform: translateY(-100vh)
-    transform: translateY(-100vh)
+    display: inline-block
+    -webkit-transform: translateY(-150vh)
+    -moz-transform: translateY(-150vh)
+    -ms-transform: translateY(-150vh)
+    transform: translateY(-150vh)
     transition: transform 2000ms ease-in-out
-    
+
+@media (max-width:850px)
+    .carte
+        display: none
+    .carte, .modules, .labels
+        width: 120%
+        left: -32%
+    svg
+        width: 140%        
+//    .module-nanterre, .module-amandiers, .module-beauxarts, .module-archi
+//        -webkit-transform: translate(5%) !important
+//        -moz-transform: translate(5%) !important
+//        -ms-transform: translate(5%) !important
+//        transform: translate(5%) !important
+//    .module-pompidou, .module-archives, .module-bnf, .module-cinematheque
+//        -webkit-transform: translate(-5%, 30%) !important
+//        -moz-transform: translate(-5%, 30%) !important
+//        -ms-transform: translate(-5%, 30%) !important
+//        transform: translate(-5%, 30%) !important
+//        
+
 
 //==================== Infos =====================
 
@@ -303,6 +334,7 @@ header
     
 #agenda
     background: white
+    margin-top: 100vh
 .agenda-header 
     height: 22vh
     text-align: left
@@ -573,3 +605,7 @@ header
     color: white
     hr
         border-color: white
+//*
+//    background: #000 !important
+//    color: #0f0 !important
+//    outline: solid #f00 1px !important

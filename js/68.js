@@ -13,18 +13,32 @@ function isScrolledIntoView(elem)
 
 var animated = 0;
 function startAnimation() {
-    $('.module').each(function(){
-        var that = $(this);
-        setTimeout(function(){
-            that.css('-webkit-transform', 'none');
-            that.css('-moz-transform', 'none');
-            that.css('-ms-transform', 'none');
-            that.css('transform', 'none');
-        }, Math.floor(Math.random() * 1500) + 700);
-    });
-    setTimeout(function() {
-        $('.carte svg').css('opacity', '0');
-    }, 3000);
+    $('#header-accueil').html(window.innerWidth);
+
+    if (window.innerWidth < 850) {
+        $('.module-nanterre, .module-amandiers, .module-beauxarts, .module-archi').css('-webkit-transform', 'translate(5%)');      
+        $('.module-nanterre, .module-amandiers, .module-beauxarts, .module-archi').css('-moz-transform', 'translate(5%)');      
+        $('.module-nanterre, .module-amandiers, .module-beauxarts, .module-archi').css('-ms-transform', 'translate(5%)');
+        $('.module-nanterre, .module-amandiers, .module-beauxarts, .module-archi').css('transform', 'translate(5%)');
+        $('.module-pompidou, .module-archives, .module-bnf, .module-cinematheque').css('-webkit-transform', 'translate(-5%, 30%)');      
+        $('.module-pompidou, .module-archives, .module-bnf, .module-cinematheque').css('-moz-transform', 'translate(-5%, 30%)');      
+        $('.module-pompidou, .module-archives, .module-bnf, .module-cinematheque').css('-ms-transform', 'translate(-5%, 30%)');
+        $('.module-pompidou, .module-archives, .module-bnf, .module-cinematheque').css('transform', 'translate(-5%, 30%)');
+    }
+    else {
+        $('.module').each(function(){
+            var that = $(this);
+            setTimeout(function(){
+                that.css('-webkit-transform', 'translateY(150px)');
+                that.css('-moz-transform', 'translateY(150px)');
+                that.css('-ms-transform', 'translateY(150px)');
+                that.css('transform', 'translateY(150px)');
+            }, Math.floor(Math.random() * 1500) + 700);
+        });
+        setTimeout(function() {
+            $('.carte svg').css('opacity', '0');
+        }, 3000);        
+    };
 
     animated = 1;
 };
@@ -49,7 +63,7 @@ doc.ready(function () {
                 window.scrollTo(0, 100);
                 prevScroll = 100;
             };
-            window.scrollTo(0, $('#agenda').position().top);
+            window.scrollTo(0, $('#agenda').position().top + window.innerHeight);
             document.activeElement.blur();
         }); 
     }
@@ -69,7 +83,7 @@ doc.ready(function () {
                 body.stop().animate({scrollTop: 100}, 0);
                 $('#header-agenda').click();
             };
-            body.stop().animate({scrollTop: $('#agenda').position().top}, 1000);
+            body.stop().animate({scrollTop: $('#agenda').position().top + window.innerHeight}, 1000);
             document.activeElement.blur();
         });        
     };
@@ -107,25 +121,25 @@ doc.ready(function () {
             if (prevScroll < 10) {
                 animated = 0;
                 $('.module').css('transition', 'transform 10ms ease-in-out');
-                $('.module').css('-webkit-transform', 'translateY(-100vh)');
-                $('.module').css('-moz-transform', 'translateY(-100vh)');
-                $('.module').css('-ms-transform', 'translateY(-100vh)');
-                $('.module').css('transform', 'translateY(-100vh)');
+                $('.module').css('-webkit-transform', 'translateY(-150vh)');
+                $('.module').css('-moz-transform', 'translateY(-150vh)');
+                $('.module').css('-ms-transform', 'translateY(-150vh)');
+                $('.module').css('transform', 'translateY(-150vh)');
                 $('.module').css('transition', 'transform 2000ms ease-in-out');
             }
             if (prevScroll + 10 < $('#68').position().top) {
-                $('.carte').css('-webkit-transform', 'translateY('+(prevScroll - $('#68').position().top)+'px)');
-                $('.carte').css('-moz-transform', 'translateY('+(prevScroll - $('#68').position().top)+'px)');
-                $('.carte').css('-ms-transform', 'translateY('+(prevScroll - $('#68').position().top)+'px)');
-                $('.carte').css('transform', 'translateY('+(prevScroll - $('#68').position().top)+'px)');
+                $('.carte').css('-webkit-transform', 'translateY('+(prevScroll - $('#68').position().top + 100)+'px)');
+                $('.carte').css('-moz-transform', 'translateY('+(prevScroll - $('#68').position().top + 100)+'px)');
+                $('.carte').css('-ms-transform', 'translateY('+(prevScroll - $('#68').position().top + 100)+'px)');
+                $('.carte').css('transform', 'translateY('+(prevScroll - $('#68').position().top + 100)+'px)');
                 $('.carte svg').css('opacity', '1');
                 $('.carte-label').css('opacity', '0')                
             }
             else if (prevScroll) {
-                $('.carte').css('-webkit-transform', 'translateY(0)');
-                $('.carte').css('-moz-transform', 'translateY(0)');
-                $('.carte').css('-ms-transform', 'translateY(0)');
-                $('.carte').css('transform', 'translateY(0)');
+                $('.carte').css('-webkit-transform', 'translateY(100px)');
+                $('.carte').css('-moz-transform', 'translateY(100px)');
+                $('.carte').css('-ms-transform', 'translateY(100px)');
+                $('.carte').css('transform', 'translateY(100px)');
                 $('.carte-label').css('opacity', '0.7');
                 if (animated == 0) {
                     startAnimation();
@@ -133,14 +147,19 @@ doc.ready(function () {
             };
         });
         
-        $('.carte').css('transform', '-webkit-translateY('+(prevScroll - $('#68').position().top)+'px)');
-        $('.carte').css('transform', '-moz-translateY('+(prevScroll - $('#68').position().top)+'px)');
-        $('.carte').css('transform', '-ms-translateY('+(prevScroll - $('#68').position().top)+'px)');
-        $('.carte').css('transform', 'translateY('+(prevScroll - $('#68').position().top)+'px)');
+        $('.carte').css('transform', '-webkit-translateY('+(prevScroll - $('#68').position().top + 100)+'px)');
+        $('.carte').css('transform', '-moz-translateY('+(prevScroll - $('#68').position().top + 100)+'px)');
+        $('.carte').css('transform', '-ms-translateY('+(prevScroll - $('#68').position().top + 100)+'px)');
+        $('.carte').css('transform', 'translateY('+(prevScroll - $('#68').position().top + 100)+'px)');
     }, 100);
     
     $('.scroll').click(function() {
-        body.stop().animate({scrollTop: $('#68').position().top}, 1000);
+        if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {  
+            window.scrollTo(0, $('#68').position().top);
+        }
+        else {
+            body.stop().animate({scrollTop: $('#68').position().top}, 1000);
+        };
     });
 
 //----------- 68 --------------

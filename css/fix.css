@@ -1,3 +1,3 @@
-.info-container, #carte, .module {
+.info-container, #carte {
     will-change: transform;
 }
