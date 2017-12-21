@@ -23,7 +23,7 @@ TOUT DOUX
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>SoixanteHuit</title>
-    <meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=0.8 , user-scalable=no">
+    <meta name="viewport" content="target-densitydpi=device-dpi; width=device-width; initial-scale=0.8; maximum-scale=0.8; user-scalable=no">
     <meta name="description" content="" />
 
     <script src="js/jquery.min.js"></script>
@@ -93,7 +93,7 @@ TOUT DOUX
                 <?php echo file_get_contents("assets/carte.svg"); ?><br>
             </div>
         </div>
-        <div class="modules">
+        <div class="modules modules-display">
             <div class="vertical">
                 <?php echo file_get_contents("assets/modules.svg"); ?>
             </div>
@@ -104,7 +104,7 @@ TOUT DOUX
                     <div class="carte-lieu carte-nanterre">Université<br>Paris<br>Nanterre</div>
                     <div class="carte-lieu carte-amandiers">Nanterre<br>Amandiers</div>
                     <div class="carte-lieu carte-archi">Cité<br>de&nbsp;l’architecture<br>et&nbsp;du&nbsp;patrimoine</div>
-                    <div class="carte-lieu carte-beauxarts">Beaux-Arts<br>de&nbsp;Paris</div>
+                    <div class="carte-lieu carte-beauxarts">Beaux&#8209;Arts<br>de&nbsp;Paris</div>
                     <div class="carte-lieu carte-pompidou">Centre<br>Pompidou</div>
                     <div class="carte-lieu carte-archives">Archives<br>Nationales</div>
                     <div class="carte-lieu carte-bnf">Bibliothèque<br>nationale<br>de&nbsp;France</div>

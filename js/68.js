@@ -13,8 +13,8 @@ function isScrolledIntoView(elem)
 
 var animated = 0;
 function startAnimation() {
-    $('.module').each(function(){
-        var that = $(this);
+    $('.modules-display .module').each(function(){
+        var that = $('.' + $(this).attr('class').split(' ').pop());
         setTimeout(function(){
             that.css('-webkit-transform', 'none');
             that.css('-moz-transform', 'none');
@@ -107,10 +107,10 @@ doc.ready(function () {
             if (prevScroll < 10) {
                 animated = 0;
                 $('.module').css('transition', 'transform 10ms ease-in-out');
-                $('.module').css('-webkit-transform', 'translateY(-100vh)');
-                $('.module').css('-moz-transform', 'translateY(-100vh)');
-                $('.module').css('-ms-transform', 'translateY(-100vh)');
-                $('.module').css('transform', 'translateY(-100vh)');
+                $('.module').css('-webkit-transform', 'translateY(-150vh)');
+                $('.module').css('-moz-transform', 'translateY(-150vh)');
+                $('.module').css('-ms-transform', 'translateY(-150vh)');
+                $('.module').css('transform', 'translateY(-150vh)');
                 $('.module').css('transition', 'transform 2000ms ease-in-out');
             }
             if (prevScroll + 10 < $('#68').position().top) {
@@ -140,16 +140,21 @@ doc.ready(function () {
     }, 100);
     
     $('.scroll').click(function() {
-        body.stop().animate({scrollTop: $('#68').position().top}, 1000);
+        if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {  
+            window.scrollTo(0, $('#68').position().top);
+        }
+        else {
+            body.stop().animate({scrollTop: $('#68').position().top}, 1000);
+        };
     });
 
 //----------- 68 --------------
     $('.module').attr('tabindex', '-1');
 
     $('.modules-click .module').hover(function(){
-     $('.' + $(this).attr('class').split(' ').pop()).css('opacity', '0.8');
+        $('.' + $(this).attr('class').split(' ').pop()).css('opacity', '0.8');
     }, function() {
-     $('.' + $(this).attr('class').split(' ').pop()).css('opacity', '1');       
+        $('.' + $(this).attr('class').split(' ').pop()).css('opacity', '1');       
     });
    
     $('.modules-click .module').click(function() {

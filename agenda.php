@@ -13,7 +13,7 @@
                 <i class="glyphicon glyphicon-chevron-right"></i>
             </button>
             <div class="col-sm-6">
-                <input type='text' class="btn btn-blank" id='datetimepicker' placeholder="Date"/>
+                <input type='text' class="btn btn-blank" id='datetimepicker' placeholder="Date" readonly="readonly"/>
                 <i class="glyphicon glyphicon-chevron-right" id='glyphicon'></i>
             </div>
             

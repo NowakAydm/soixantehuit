@@ -99,7 +99,7 @@ header
 
 .edito 
     width: 90%
-    margin: 20vh auto 100px
+    margin: 18% auto 7%
     padding: 40px 100px
     background: rgba(26,26,26,0.1)
     font-weight: 500
@@ -202,22 +202,28 @@ header
 @media (max-width:1470px)
     .carte-lieu
         font-size: 1.5vw
-@media (max-width:850px)
-    .carte svg
-        opacity: 0 !important
     
 .modules-click 
     z-index: 10
     .module
         fill: transparent
 .module
-    -webkit-transform: translateY(-100vh)
-    -moz-transform: translateY(-100vh)
-    -ms-transform: translateY(-100vh)
-    transform: translateY(-100vh)
+    -webkit-transform: translateY(-150vh)
+    -moz-transform: translateY(-150vh)
+    -ms-transform: translateY(-150vh)
+    transform: translateY(-150vh)
     transition: transform 2000ms ease-in-out
     
-
+@media (max-width:850px)
+    .carte svg
+        opacity: 0 !important
+    .module
+        -webkit-transform: none
+        -moz-transform: none
+        -ms-transform: none
+        transform: none
+        transition: none
+        
 //==================== Infos =====================
 
 
@@ -234,6 +240,7 @@ header
     .close-info 
         font-size: 65px
         margin: 40px 30px
+        float: left
     .info-sidebar
         min-height: 100vh
         max-width: 350px
@@ -299,6 +306,45 @@ header
 .info-transition
     transition: all 500ms ease-in-out
     
+@media (max-width:850px)
+    .info-container
+        position: fixed
+        top: 0
+        left: 0
+        bottom: 0
+        min-height: 100%
+        height: auto
+        -webkit-backface-visibility: hidden
+        .info-sidebar, .info-midbar
+            min-height: 150px
+            height: auto
+            max-width: 100%
+            width: 100%
+            margin-bottom: 40px
+            .close-info
+                font-size: 45px
+                margin: 0
+                position: absolute
+                top: 35%
+                left: 3%
+            .info-lieu
+                position: absolute
+                top: 15%
+                left: 18%
+                width: auto
+                font-size: 32px !important
+                line-height: 40px
+                -webkit-transform: none
+                -moz-transform: none
+                -o-transform: none
+                -ms-transform: none
+                transform: none
+            .info-presentation, .info-goagenda
+                font-size: 18px
+            .info-description
+                font-size: 15px
+                
+    
 //==================== Agenda =====================    
     
 #agenda
@@ -306,6 +352,7 @@ header
 .agenda-header 
     height: 22vh
     text-align: left
+    position: relative
     h1
         display: inline-block
         width: 35%
@@ -394,11 +441,11 @@ header
         
 @media (max-width:850px)
     .agenda-header
-        height: 24vh
+        height: 25vh
         .agenda-filtres
             font-size: 15px
-            margin-top: 12vh
-            height: 8vh
+            margin: 20% 5% 0
+            height: 50px
             .col-sm-6            
                 input
                     font-size: 15px
@@ -418,10 +465,8 @@ header
         .search-lieu
             width: 60px
 
-      
 
 #timeline, #recherche
-    display: inline-block
     overflow-x: hidden
     overflow-y: scroll
     height: 78vh
@@ -430,12 +475,13 @@ header
 #timeline
     position: relative
     top: 4px
+    float: left
 #recherche
     padding-top: 4px
     float: right
 @media (max-width:850px)
     #timeline, #recherche
-        height: 76vh
+        height: 74vh
         
 .details
     padding: 2.7%
@@ -573,3 +619,8 @@ header
     color: white
     hr
         border-color: white
+//
+//*
+//    background: #000 !important
+//    color: #0f0 !important
+//    outline: solid #f00 1px !important

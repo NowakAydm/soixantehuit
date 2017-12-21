@@ -25,7 +25,7 @@ function searchReady() {
     });
     function convertDate( a ) {
         var out = "-";
-        if (a[1] == '/')    //Days
+        if (a[1] == '/')
             out = a.slice(2, 4)+"-0"+a[0];
         else
             out = a.slice(3, 5)+"-"+a.slice(0, 2);
@@ -37,7 +37,8 @@ function searchReady() {
         locale: 'fr',
         format: 'D/MM',
         minDate: moment('2018/01/01', 'YYYY/MM/DD'),
-        maxDate: moment('2018/12/31', 'YYYY/MM/DD')
+        maxDate: moment('2018/12/31', 'YYYY/MM/DD'),
+        ignoreReadonly: true
     });
     $('#datetimepicker').val('Date');
     $('#datetimepicker').on('dp.hide', function(){        
@@ -94,6 +95,7 @@ function addPlace( a ) {
     else {
         body.stop().animate({scrollTop: $('#agenda').position().top}, 1000);
     };
+    $('.close-info').click();
 };
 
 var curCategorie;
