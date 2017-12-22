@@ -70,10 +70,9 @@ TOUT DOUX
     <div class="container bloc" id="home">        
         <div class="edito edito-open center">
             <h1>soixante-huit</h1>
-            <p>
-                Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sedsfsdfm at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum.
-            </p>
-
+            <p>Il y a cinquante ans, le mouvement protestataire de Mai 68 retournait les rues de Paris, de Nanterre, et les esprits de la France entière. En lien avec un vaste mouvement de contestation international, il transformait profondément la société française.</p>
+            <p>50 ans après, plusieurs institutions culturelles interrogent l’histoire et l’héritage de Mai 68 à travers des rencontres, des expositions, des ouvertures d’archives, des ateliers participatifs, du théâtre, de la musique, des débats, des interventions inédites.</p>
+            <p>Fédérant le programme de huit partenaires culturels, à Paris et en Ile-de-France, ce site partage avec le public le plus large toute la richesse et la diversité de ces hommages.</p>
             <div class="langues">
                 <a><u>FR</u></a> <a>EN</a>
             </div>

@@ -13,6 +13,7 @@ function isScrolledIntoView(elem)
 
 var animated = 0;
 function startAnimation() {
+    
     $('.modules-display .module').each(function(){
         var that = $('.' + $(this).attr('class').split(' ').pop());
         setTimeout(function(){
@@ -107,10 +108,12 @@ doc.ready(function () {
             if (prevScroll < 10) {
                 animated = 0;
                 $('.module').css('transition', 'transform 10ms ease-in-out');
-                $('.module').css('-webkit-transform', 'translateY(-150vh)');
-                $('.module').css('-moz-transform', 'translateY(-150vh)');
-                $('.module').css('-ms-transform', 'translateY(-150vh)');
-                $('.module').css('transform', 'translateY(-150vh)');
+                if (!navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
+                    $('.module').css('-webkit-transform', 'translateY(-150vh)');
+                    $('.module').css('-moz-transform', 'translateY(-150vh)');
+                    $('.module').css('-ms-transform', 'translateY(-150vh)');
+                    $('.module').css('transform', 'translateY(-150vh)');
+                };
                 $('.module').css('transition', 'transform 2000ms ease-in-out');
             }
             if (prevScroll + 10 < $('#68').position().top) {

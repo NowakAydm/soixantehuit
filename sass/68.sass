@@ -4,7 +4,7 @@ html, body
     font-family: 'Work Sans', sans-serif
     color: black
     width: 100%
-    overflow-x: hidden
+    max-width: 100%
     
 ::-webkit-scrollbar
     width: 10px
@@ -272,9 +272,9 @@ header
             font-size: 17px
             font-weight: 500
             img
-                width: 60%
                 position: relative
-                max-width: 250px
+                max-width: 80%
+                max-height: 200px
                 top: 27px
                 margin-bottom: 65px
     .info-programme
@@ -314,7 +314,6 @@ header
         bottom: 0
         min-height: 100%
         height: auto
-        -webkit-backface-visibility: hidden
         .info-sidebar, .info-midbar
             min-height: 150px
             height: auto
@@ -366,6 +365,8 @@ header
         font-size: 19.5px
         text-align: right
         position: relative
+        .glyphicon
+            transition: transform 300ms ease-in-out
         button
             font-size: inherit
             padding: 0 7px
@@ -395,6 +396,7 @@ header
                 top: 8px
                 right: -5px
                 font-size: 15px
+                transition: transform 300ms ease-in-out
     .popover, .popover-content 
         padding: 0
         border: none
@@ -522,6 +524,9 @@ header
         margin-bottom: 25px;
         #site-officiel
             text-decoration: none
+@media (max-width:850px)
+    .details .col-6
+        width: 100%
         
 .evenement
     display: inline-block

@@ -11,7 +11,21 @@ function searchReady() {
                       <li class='list-group-item lieu97092341' onclick='addPlace(97092341)'>Cité de l'Architecture</li>\
                       <li class='list-group-item lieu47774204' onclick='addPlace(47774204)'>Nanterre Amandiers</li>\
                       <li class='list-group-item lieu49592631' onclick='addPlace(49592631)'>Université Paris Nanterre</li>\
-                    </ul>",
+                    </ul>"
+    });
+    $('#filtre-lieu').on('show.bs.popover', function() {
+        $('#filtre-lieu .glyphicon').css('-webkit-transform', 'rotate(90deg)');
+        $('#filtre-lieu .glyphicon').css('-moz-transform', 'rotate(90deg)');
+        $('#filtre-lieu .glyphicon').css('-o-transform', 'rotate(90deg)');
+        $('#filtre-lieu .glyphicon').css('-ms-transform', 'rotate(90deg)');
+        $('#filtre-lieu .glyphicon').css('transform', 'rotate(90deg)');
+    });
+    $('#filtre-lieu').on('hide.bs.popover', function() {
+        $('#filtre-lieu .glyphicon').css('-webkit-transform', 'none');
+        $('#filtre-lieu .glyphicon').css('-moz-transform', 'none');
+        $('#filtre-lieu .glyphicon').css('-o-transform', 'none');
+        $('#filtre-lieu .glyphicon').css('-ms-transform', 'none');
+        $('#filtre-lieu .glyphicon').css('transform', 'none');
     });
     $('#filtre-categorie').popover({
         placement: 'bottom',
@@ -21,8 +35,25 @@ function searchReady() {
                       <li class='list-group-item' onclick='addCategory(2)'>Performance/Spectacle</li>\
                       <li class='list-group-item' onclick='addCategory(3)'>Colloque/Conférence/Débat</li>\
                       <li class='list-group-item' onclick='addCategory(4)'>Exposition</li>\
-                    </ul>",
+                    </ul>"
     });
+    $('#filtre-categorie').on('show.bs.popover', function() {
+        $('#filtre-categorie .glyphicon').css('-webkit-transform', 'rotate(90deg)');
+        $('#filtre-categorie .glyphicon').css('-moz-transform', 'rotate(90deg)');
+        $('#filtre-categorie .glyphicon').css('-o-transform', 'rotate(90deg)');
+        $('#filtre-categorie .glyphicon').css('-ms-transform', 'rotate(90deg)');
+        $('#filtre-categorie .glyphicon').css('transform', 'rotate(90deg)');
+    });
+    $('#filtre-categorie').on('hide.bs.popover', function() {
+        $('#filtre-categorie .glyphicon').css('-webkit-transform', 'none');
+        $('#filtre-categorie .glyphicon').css('-moz-transform', 'none');
+        $('#filtre-categorie .glyphicon').css('-o-transform', 'none');
+        $('#filtre-categorie .glyphicon').css('-ms-transform', 'none');
+        $('#filtre-categorie .glyphicon').css('transform', 'none');
+    });
+    
+    
+    
     function convertDate( a ) {
         var out = "-";
         if (a[1] == '/')
@@ -41,7 +72,20 @@ function searchReady() {
         ignoreReadonly: true
     });
     $('#datetimepicker').val('Date');
+    $('#datetimepicker').on('dp.show', function(){
+        $('#glyphicon').css('-webkit-transform', 'rotate(90deg)');
+        $('#glyphicon').css('-moz-transform', 'rotate(90deg)');
+        $('#glyphicon').css('-o-transform', 'rotate(90deg)');
+        $('#glyphicon').css('-ms-transform', 'rotate(90deg)');
+        $('#glyphicon').css('transform', 'rotate(90deg)');
+    });
     $('#datetimepicker').on('dp.hide', function(){        
+        $('#glyphicon').css('-webkit-transform', 'none');
+        $('#glyphicon').css('-moz-transform', 'none');
+        $('#glyphicon').css('-o-transform', 'none');
+        $('#glyphicon').css('-ms-transform', 'none');
+        $('#glyphicon').css('transform', 'none');
+
         curDate = $('#datetimepicker').val();
         $('.search-date').css('background', 'black');
         $('.search-date').html('<i class="glyphicon glyphicon-remove clear-date"></i>'+$('#datetimepicker').val());
