@@ -99,7 +99,7 @@ header
 
 .edito 
     width: 90%
-    margin: 18% auto 7%
+    margin: 90px auto 3.5%
     padding: 40px 100px
     background: rgba(26,26,26,0.1)
     font-weight: 500
@@ -155,7 +155,7 @@ header
     svg
         margin: auto
         max-height: 100vh
-        transition: opacity 1500ms ease-in-out
+        transition: opacity 3000ms ease-in-out
 
 .points
     opacity: 0.5
@@ -212,7 +212,8 @@ header
     -moz-transform: translateY(-150vh)
     -ms-transform: translateY(-150vh)
     transform: translateY(-150vh)
-    transition: transform 2000ms ease-in-out
+    transition: transform 1500ms ease-in-out
+    cursor: pointer
     
 @media (max-width:850px)
     .carte svg
@@ -228,7 +229,11 @@ header
 
 
 .info-container
-    position: absolute
+    position: fixed
+    top: 0
+    left: 0
+    bottom: 0
+    height: 100%
     width: 100%
     z-index: 101
     -webkit-transform: translateX(-100%)
@@ -241,9 +246,9 @@ header
         font-size: 65px
         margin: 40px 30px
         float: left
+        cursor: pointer
     .info-sidebar
         min-height: 100vh
-        max-width: 350px
         .info-lieu
             display: block
             position: absolute
@@ -258,12 +263,27 @@ header
             transform: rotate(-90deg)
             transform-origin: left
             line-height: 9vh
+        #info-lieu-bnf
+            font-size: 60px
+        .info-bordureleft
+            border-left: 3px dotted black
+            width: 2px
+            height: 90%
+            position: absolute
+            right: -1px
+            top: 5%
     .info-midbar
         height: 100vh
-        border-left: 3px dotted
         margin: -2px
         padding: 0 3%
         overflow-y: auto
+        .info-bordureright
+            border-left: 3px dotted black
+            width: 2px
+            height: 90%
+            position: absolute
+            left: 3px
+            top: 5%
         .info-presentation
             font-size: 24px
             font-weight: 300
@@ -271,12 +291,31 @@ header
         .info-description
             font-size: 17px
             font-weight: 500
-            img
-                position: relative
-                max-width: 80%
+            .info-logo 
+                img
+                    position: relative
+                    max-width: 80%
+                    max-height: 200px
+                    top: 27px
+                    margin-bottom: 65px
+                &:hover
+                    text-decoration: none
+            #logo-ministere
+                max-width: 20%
                 max-height: 200px
-                top: 27px
-                margin-bottom: 65px
+            #logo-archives
+                margin-left: 5%
+                max-width: 55%
+                max-height: 150px
+                vertical-align: bottom
+            .info-rs 
+                &:hover, &:active, &:focus
+                    text-decoration: none
+                img
+                    margin: 10px
+                    margin-bottom: 45px
+                    height: 50px
+                    width: 50px
     .info-programme
         font-size: 24px
         font-weight: 300
@@ -288,12 +327,33 @@ header
             bottom: 19px
             right: 9px
             z-index: -1
+    .info-agenda
+        max-height: 75vh
+        overflow-x: hidden
+        overflow-y: auto
+        margin-right: -10%
+        margin-bottom: 75px
+        .info-event
+            padding-right: 5px
+            b
+                line-height: 35px
+            span
+                font-size: 17px
+                font-weight: 500
+            .info-eventdesc
+                margin-top: 10px
     .info-goagenda
         font-size: 24px
         font-weight: 300
         position: absolute
-        bottom: 5%
-        right: 8%
+        bottom: 3%
+        right: 5%
+        cursor: pointer
+        text-align: center
+        max-width: 90%
+        height: 90px
+        width: 400px
+        padding: 25px
         .glyphicon
             font-size: 18px
             left: 6px
@@ -320,6 +380,8 @@ header
             max-width: 100%
             width: 100%
             margin-bottom: 40px
+            .info-bordureleft, .info-bordureright
+                display: none
             .close-info
                 font-size: 45px
                 margin: 0
@@ -328,7 +390,7 @@ header
                 left: 3%
             .info-lieu
                 position: absolute
-                top: 15%
+                top: 22%
                 left: 18%
                 width: auto
                 font-size: 32px !important
@@ -338,18 +400,32 @@ header
                 -o-transform: none
                 -ms-transform: none
                 transform: none
+                bottom: 0
+            #info-lieu-bnf
+                line-height: 35px
+                top: 20px
+            #info-lieu-archi
+                font-size: 28px !important
+            .info-agenda
+                margin-right: 0
             .info-presentation, .info-goagenda
                 font-size: 18px
             .info-description
                 font-size: 15px
+            .info-goagenda
+                bottom: 0
+                height: 70px
                 
     
 //==================== Agenda =====================    
     
 #agenda
     background: white
+    position: relative
+    width: 100%
+    overflow-x: hidden
 .agenda-header 
-    height: 22vh
+    height: 210px
     text-align: left
     position: relative
     h1
@@ -443,10 +519,10 @@ header
         
 @media (max-width:850px)
     .agenda-header
-        height: 25vh
+        height: 180px
         .agenda-filtres
             font-size: 15px
-            margin: 20% 5% 0
+            margin: 75px 5% 0
             height: 50px
             .col-sm-6            
                 input
@@ -472,18 +548,48 @@ header
     overflow-x: hidden
     overflow-y: scroll
     height: 78vh
-    width: 48%
+    width: 50%
     text-align: left !important
+    position: absolute
 #timeline
-    position: relative
-    top: 4px
-    float: left
+    top: 22vh
+    left: 0
 #recherche
+    top: 22vh
+    right: 0
     padding-top: 4px
-    float: right
+    background: white
+#show-timeline, #show-recherche
+    display: none
 @media (max-width:850px)
     #timeline, #recherche
-        height: 74vh
+        position: absolute
+        height: 73vh
+        width: 90%
+        top: 27vh
+        transition: all 100ms ease-in-out
+    #timeline
+        cursor: pointer
+    #recherche
+        right: 0
+    #show-timeline, #show-recherche
+        display: block
+        position: absolute
+        top: -1px
+        background: white
+        height: 9vw
+        width: 9vw
+        font-size: 5vw
+    #show-timeline
+        left: 1vw
+        border-bottom-left-radius: 100%
+        text-align: right
+    #show-recherche
+        display: none
+        left: 
+        border-bottom-right-radius: 100%
+        
+
         
 .details
     padding: 2.7%
@@ -491,7 +597,7 @@ header
     font-size: 18px
     line-height: 24px
     font-weight: 500
-    width: 102.4%
+    width: 100%
     h1
         font-size: 43px
         font-weight: 700
@@ -521,7 +627,7 @@ header
         &:hover
             text-decoration: underline
     .right
-        margin-bottom: 25px;
+        margin-bottom: 25px
         #site-officiel
             text-decoration: none
 @media (max-width:850px)
@@ -553,7 +659,7 @@ header
         h1
             font-size: 18px
             line-height: 19.6px
-            height: 42px
+            height: 40px
             font-weight: 600
             white-space: initial
         h2
@@ -568,6 +674,34 @@ header
         -webkit-box-shadow: 0 0 0 3px black
         box-shadow: 0 0 0 3px black
         border-radius: 0
+    
+footer
+    position: relative
+    background: #424242
+    color: white
+    height: 120px
+    .col-xs-4
+        height: 90px
+        font-size: 18px
+        padding: 25px
+        a, a:hover
+            color: white
+    .scroll-footer
+        position: absolute
+        background: #424242
+        top: -50px
+        right: 30px
+        height: 51px
+        width: 100px
+        border-top-left-radius: 50px
+        border-top-right-radius: 50px
+        font-size: 40px
+        padding: 5px
+        cursor: pointer
+    .modal
+        color: black
+        text-align: left
+    
 
 // Paris Nanterre
 .lieu49592631

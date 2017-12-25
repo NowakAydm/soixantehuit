@@ -1,15 +1,3 @@
-<!--
-TOUT DOUX
-
-- Responsiveness
-    = logo 68 decale
-- description metadata
-- charger les images en full res quand les thumbs sont charges
-- version EN
-
--->
-
-
 <!DOCTYPE html>
 
 <html>
@@ -56,7 +44,7 @@ TOUT DOUX
     <header>
         <button id="header-accueil" class="btn btn-blank" style="border-bottom: none;">
             <div class="header-background"></div>
-            ACCUEIL
+            HOME
         </button>
         <button id="header-68" class="btn btn-blank">
             <div class="header-background hidden"></div>
@@ -64,7 +52,7 @@ TOUT DOUX
         </button>
         <button id="header-agenda" class="btn btn-blank">
             <div class="header-background hidden"></div>
-            AGENDA
+            EVENTS
         </button>
     </header>
 
@@ -73,11 +61,11 @@ TOUT DOUX
     <div class="container bloc" id="home">
         <div class="edito center">
             <h1>soixante-huit</h1>
-            <p>Il y a cinquante ans, le mouvement protestataire de Mai 68 retournait les rues de Paris, de Nanterre, et les esprits de la France entière. En lien avec un vaste mouvement de contestation international, il transformait profondément la société française.</p>
-            <p>50 ans après, plusieurs institutions culturelles interrogent l’histoire et l’héritage de Mai 68 à travers des rencontres, des expositions, des ouvertures d’archives, des ateliers participatifs, du théâtre, de la musique, des débats, des interventions inédites.</p>
-            <p>Fédérant le programme de huit partenaires culturels, à Paris et en Ile-de-France, ce site partage avec le public le plus large toute la richesse et la diversité de ces hommages.</p>
+            <p>Fifty years ago, the demonstrations of May 68 turned the streets of Paris and Nanterre upside down, and shook France to its very core. Linked with a vast international protest movement, it brought about profound changes in French society.</p>
+            <p>Fifty years on, various cultural institutions explore the history and legacy of May 68 through get-togethers, exhibitions, newly-opened archives, participatory workshops, theatre, music, debates and talks casting fresh light on the events. </p>
+            <p>Uniting the programmes of eight cultural partners in Paris and the surrounding region, this site is designed to share these rich and varied tributes with a broad public.</p>
             <div class="langues">
-                <a><u>FR</u></a> <a href="index_en.php">EN</a>
+                <a href="index.php"><u>FR</u></a> <a><u>EN</u></a>
             </div>
         </div>
         <button class="btn btn-blank scroll centerblock">
@@ -88,7 +76,7 @@ TOUT DOUX
     <!--============= 68 ===============-->
 
     <div class="bloc" id="68">
-        <?php include 'infos.php'?>
+        <?php include 'infos_en.php'?>
 
         <div class="carte">
             <div class="vertical">
@@ -122,13 +110,13 @@ TOUT DOUX
     </div>
 
     <!--============= Agenda ===============-->
-    <?php include 'agenda.php'?>
+    <?php include 'agenda_en.php'?>
 
     <!--============= Agenda ===============-->
     <footer class="center">
         <div class='scroll-footer'><span class="glyphicon glyphicon-chevron-down"></span></div>
-        <div class='col-xs-4'><a data-toggle='modal' href='#Credits'>Crédits</a></div>
-        <div class='col-xs-4'><a data-toggle='modal' href='#Presse'>Presse</a></div>
+        <div class='col-xs-4'><a data-toggle='modal' href='#Credits'>Credits</a></div>
+        <div class='col-xs-4'><a data-toggle='modal' href='#Presse'>Press</a></div>
         <div class='col-xs-4'><a href="mailto:claire.galibert@centrepompidou.fr">Contact</a></div>
 
         <div id="Credits" class="modal fade" role="dialog">

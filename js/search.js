@@ -27,16 +27,30 @@ function searchReady() {
         $('#filtre-lieu .glyphicon').css('-ms-transform', 'none');
         $('#filtre-lieu .glyphicon').css('transform', 'none');
     });
-    $('#filtre-categorie').popover({
-        placement: 'bottom',
-        html: 'true',
-        content: "<ul class='list-group list-categorie'>\
-                      <li class='list-group-item' onclick='addCategory(1)'>Projection</li>\
-                      <li class='list-group-item' onclick='addCategory(2)'>Performance/Spectacle</li>\
-                      <li class='list-group-item' onclick='addCategory(3)'>Colloque/Conférence/Débat</li>\
-                      <li class='list-group-item' onclick='addCategory(4)'>Exposition</li>\
-                    </ul>"
-    });
+    if ($('.agenda-header h1').html() == 'Events') {
+        $('#filtre-categorie').popover({
+            placement: 'bottom',
+            html: 'true',
+            content: "<ul class='list-group list-categorie'>\
+                          <li class='list-group-item' onclick='addCategory(1)'>Projection</li>\
+                          <li class='list-group-item' onclick='addCategory(2)'>Performance/Show</li>\
+                          <li class='list-group-item' onclick='addCategory(3)'>Seminar/Conference/Debate</li>\
+                          <li class='list-group-item' onclick='addCategory(4)'>Exhibition</li>\
+                        </ul>"
+        });
+    }
+    else {
+        $('#filtre-categorie').popover({
+            placement: 'bottom',
+            html: 'true',
+            content: "<ul class='list-group list-categorie'>\
+                          <li class='list-group-item' onclick='addCategory(1)'>Projection</li>\
+                          <li class='list-group-item' onclick='addCategory(2)'>Performance/Spectacle</li>\
+                          <li class='list-group-item' onclick='addCategory(3)'>Colloque/Conférence/Débat</li>\
+                          <li class='list-group-item' onclick='addCategory(4)'>Exposition</li>\
+                        </ul>"
+        });
+    };
     $('#filtre-categorie').on('show.bs.popover', function() {
         $('#filtre-categorie .glyphicon').css('-webkit-transform', 'rotate(90deg)');
         $('#filtre-categorie .glyphicon').css('-moz-transform', 'rotate(90deg)');
@@ -87,6 +101,7 @@ function searchReady() {
         $('#glyphicon').css('transform', 'none');
 
         curDate = $('#datetimepicker').val();
+        $('.search-date').css('display', 'block');
         $('.search-date').css('background', 'black');
         $('.search-date').html('<i class="glyphicon glyphicon-remove clear-date"></i>'+$('#datetimepicker').val());
         $('#datetimepicker').val('Date');
@@ -97,26 +112,33 @@ function searchReady() {
                     $('#'+events[x].uid).removeClass('hide-date');
             }            
         }
+        $('.search-date').css('cursor', 'pointer');
 
         $('.clear-date').click(function() {
             $('.search-date').html('');
+            $('.search-date').css('cursor', 'initial');
             $('.search-date').css('background', 'white');
+            $('.search-date').css('display', 'none');
             $('.evenement').removeClass('hide-date');
+            setTimeout(function(){showRecherche()}, 100);                
         });
+        setTimeout(function(){showRecherche()}, 100);                
     });
     
     $('.search-lieu .glyphicon').css('color', 'white');
     $('.search-categorie .glyphicon').css('color', 'white');
 
     $('.clear-lieu').click(function() {
+        $('.search-lieu').css('display', 'none');
+        $('.search-lieu').css('cursor', 'initial');
         $('.search-lieu .glyphicon').css('color', 'white');
         $('.search-lieu').removeClass(curPlace);  
         $('.evenement').removeClass('hide-lieu');
+        setTimeout(function(){showRecherche()}, 100);                
     });
     
     $('body').on('click', function (e) {
         $('[data-toggle=popover]').each(function () {
-            // hide any open popovers when the anywhere else in the body is clicked
             if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
                 $(this).popover('hide');
             }
@@ -126,7 +148,10 @@ function searchReady() {
 
 var curPlace;
 function addPlace( a ) {
+    $('.info-open .close-info').click();
     $('.search-lieu .glyphicon').css('color', 'inherit');
+    $('.search-lieu').css('display', 'block');
+    $('.search-lieu').css('cursor', 'pointer');
     $('.search-lieu').removeClass(curPlace); 
     $('.search-lieu').addClass('lieu'+a); 
     curPlace = 'lieu'+a;
@@ -139,11 +164,13 @@ function addPlace( a ) {
     else {
         body.stop().animate({scrollTop: $('#agenda').position().top}, 1000);
     };
-    $('.close-info').click();
+    setTimeout(function(){showRecherche()}, 100);                
 };
 
 var curCategorie;
 function addCategory( a ) {
+    $('.search-categorie').css('display', 'block');
+    $('.search-categorie').css('cursor', 'pointer');
     $('.search-categorie').css('background', 'black');
     if (a == 1)
         $('.search-categorie').html('<i class="glyphicon glyphicon-remove clear-categorie"></i>Projection');
@@ -167,7 +194,10 @@ function addCategory( a ) {
     
     $('.clear-categorie').click(function() {
         $('.evenement').removeClass('hide-categorie');
-        $('.search-categorie').css('background', 'white');
+        $('.search-categorie').css('display', 'none');
+        $('.search-categorie').css('cursor', 'initial');
         $('.search-categorie').html("");
+        setTimeout(function(){showRecherche()}, 100);                
     });
+    setTimeout(function(){showRecherche()}, 100);                
 };

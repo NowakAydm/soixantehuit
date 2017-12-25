@@ -21,16 +21,40 @@ function startAnimation() {
             that.css('-moz-transform', 'none');
             that.css('-ms-transform', 'none');
             that.css('transform', 'none');
-        }, Math.floor(Math.random() * 1500) + 700);
+        }, Math.floor(Math.random() * 1000));
     });
-    setTimeout(function() {
-        $('.carte svg').css('opacity', '0');
-    }, 3000);
 
     animated = 1;
 };
 
+var agendaTab = 0;
+function showTimeline() {
+    if (window.innerWidth < 850 && !agendaTab) {
+        $('#timeline').css('cursor', 'initial');
+        $('#timeline a').css('pointer-events', 'auto');
+        $('#show-timeline').css('display', 'none');
+        $('#show-recherche').css('display', 'block');
+        $('#show-recherche').css('top', $('#recherche').scrollTop());
+        $('#recherche').css('right', '-80vw');
+        $('#recherche').css('cursor', 'pointer');
+        agendaTab = 1;
+    }
+};
+function showRecherche() {
+    if (window.innerWidth < 850 && agendaTab) {
+        $('#recherche').css('right', '0');
+        $('#recherche').css('cursor', 'initial');
+        $('#show-timeline').css('display', 'block');
+        $('#show-timeline').css('top', $('#timeline').scrollTop());
+        $('#show-recherche').css('display', 'none');
+        $('#timeline').css('cursor', 'pointer');
+        $('#timeline a').css('pointer-events', 'none');
+        agendaTab = 0;
+    }
+};
+
 doc.ready(function () {
+    window.scrollTop = 0;
     window.scrollTo(0, 0);
     
 //----------- Header scroll --------------
@@ -81,8 +105,8 @@ doc.ready(function () {
     setTimeout(function() {
         
         doc.on('scroll', function () {
-            if (prevScroll < 10 && doc.scrollTop() > prevScroll)
-                body.stop().animate({scrollTop: $('#68').position().top}, 1000); 
+//            if (prevScroll < 10 && doc.scrollTop() > prevScroll)
+//                body.stop().animate({scrollTop: $('#68').position().top}, 1000); 
 
             prevScroll = doc.scrollTop();
             
@@ -114,7 +138,7 @@ doc.ready(function () {
                     $('.module').css('-ms-transform', 'translateY(-150vh)');
                     $('.module').css('transform', 'translateY(-150vh)');
                 };
-                $('.module').css('transition', 'transform 2000ms ease-in-out');
+                $('.module').css('transition', 'transform 1500ms ease-in-out');
             }
             if (prevScroll + 10 < $('#68').position().top) {
                 $('.carte').css('-webkit-transform', 'translateY('+(prevScroll - $('#68').position().top)+'px)');
@@ -133,6 +157,7 @@ doc.ready(function () {
                 if (animated == 0) {
                     startAnimation();
                 };
+                $('.carte svg').css('opacity', '0');
             };
         });
         
@@ -150,6 +175,14 @@ doc.ready(function () {
             body.stop().animate({scrollTop: $('#68').position().top}, 1000);
         };
     });
+    $('.scroll-footer').click(function() {
+        if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {  
+            window.scrollTo(0, 999999);
+        }
+        else {
+            body.stop().animate({scrollTop: document.body.scrollHeight}, 1000);
+        };
+    });
 
 //----------- 68 --------------
     $('.module').attr('tabindex', '-1');
@@ -164,13 +197,6 @@ doc.ready(function () {
        $('#' + $(this).attr('class').split(' ').pop().replace('module', 'info')).addClass('info-open');
        $('.info-open').addClass('info-transition');
        $('.info-open button').attr('tabindex', '0');
-        if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {  
-            window.scrollTo(0, $('#68').position().top);
-        }
-        else {
-            body.stop().animate({scrollTop: $('#68').position().top}, 1000);
-        };
-
 //       $('.modules-click .module').attr('tabindex', '-1');
     });
     $('.close-info').click(function() {
@@ -178,6 +204,7 @@ doc.ready(function () {
 //       $('.modules-click .module').attr('tabindex', '0');
        $('.info-open').addClass('info-transition');
        $('.info-open').removeClass('info-open');
+        window.scrollTo(0, $('#68').position().top);
     });
     
    $('.info-container').on('transitionend', function() {
@@ -192,16 +219,45 @@ doc.ready(function () {
     var prevPos = 0;
     $('.evenement').click(function() {
         var id = $(this).attr('id');
-        var pos = $('.' + id).offset().top - $('#timeline').offset().top + 2;
-
-        $('#timeline').stop().animate({scrollTop: pos + prevPos}, 1000);
-        prevPos += pos;
+        var pos = $('.' + id).offset().top - $('#timeline').offset().top;
+        console.log($('.' + id));
+        if (window.innerWidth < 850) {
+            if (!agendaTab) {
+                setTimeout(function(){showTimeline()}, 100);                
+                $('#timeline').stop().animate({scrollTop: pos + prevPos}, 1000);
+                prevPos += pos;
+            }
+        }
+        else {
+            $('#timeline').stop().animate({scrollTop: pos + prevPos}, 1000);            
+            prevPos += pos;
+        };
     });
     $('#timeline').on('scroll', function()  {
         prevPos = $('#timeline').scrollTop();
+        $('#show-timeline').css('top', $('#timeline').scrollTop());
+    });
+    $('#recherche').on('scroll', function()  {
+        $('#show-recherche').css('top', $('#recherche').scrollTop());
     });
 
-    $('.agenda-header span').click(function() {
-        $(this).find('.glyphicon');
-    });
 });
+
+window.onresize = function(event) {
+    if (window.innerWidth < 850) {
+        agendaTab = 1;
+        showRecherche();
+    }
+    else {
+        $('#timeline').css('left', '0');
+        $('#timeline').css('cursor', 'initial');
+        $('#timeline').css('overflow-y', 'scroll');
+        $('#timeline a').css('pointer-events', 'auto');
+        $('#show-timeline').css('display', 'none');
+        $('#show-recherche').css('display', 'none');
+        $('#recherche').css('right', '0');
+        $('#recherche').css('cursor', 'initial');
+        $('#recherche').css('overflow-y', 'scroll');
+    }
+        
+};
