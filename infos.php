@@ -312,7 +312,7 @@
 <div id="info-archives" class="info-container bloc">
     <div class="info-sidebar col-sm-3 lieu74030026">
         <span tabIndex="-1" class="close-info glyphicon glyphicon-chevron-left"></span>
-        <span class="info-lieu">Les Archives<br>Nationales</span>
+        <span class="info-lieu">Archives<br>Nationales</span>
         <div class="info-bordureleft"></div>
     </div>
     <div class="info-midbar col-sm-5">
@@ -440,7 +440,7 @@
         </div>
         <div class="info-description">
             En <b>1936</b>, <b>Henri Langlois</b>, personnage visionnaire, crée <b>La Cinémathèque française</b> afin de sauver de la destruction les films, costumes, décors, affiches et autres trésors du cinéma. Il est alors le premier à considérer le cinéma comme <b>un art à conserver, restaurer et montrer</b>.<br> Huit décennies plus tard, dans un bâtiment résolument contemporain, entièrement dédié au 7e art, La Cinémathèque française dévoile plus que jamais le cinéma de manière unique grâce à <b>une des plus belle collections au monde sur le cinéma</b> et à ses nombreuses activités :<br> Des <b>expositions autour de personnalités majeures ou de grands moments de l’histoire du cinéma</b> (Tim Burton, Metropolis, Lanternes magiques, Pedro Almodovar, François Truffaut, Jacques Tati, Stanley Kubrick, Scorsese,...), des <b>films et conférences</b> (40 films par semaine, 4 salles de cinéma), une <b>Bibliothèque du Film</b> (22 500 ouvrages, 500 revues spécialisées, 23 000 affiches, 12 000 films...), des <b>collections</b> (40 000 films, 3 000 costumes, 23 000 affiches, 14 500 dessins, 2 300 objets…), un <b>Musée du cinéma</b>, des <b>activités pour le jeune public</b> et une <b>Librairie</b>.
-            <br>
+            <br><br>
             <b>Adresse</b><br> 51 rue de Bercy<br> 75012 Paris<br><br>
             <a class="info-logo" target="_blank" href="http://www.cinematheque.fr/">
                 <img src='assets/logo/logo-cinematheque.png'>

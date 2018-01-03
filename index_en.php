@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -71,9 +71,6 @@
                 <a href="index.php">FR</a> <a><u>EN</u></a>
             </div>
         </div>
-        <button class="btn btn-blank scroll centerblock">
-            <span class="glyphicon glyphicon-chevron-down"></span>
-        </button>
     </div>
 
     <!--============= 68 ===============-->

@@ -548,7 +548,7 @@ header
     overflow-x: hidden
     overflow-y: scroll
     height: 78vh
-    width: 50%
+    width: 49%
     text-align: left !important
     position: absolute
 #timeline
@@ -556,7 +556,7 @@ header
     left: 0
 #recherche
     top: 22vh
-    right: 0
+    right: 1.5%
     padding-top: 4px
     background: white
 #show-timeline, #show-recherche
@@ -570,24 +570,25 @@ header
         transition: all 100ms ease-in-out
     #timeline
         cursor: pointer
-    #recherche
-        right: 0
     #show-timeline, #show-recherche
         display: block
         position: absolute
-        top: -1px
+        top: 50%
         background: white
-        height: 9vw
-        width: 9vw
+        height: 20vw
+        width: 10vw
         font-size: 5vw
+        .glyphicon
+            font-size: 8vw
+            padding-top: 6vw
     #show-timeline
-        left: 1vw
-        border-bottom-left-radius: 100%
+        border-top-left-radius: 300px
+        border-bottom-left-radius: 300px
         text-align: right
     #show-recherche
         display: none
-        left: 
-        border-bottom-right-radius: 100%
+        border-top-right-radius: 300px
+        border-bottom-right-radius: 300px
         
 
         
@@ -601,6 +602,10 @@ header
     h1
         font-size: 43px
         font-weight: 700
+        -webkit-hyphens: auto
+        -moz-hyphens: auto
+        -ms-hyphens: auto
+        hyphens: auto
     h2
         font-size: 36px
         line-height: 43.2px
@@ -631,8 +636,16 @@ header
         #site-officiel
             text-decoration: none
 @media (max-width:850px)
-    .details .col-6
-        width: 100%
+    .details 
+        font-size: 16px
+        h1
+            font-size: 39px
+        h2
+            font-size: 30px
+        h3
+            font-size: 24px
+        .col-6
+            width: 100%
         
 .evenement
     display: inline-block

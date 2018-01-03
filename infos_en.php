@@ -304,7 +304,7 @@
 <div id="info-archives" class="info-container bloc">
     <div class="info-sidebar col-sm-3 lieu74030026">
         <span tabIndex="-1" class="close-info glyphicon glyphicon-chevron-left"></span>
-        <span class="info-lieu">Les Archives<br>Nationales</span>
+        <span class="info-lieu">Archives<br>Nationales</span>
         <div class="info-bordureleft"></div>
     </div>
     <div class="info-midbar col-sm-5">
@@ -433,7 +433,7 @@
         </div>
         <div class="info-description">
             In <b>1936</b>, the visionary <b>Henri Langlois</b> founded <b>La Cinémathèque française</b> to stop the destruction of films, costumes, sets, posters and other cinematic treasures. He was the first person to consider cinema <b>an art worth conserving, restoring and displaying</b>.<br> Eight decades later, in a decidedly contemporary building entirely dedicated to the world of film, La Cinémathèque française offers a unique view of cinema through <b>one of the finest cinematic collections in the world</b> and a varied range of activities for the public: <br><b>Exhibitions on major figures and key moments in the history of cinema</b> (Tim Burton, Metropolis, Lanternes magiques, Pedro Almodovar, François Truffaut, Jacques Tati, Stanley Kubrick, Scorsese,...), des <b>films and talks</b> (40 films a week, 4 cinema screens), a <b>film library</b> (22,500 books, 500 specialist magazines and journals, 23,000 posters, 12,000 films), <b>collections</b> (40,000 films, 3000 costumes, 23,000 posters, 14,500 drawings, 2300 objects), a <b>cinema museum</b>, <b>activities for young visitors</b> and a <b>bookshop</b>.
-            <br>
+            <br><br>
             <b>Address</b><br> 51 rue de Bercy<br> 75012 Paris<br><br>
             <a class="info-logo" target="_blank" href="http://www.cinematheque.fr/">
                 <img src='assets/logo/logo-cinematheque.png'>

@@ -4,15 +4,13 @@ TOUT DOUX
 - Responsiveness
     = logo 68 decale
 - description metadata
-- charger les images en full res quand les thumbs sont charges
-- version EN
 
 -->
 
 
 <!DOCTYPE html>
 
-<html>
+<html lang="fr">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -83,9 +81,6 @@ TOUT DOUX
                 <a><u>FR</u></a> <a href="index_en.php">EN</a>
             </div>
         </div>
-        <button class="btn btn-blank scroll centerblock">
-            <span class="glyphicon glyphicon-chevron-down"></span>
-        </button>
     </div>
 
     <!--============= 68 ===============-->
