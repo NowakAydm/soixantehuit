@@ -175,12 +175,29 @@ doc.ready(function () {
             body.stop().animate({scrollTop: $('#68').position().top}, 1000);
         };
     });
+    
     $('.scroll-footer').click(function() {
-        if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {  
-            window.scrollTo(0, 999999);
+        if ($('.scroll-footer').hasClass('footer-open')) {
+            if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {  
+                window.scrollTo(0, $('#agenda').position().top);
+            }
+            else {
+                body.stop().animate({scrollTop: $('#agenda').position().top}, 300);
+            };
+            setTimeout(function() {
+                $('footer').css('display', 'none');
+                $('.scroll-footer').removeClass('footer-open');            
+            }, 300);
         }
         else {
-            body.stop().animate({scrollTop: document.body.scrollHeight}, 1000);
+            $('.scroll-footer').addClass('footer-open');
+            $('footer').css('display', 'block');
+            if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {  
+                window.scrollTo(0, 999999);
+            }
+            else {
+                body.stop().animate({scrollTop: document.body.scrollHeight}, 1000);
+            };
         };
     });
 

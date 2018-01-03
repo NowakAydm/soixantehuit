@@ -25,7 +25,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type='text/javascript'>
         window.scrollTo(0, 0);
-        var events = <?php echo file_get_contents("https://openagenda.com/agendas/31783764/events.json?limit=300"); ?>.events;
+        var events = <?php 
+            $OA = json_decode(file_get_contents("https://openagenda.com/agendas/31783764/events.json?limit=300"));
+            $e = $OA->events;
+            echo json_encode($OA); ?>.events;
     </script>
     <script src="js/68.js"></script>
     <script src="js/search.js"></script>
@@ -65,7 +68,7 @@
             <p>Fifty years on, various cultural institutions explore the history and legacy of May 68 through get-togethers, exhibitions, newly-opened archives, participatory workshops, theatre, music, debates and talks casting fresh light on the events. </p>
             <p>Uniting the programmes of eight cultural partners in Paris and the surrounding region, this site is designed to share these rich and varied tributes with a broad public.</p>
             <div class="langues">
-                <a href="index.php"><u>FR</u></a> <a><u>EN</u></a>
+                <a href="index.php">FR</a> <a><u>EN</u></a>
             </div>
         </div>
         <button class="btn btn-blank scroll centerblock">
@@ -114,7 +117,6 @@
 
     <!--============= Agenda ===============-->
     <footer class="center">
-        <div class='scroll-footer'><span class="glyphicon glyphicon-chevron-down"></span></div>
         <div class='col-xs-4'><a data-toggle='modal' href='#Credits'>Credits</a></div>
         <div class='col-xs-4'><a data-toggle='modal' href='#Presse'>Press</a></div>
         <div class='col-xs-4'><a href="mailto:claire.galibert@centrepompidou.fr">Contact</a></div>
@@ -123,7 +125,6 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
                         <h4 class="modal-title">Crédits</h4>
                     </div>
                     <div class="modal-body">
@@ -158,8 +159,7 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Crédits</h4>
+                        <h4 class="modal-title">Presse</h4>
                     </div>
                     <div class="modal-body">
                         <p><a>Télécharger le dossier de presse</a></p>

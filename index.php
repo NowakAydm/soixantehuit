@@ -37,7 +37,10 @@ TOUT DOUX
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type='text/javascript'>
         window.scrollTo(0, 0);
-        var events = <?php echo file_get_contents("https://openagenda.com/agendas/31783764/events.json?limit=300"); ?>.events;
+        var events = <?php 
+            $OA = json_decode(file_get_contents("https://openagenda.com/agendas/31783764/events.json?limit=300"));
+            $e = $OA->events;
+            echo json_encode($OA); ?>.events;
     </script>
     <script src="js/68.js"></script>
     <script src="js/search.js"></script>
@@ -126,7 +129,6 @@ TOUT DOUX
 
     <!--============= Agenda ===============-->
     <footer class="center">
-        <div class='scroll-footer'><span class="glyphicon glyphicon-chevron-down"></span></div>
         <div class='col-xs-4'><a data-toggle='modal' href='#Credits'>Crédits</a></div>
         <div class='col-xs-4'><a data-toggle='modal' href='#Presse'>Presse</a></div>
         <div class='col-xs-4'><a href="mailto:claire.galibert@centrepompidou.fr">Contact</a></div>
@@ -135,7 +137,6 @@ TOUT DOUX
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
                         <h4 class="modal-title">Crédits</h4>
                     </div>
                     <div class="modal-body">
@@ -170,8 +171,7 @@ TOUT DOUX
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Crédits</h4>
+                        <h4 class="modal-title">Presse</h4>
                     </div>
                     <div class="modal-body">
                         <p><a>Télécharger le dossier de presse</a></p>

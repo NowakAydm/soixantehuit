@@ -680,28 +680,37 @@ footer
     background: #424242
     color: white
     height: 120px
+    display: none
     .col-xs-4
         height: 90px
         font-size: 18px
         padding: 25px
         a, a:hover
             color: white
-    .scroll-footer
-        position: absolute
-        background: #424242
-        top: -50px
-        right: 30px
-        height: 51px
-        width: 100px
-        border-top-left-radius: 50px
-        border-top-right-radius: 50px
-        font-size: 40px
-        padding: 5px
-        cursor: pointer
     .modal
         color: black
         text-align: left
-    
+.scroll-footer
+    position: absolute
+    color: white
+    background: #424242
+    bottom: 0
+    right: 30px
+    height: 63px
+    width: 100px
+    border-top-left-radius: 50px
+    border-top-right-radius: 50px
+    font-size: 40px
+    padding: 5px 0 0 30px
+    cursor: pointer
+    .glyphicon
+        transition: transform 150ms ease-in-out        
+.footer-open .glyphicon
+    -webkit-transform: rotate(180deg) translateX(3px)
+    -moz-transform: rotate(180deg) translateX(3px)
+    -o-transform: rotate(180deg) translateX(3px)
+    -ms-transform: rotate(180deg) translateX(3px)
+    transform: rotate(180deg) translateX(3px)
 
 // Paris Nanterre
 .lieu49592631

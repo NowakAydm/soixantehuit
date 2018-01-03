@@ -1,8 +1,3 @@
-<?php
-    $OA = json_decode(file_get_contents("https://openagenda.com/agendas/31783764/events.json?limit=300"));
-    $e = $OA->events;
-?>
-
 <!--Paris Nanterre-->
 <div id="info-nanterre" class="info-container bloc">
     <div class="info-sidebar col-sm-3 lieu49592631">
@@ -48,39 +43,39 @@
                     echo '<div class="info-eventdesc">'.($e[$x]->description->en ? $e[$x]->description->en : $e[$x]->description->fr).'</div><br>';
                     echo '</div>';
                     
-                    echo '<div class="info-event '.$e[$x]->uid.'"><b>'.str_replace("2018", "", $e[$x]->range->en).'</b><br>';
+                    echo '<div class="info-event"><b>'.str_replace("2018", "", $e[$x]->range->en).'</b><br>';
                     echo '<span>'.($e[$x]->title->en ? $e[$x]->title->en : $e[$x]->title->fr).'</span><br>';
                     echo '<div class="info-eventdesc">'.($e[$x]->description->en ? $e[$x]->description->en : $e[$x]->description->fr).'</div><br>';
                     echo '</div>';
-                    echo '<div class="info-event '.$e[$x]->uid.'"><b>'.str_replace("2018", "", $e[$x]->range->en).'</b><br>';
+                    echo '<div class="info-event"><b>'.str_replace("2018", "", $e[$x]->range->en).'</b><br>';
                     echo '<span>'.($e[$x]->title->en ? $e[$x]->title->en : $e[$x]->title->fr).'</span><br>';
                     echo '<div class="info-eventdesc">'.($e[$x]->description->en ? $e[$x]->description->en : $e[$x]->description->fr).'</div><br>';
                     echo '</div>';
-                    echo '<div class="info-event '.$e[$x]->uid.'"><b>'.str_replace("2018", "", $e[$x]->range->en).'</b><br>';
+                    echo '<div class="info-event"><b>'.str_replace("2018", "", $e[$x]->range->en).'</b><br>';
                     echo '<span>'.($e[$x]->title->en ? $e[$x]->title->en : $e[$x]->title->fr).'</span><br>';
                     echo '<div class="info-eventdesc">'.($e[$x]->description->en ? $e[$x]->description->en : $e[$x]->description->fr).'</div><br>';
                     echo '</div>';
-                    echo '<div class="info-event '.$e[$x]->uid.'"><b>'.str_replace("2018", "", $e[$x]->range->en).'</b><br>';
+                    echo '<div class="info-event"><b>'.str_replace("2018", "", $e[$x]->range->en).'</b><br>';
                     echo '<span>'.($e[$x]->title->en ? $e[$x]->title->en : $e[$x]->title->fr).'</span><br>';
                     echo '<div class="info-eventdesc">'.($e[$x]->description->en ? $e[$x]->description->en : $e[$x]->description->fr).'</div><br>';
                     echo '</div>';
-                    echo '<div class="info-event '.$e[$x]->uid.'"><b>'.str_replace("2018", "", $e[$x]->range->en).'</b><br>';
+                    echo '<div class="info-event"><b>'.str_replace("2018", "", $e[$x]->range->en).'</b><br>';
                     echo '<span>'.($e[$x]->title->en ? $e[$x]->title->en : $e[$x]->title->fr).'</span><br>';
                     echo '<div class="info-eventdesc">'.($e[$x]->description->en ? $e[$x]->description->en : $e[$x]->description->fr).'</div><br>';
                     echo '</div>';
-                    echo '<div class="info-event '.$e[$x]->uid.'"><b>'.str_replace("2018", "", $e[$x]->range->en).'</b><br>';
+                    echo '<div class="info-event"><b>'.str_replace("2018", "", $e[$x]->range->en).'</b><br>';
                     echo '<span>'.($e[$x]->title->en ? $e[$x]->title->en : $e[$x]->title->fr).'</span><br>';
                     echo '<div class="info-eventdesc">'.($e[$x]->description->en ? $e[$x]->description->en : $e[$x]->description->fr).'</div><br>';
                     echo '</div>';
-                    echo '<div class="info-event '.$e[$x]->uid.'"><b>'.str_replace("2018", "", $e[$x]->range->en).'</b><br>';
+                    echo '<div class="info-event"><b>'.str_replace("2018", "", $e[$x]->range->en).'</b><br>';
                     echo '<span>'.($e[$x]->title->en ? $e[$x]->title->en : $e[$x]->title->fr).'</span><br>';
                     echo '<div class="info-eventdesc">'.($e[$x]->description->en ? $e[$x]->description->en : $e[$x]->description->fr).'</div><br>';
                     echo '</div>';
-                    echo '<div class="info-event '.$e[$x]->uid.'"><b>'.str_replace("2018", "", $e[$x]->range->en).'</b><br>';
+                    echo '<div class="info-event"><b>'.str_replace("2018", "", $e[$x]->range->en).'</b><br>';
                     echo '<span>'.($e[$x]->title->en ? $e[$x]->title->en : $e[$x]->title->fr).'</span><br>';
                     echo '<div class="info-eventdesc">'.($e[$x]->description->en ? $e[$x]->description->en : $e[$x]->description->fr).'</div><br>';
                     echo '</div>';
-                    echo '<div class="info-event '.$e[$x]->uid.'"><b>'.str_replace("2018", "", $e[$x]->range->en).'</b><br>';
+                    echo '<div class="info-event"><b>'.str_replace("2018", "", $e[$x]->range->en).'</b><br>';
                     echo '<span>'.($e[$x]->title->en ? $e[$x]->title->en : $e[$x]->title->fr).'</span><br>';
                     echo '<div class="info-eventdesc">'.($e[$x]->description->en ? $e[$x]->description->en : $e[$x]->description->fr).'</div><br>';
                     echo '</div>';

@@ -26,8 +26,6 @@
         <div id="show-timeline"><i class="glyphicon glyphicon-chevron-left"></i></div>
         <?php
             setlocale(LC_CTYPE, "fr");
-            $OA = json_decode(file_get_contents("https://openagenda.com/agendas/31783764/events.json?limit=300"));
-            $e = $OA->events;
         
             for($x=0; $x<$OA->total; $x++) { 
                 $e[$x]->range->en = str_replace("2018", "", $e[$x]->range->en);
@@ -155,4 +153,5 @@
 
         <?php } ?>
     </div>
+    <div class='scroll-footer'><span class="glyphicon glyphicon-chevron-up"></span></div>
 </div>
