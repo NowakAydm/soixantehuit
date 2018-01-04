@@ -102,13 +102,13 @@ TOUT DOUX
             <div class="vertical">
                 <div class="carte-label">
                     <div class="carte-lieu carte-nanterre">Université<br>Paris<br>Nanterre</div>
-                    <div class="carte-lieu carte-amandiers">Nanterre<br>Amandiers</div>
+                    <div class="carte-lieu carte-amandiers">Nanterre-Amandiers</div>
                     <div class="carte-lieu carte-archi">Cité<br>de&nbsp;l’architecture<br>et&nbsp;du&nbsp;patrimoine</div>
                     <div class="carte-lieu carte-beauxarts">Beaux&#8209;Arts<br>de&nbsp;Paris</div>
                     <div class="carte-lieu carte-pompidou">Centre<br>Pompidou</div>
-                    <div class="carte-lieu carte-archives">Archives<br>Nationales</div>
+                    <div class="carte-lieu carte-archives">Archives<br>nationales</div>
                     <div class="carte-lieu carte-bnf">Bibliothèque<br>nationale<br>de&nbsp;France</div>
-                    <div class="carte-lieu carte-cinematheque">Cinémathèque<br>Francaise</div>
+                    <div class="carte-lieu carte-cinematheque">La&nbsp;Cinémathèque<br>francaise</div>
                 </div>
             </div>
         </div>

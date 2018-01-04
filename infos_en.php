@@ -91,7 +91,7 @@
 <div id="info-amandiers" class="info-container bloc">
     <div class="info-sidebar col-sm-3 lieu47774204">
         <span tabIndex="-1" class="close-info glyphicon glyphicon-chevron-left"></span>
-        <span class="info-lieu">Nanterre<br>Amandiers</span>
+        <span class="info-lieu">Nanterre-Amandiers</span>
         <div class="info-bordureleft"></div>
     </div>
     <div class="info-midbar col-sm-5">
@@ -304,7 +304,7 @@
 <div id="info-archives" class="info-container bloc">
     <div class="info-sidebar col-sm-3 lieu74030026">
         <span tabIndex="-1" class="close-info glyphicon glyphicon-chevron-left"></span>
-        <span class="info-lieu">Archives<br>Nationales</span>
+        <span class="info-lieu">Archives<br>nationales</span>
         <div class="info-bordureleft"></div>
     </div>
     <div class="info-midbar col-sm-5">
@@ -368,7 +368,7 @@
 <div id="info-bnf" class="info-container bloc">
     <div class="info-sidebar col-sm-3 lieu96612516">
         <span tabIndex="-1" class="close-info glyphicon glyphicon-chevron-left"></span>
-        <span id='info-lieu-bnf' class="info-lieu">Bibliothèque nationale<br>de&nbsp;France</span>
+        <span id='info-lieu-bnf' class="info-lieu">Bibliothèque<br>nationale<br>de&nbsp;France</span>
         <div class="info-bordureleft"></div>
     </div>
     <div class="info-midbar col-sm-5">
@@ -424,7 +424,7 @@
 <div id="info-cinematheque" class="info-container bloc">
     <div class="info-sidebar col-sm-3 lieu33873846">
         <span tabIndex="-1" class="close-info glyphicon glyphicon-chevron-left"></span>
-        <span class="info-lieu">Cinémathèque<br>Française</span>
+        <span class="info-lieu">La Cinémathèque<br>française</span>
         <div class="info-bordureleft"></div>
     </div>
     <div class="info-midbar col-sm-5">

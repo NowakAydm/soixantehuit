@@ -2,7 +2,7 @@
     <div class="agenda-header">
         <h1>Agenda</h1>
         <div class="agenda-filtres">
-            Trier par:
+            Trier par :
             <button id="filtre-categorie" class="btn btn-blank" data-toggle="popover">
                 Catégorie 
                 <i class="glyphicon glyphicon-chevron-right"></i>

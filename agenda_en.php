@@ -2,7 +2,7 @@
     <div class="agenda-header">
         <h1>Events</h1>
         <div class="agenda-filtres">
-            Sort by:
+            Sort by :
             <button id="filtre-categorie" class="btn btn-blank" data-toggle="popover">
                 Category 
                 <i class="glyphicon glyphicon-chevron-right"></i>
