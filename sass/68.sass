@@ -81,6 +81,8 @@ header
             z-index: -1
             top: 12px
             right: 6px
+.header-en
+    width: 430px
             
 @media (max-width:850px)
     header
@@ -98,7 +100,7 @@ header
 
 .edito 
     width: 90%
-    margin: 90px auto 3.5%
+    margin: 13% auto 3.5%
     padding: 40px 100px
     background: rgba(26,26,26,0.1)
     font-weight: 500
@@ -119,6 +121,8 @@ header
     .edito
         padding: 25px
         width: 95%
+        font-size: 17px
+        margin-top: 20vh
         h1
             font-size: 40px
             margin: 20px auto
@@ -174,30 +178,54 @@ header
     z-index: 20
     text-align: left
     font-weight: 500
+    transition: all 500ms ease-in-out
 .carte-nanterre
     top: 18% 
     left: 12%
+.carte-nanterre.carte-hover
+    top: 15% 
+    left: 10%
 .carte-amandiers
     top: 37%
     left: 2%
+.carte-amandiers.carte-hover
+    top: 40% 
+    left: -1%
 .carte-archi
     top: 42%
     left: 17%
+.carte-archi.carte-hover
+    top: 45%
 .carte-beauxarts
     left: 40%
     bottom: 40%
+.carte-beauxarts.carte-hover
+    left: 43%
+    bottom: 39%
 .carte-pompidou
     left: 53%
     top: 42%
+.carte-pompidou.carte-hover
+    left: 50%
+    top: 40%
 .carte-archives
     top: 45%
     left: 70%
+.carte-archives.carte-hover
+    top: 42%
+    left: 69%
 .carte-bnf
     left: 65%
     bottom: 13%
+.carte-bnf.carte-hover
+    left: 64%
+    bottom: 15%
 .carte-cinematheque
     left: 85%
     bottom: 28%
+.carte-cinematheque.carte-hover
+    left: 88%
+    bottom: 30%
 @media (max-width:1470px)
     .carte-lieu
         font-size: 1.5vw
@@ -205,24 +233,74 @@ header
 .modules-click 
     z-index: 10
     .module
-        fill: transparent
+        fill: transparent        
+.modules-mobile
+    display: none
+    
 .module
     -webkit-transform: translateY(-150vh)
     -moz-transform: translateY(-150vh)
     -ms-transform: translateY(-150vh)
+    -o-transform: translateY(-150vh)
     transform: translateY(-150vh)
     transition: transform 1500ms ease-in-out
     cursor: pointer
     
 @media (max-width:850px)
+    .modules
+        display: none
+    .modules-mobile, .carte-label
+        display: table
     .carte svg
         opacity: 0 !important
     .module
         -webkit-transform: none
         -moz-transform: none
         -ms-transform: none
+        -o-transform: none
         transform: none
         transition: none
+    .carte-label
+        width: 64vh
+        max-width: 100vw
+        height: 100vh
+        max-height: 154vw
+        -webkit-transform: translateY(-3%)
+        -moz-transform: translateY(-3%)
+        -ms-transform: translateY(-3%)
+        -o-transform: translateY(-3%)
+        transform: translateY(-3%)
+        transition: none
+        opacity: 0.7 !important
+        .carte-lieu
+            font-size: 1.8vh
+        .carte-nanterre
+            top: 17%
+            left: 20%
+        .carte-amandiers
+            top: 50%
+            left: 6%
+        .carte-archi
+            top: 34%
+            left: 22%
+        .carte-beauxarts
+            left: 50%
+            top: 46%
+        .carte-pompidou
+            left: 43%
+            top: 62%
+        .carte-archives
+            top: 65%
+            left: 72%
+        .carte-bnf
+            left: 35%
+            bottom: 8%
+        .carte-cinematheque
+            left: 70%
+            bottom: 14%
+@media (max-width:595px)
+    .carte-label .carte-lieu
+        font-size: 12px
         
 //==================== Infos =====================
 
@@ -235,14 +313,17 @@ header
     height: 100%
     width: 100%
     z-index: 101
-    -webkit-transform: translateX(-100%)
-    -moz-transform: translateX(-100%)
-    -ms-transform: translateX(-100%)
-    transform: translateX(-100%)
+    -webkit-transform: translateX(100%)
+    -moz-transform: translateX(100%)
+    -ms-transform: translateX(100%)
+    -o-transform: translateX(100%)
+    transform: translateX(100%)
     background: white
     overflow-x: hidden
+    a
+        tabindex: -1
     .close-info 
-        font-size: 65px
+        font-size: 55px
         margin: 40px 30px
         float: left
         cursor: pointer
@@ -337,9 +418,10 @@ header
             b
                 line-height: 35px
             span
-                font-size: 16px
+                font-size: 18px
                 font-weight: 500
             .info-eventdesc
+                font-size: 16px
                 margin-top: 10px
     .info-goagenda
         font-size: 24px
@@ -378,7 +460,6 @@ header
             height: auto
             max-width: 100%
             width: 100%
-            margin-bottom: 40px
             .info-bordureleft, .info-bordureright
                 display: none
             .close-info
@@ -392,7 +473,7 @@ header
                 top: 22%
                 left: 18%
                 width: auto
-                font-size: 32px !important
+                font-size: 36px !important
                 line-height: 40px
                 -webkit-transform: none
                 -moz-transform: none
@@ -404,7 +485,7 @@ header
                 line-height: 35px
                 top: 20px
             #info-lieu-archi
-                font-size: 28px !important
+                font-size: 30px !important
             .info-agenda
                 margin-right: 0
             .info-presentation, .info-goagenda
@@ -552,12 +633,13 @@ header
     position: absolute
 #timeline
     top: 22vh
-    left: 0
+    right: 1px
 #recherche
     top: 22vh
-    right: 1.5%
+    left: 0
     padding-top: 4px
     background: white
+    padding-bottom: 100px
 #show-timeline, #show-recherche
     display: none
 @media (max-width:850px)
@@ -568,6 +650,7 @@ header
         top: 27vh
         transition: all 100ms ease-in-out
     #timeline
+        left: 90%
         cursor: pointer
     #show-timeline, #show-recherche
         display: block
@@ -581,21 +664,21 @@ header
             font-size: 8vw
             padding-top: 6vw
     #show-timeline
+        border-top-right-radius: 300px
+        border-bottom-right-radius: 300px
+    #show-recherche
+        display: none
         border-top-left-radius: 300px
         border-bottom-left-radius: 300px
         text-align: right
-    #show-recherche
-        display: none
-        border-top-right-radius: 300px
-        border-bottom-right-radius: 300px
         
 
         
 .details
     padding: 2.7%
     padding-right: 4%
-    font-size: 17px
-    line-height: 24px
+    font-size: 16px
+    line-height: 21.5px
     font-weight: 500
     width: 100%
     h1
@@ -707,7 +790,7 @@ footer
     color: white
     background: #424242
     bottom: 0
-    right: 30px
+    left: 20px
     height: 63px
     width: 100px
     border-top-left-radius: 50px

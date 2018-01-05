@@ -2,6 +2,7 @@
 var doc = $(document);
 var body = $('html, body');
 var prevScroll = 0;
+var calc = 0;
 
 function isScrolledIntoView(elem)
 {
@@ -13,13 +14,13 @@ function isScrolledIntoView(elem)
 
 var animated = 0;
 function startAnimation() {
-    
-    $('.modules-display .module').each(function(){
-        var that = $('.' + $(this).attr('class').split(' ').pop());
+    $('.modules .module').each(function(){
+        var that = $('.' + $(this).attr('class').split(' ').pop() + ':not(.module-mobile)');
         setTimeout(function(){
             that.css('-webkit-transform', 'none');
             that.css('-moz-transform', 'none');
             that.css('-ms-transform', 'none');
+            that.css('-o-transform', 'none');
             that.css('transform', 'none');
         }, Math.floor(Math.random() * 750));
     });
@@ -30,11 +31,12 @@ function startAnimation() {
 var agendaTab = 0;
 function showTimeline() {
     if (window.innerWidth < 850 && !agendaTab) {
+        $('#timeline').css('left', '10%');
         $('#timeline').css('cursor', 'initial');
         $('#timeline a').css('pointer-events', 'auto');
         $('#show-timeline').css('display', 'none');
         $('#show-recherche').css('display', 'block');
-        $('#show-recherche').css('top', $('#recherche').scrollTop() + ($('#timeline').height() / 2.4));
+        $('#show-recherche').css('top', $('#recherche').scrollTop() + ($('#recherche').height() / 2.4));
         $('#recherche').css('right', '-80vw');
         $('#recherche').css('cursor', 'pointer');
         agendaTab = 1;
@@ -42,11 +44,11 @@ function showTimeline() {
 };
 function showRecherche() {
     if (window.innerWidth < 850 && agendaTab) {
-        $('#recherche').css('right', '1.5%');
         $('#recherche').css('cursor', 'initial');
         $('#show-timeline').css('display', 'block');
         $('#show-timeline').css('top', $('#timeline').scrollTop() + ($('#timeline').height() / 2.4));
         $('#show-recherche').css('display', 'none');
+        $('#timeline').css('left', '90%');
         $('#timeline').css('cursor', 'pointer');
         $('#timeline a').css('pointer-events', 'none');
         agendaTab = 0;
@@ -129,11 +131,12 @@ doc.ready(function () {
             $('.header-background').parent().css('border-bottom', 'none');
             $('.header-background.hidden').parent().css('border-bottom', 'dotted 1px black');
             
+            calc = prevScroll - $('#68').position().top;
             if (prevScroll + 10 < $('#68').position().top && animated == 0) {
-                $('.carte').css('-webkit-transform', 'translateY('+(prevScroll - $('#68').position().top)+'px)');
-                $('.carte').css('-moz-transform', 'translateY('+(prevScroll - $('#68').position().top)+'px)');
-                $('.carte').css('-ms-transform', 'translateY('+(prevScroll - $('#68').position().top)+'px)');
-                $('.carte').css('transform', 'translateY('+(prevScroll - $('#68').position().top)+'px)');
+                $('.carte').css('-webkit-transform', 'translateY('+calc+'px)');
+                $('.carte').css('-moz-transform', 'translateY('+calc+'px)');
+                $('.carte').css('-ms-transform', 'translateY('+calc+'px)');
+                $('.carte').css('transform', 'translateY('+calc+'px)');
                 $('.carte svg').css('opacity', '1');
                 $('.carte-label').css('opacity', '0')                
             }
@@ -150,10 +153,11 @@ doc.ready(function () {
             };
         });
         
-        $('.carte').css('transform', '-webkit-translateY('+(prevScroll - $('#68').position().top)+'px)');
-        $('.carte').css('transform', '-moz-translateY('+(prevScroll - $('#68').position().top)+'px)');
-        $('.carte').css('transform', '-ms-translateY('+(prevScroll - $('#68').position().top)+'px)');
-        $('.carte').css('transform', 'translateY('+(prevScroll - $('#68').position().top)+'px)');
+        calc = prevScroll - $('#68').position().top;
+        $('.carte').css('transform', '-webkit-translateY('+calc+'px)');
+        $('.carte').css('transform', '-moz-translateY('+calc+'px)');
+        $('.carte').css('transform', '-ms-translateY('+calc+'px)');
+        $('.carte').css('transform', 'translateY('+calc+'px)');
     }, 100);
     
     $('.scroll-footer').click(function() {
@@ -182,23 +186,26 @@ doc.ready(function () {
     });
 
 //----------- 68 --------------
+    $('.info-container a').attr('tabindex', '-1');
     $('.module').attr('tabindex', '-1');
+    $('.module').on('focus', function() {
+        document.activeElement.blur();            
+    });
 
     $('.modules-click .module').hover(function(){
         $('.' + $(this).attr('class').split(' ').pop()).css('opacity', '0.8');
+        $('.' + $(this).attr('class').split(' ').pop().replace('module', 'carte')).addClass('carte-hover');
     }, function() {
         $('.' + $(this).attr('class').split(' ').pop()).css('opacity', '1');       
+        $('.' + $(this).attr('class').split(' ').pop().replace('module', 'carte')).removeClass('carte-hover');
     });
    
     $('.modules-click .module').click(function() {
-       $('#' + $(this).attr('class').split(' ').pop().replace('module', 'info')).addClass('info-open');
-       $('.info-open').addClass('info-transition');
-       $('.info-open button').attr('tabindex', '0');
-//       $('.modules-click .module').attr('tabindex', '-1');
+        document.activeElement.blur();    
+        $('#' + $(this).attr('class').split(' ').pop().replace('module', 'info')).addClass('info-open');
+        $('.info-open').addClass('info-transition');
     });
     $('.close-info').click(function() {
-       $('.info-open button').attr('tabindex', '-1');
-//       $('.modules-click .module').attr('tabindex', '0');
        $('.info-open').addClass('info-transition');
        $('.info-open').removeClass('info-open');
         window.scrollTo(0, $('#68').position().top);
@@ -246,13 +253,13 @@ window.onresize = function(event) {
         showRecherche();
     }
     else {
-        $('#timeline').css('left', '0');
+        $('#timeline').css('left', '51%');
         $('#timeline').css('cursor', 'initial');
         $('#timeline').css('overflow-y', 'scroll');
         $('#timeline a').css('pointer-events', 'auto');
         $('#show-timeline').css('display', 'none');
         $('#show-recherche').css('display', 'none');
-        $('#recherche').css('right', '1.5%');
+        $('#recherche').css('left', '0');
         $('#recherche').css('cursor', 'initial');
         $('#recherche').css('overflow-y', 'scroll');
     }

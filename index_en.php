@@ -44,10 +44,10 @@
 </head>
 
 <body>
-    <header>
+    <header class="header-en">
         <button id="header-accueil" class="btn btn-blank" style="border-bottom: none;">
             <div class="header-background"></div>
-            HOME
+            EDITORIAL
         </button>
         <button id="header-68" class="btn btn-blank">
             <div class="header-background hidden"></div>
@@ -83,16 +83,21 @@
                 <?php echo file_get_contents("assets/carte.svg"); ?><br>
             </div>
         </div>
-        <div class="modules modules-display">
+        <div class="modules modules-display modules-desktop">
             <div class="vertical">
                 <?php echo file_get_contents("assets/modules.svg"); ?>
+            </div>
+        </div>
+        <div class="modules modules-display modules-mobile">
+            <div class="vertical">
+                <?php echo file_get_contents("assets/modules-mobile.svg"); ?>
             </div>
         </div>
         <div class="labels">
             <div class="vertical">
                 <div class="carte-label">
                     <div class="carte-lieu carte-nanterre">Université<br>Paris<br>Nanterre</div>
-                    <div class="carte-lieu carte-amandiers">Nanterre-<br>Amandiers</div>
+                    <div class="carte-lieu carte-amandiers">Nanterre-Amandiers</div>
                     <div class="carte-lieu carte-archi">Cité<br>de&nbsp;l’architecture<br>et&nbsp;du&nbsp;patrimoine</div>
                     <div class="carte-lieu carte-beauxarts">Beaux&#8209;Arts<br>de&nbsp;Paris</div>
                     <div class="carte-lieu carte-pompidou">Centre<br>Pompidou</div>
@@ -102,9 +107,14 @@
                 </div>
             </div>
         </div>
-        <div class="modules modules-click">
+        <div class="modules modules-click modules-desktop">
             <div class="vertical">
                 <?php echo file_get_contents("assets/modules.svg"); ?>
+            </div>
+        </div>
+        <div class="modules modules-click modules-mobile">
+            <div class="vertical">
+                <?php echo file_get_contents("assets/modules-mobile.svg"); ?>
             </div>
         </div>
     </div>

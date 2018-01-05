@@ -57,7 +57,7 @@ TOUT DOUX
     <header>
         <button id="header-accueil" class="btn btn-blank" style="border-bottom: none;">
             <div class="header-background"></div>
-            ACCUEIL
+            ÉDITO
         </button>
         <button id="header-68" class="btn btn-blank">
             <div class="header-background hidden"></div>
@@ -93,9 +93,14 @@ TOUT DOUX
                 <?php echo file_get_contents("assets/carte.svg"); ?><br>
             </div>
         </div>
-        <div class="modules modules-display">
+        <div class="modules modules-display modules-desktop">
             <div class="vertical">
                 <?php echo file_get_contents("assets/modules.svg"); ?>
+            </div>
+        </div>
+        <div class="modules modules-display modules-mobile">
+            <div class="vertical">
+                <?php echo file_get_contents("assets/modules-mobile.svg"); ?>
             </div>
         </div>
         <div class="labels">
@@ -112,9 +117,14 @@ TOUT DOUX
                 </div>
             </div>
         </div>
-        <div class="modules modules-click">
+        <div class="modules modules-click modules-desktop">
             <div class="vertical">
                 <?php echo file_get_contents("assets/modules.svg"); ?>
+            </div>
+        </div>
+        <div class="modules modules-click modules-mobile">
+            <div class="vertical">
+                <?php echo file_get_contents("assets/modules-mobile.svg"); ?>
             </div>
         </div>
     </div>

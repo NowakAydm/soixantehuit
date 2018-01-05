@@ -1,7 +1,7 @@
 <!--Paris Nanterre-->
 <div id="info-nanterre" class="info-container bloc">
     <div class="info-sidebar col-sm-3 lieu49592631">
-        <span tabIndex="-1" class="close-info glyphicon glyphicon-chevron-left"></span>
+        <span tabIndex="-1" class="close-info glyphicon glyphicon-remove"></span>
         <span class="info-lieu">Université<br>Paris Nanterre</span>
         <div class="info-bordureleft"></div>
     </div>
@@ -90,7 +90,7 @@
 <!--Amandiers-->
 <div id="info-amandiers" class="info-container bloc">
     <div class="info-sidebar col-sm-3 lieu47774204">
-        <span tabIndex="-1" class="close-info glyphicon glyphicon-chevron-left"></span>
+        <span tabIndex="-1" class="close-info glyphicon glyphicon-remove"></span>
         <span class="info-lieu">Nanterre-Amandiers</span>
         <div class="info-bordureleft"></div>
     </div>
@@ -142,7 +142,7 @@
 <!--Cite de l'archi-->
 <div id="info-archi" class="info-container bloc">
     <div class="info-sidebar col-sm-3 lieu97092341">
-        <span tabIndex="-1" class="close-info glyphicon glyphicon-chevron-left"></span>
+        <span tabIndex="-1" class="close-info glyphicon glyphicon-remove"></span>
         <span id='info-lieu-archi' class="info-lieu" style="font-size: 7vh;">Cité de&nbsp;l’architecture &&nbsp;du&nbsp;patrimoine</span>
         <div class="info-bordureleft"></div>
     </div>
@@ -194,7 +194,7 @@
 <!--Beaux Arts-->
 <div id="info-beauxarts" class="info-container bloc">
     <div class="info-sidebar col-sm-3 lieu37250659">
-        <span tabIndex="-1" class="close-info glyphicon glyphicon-chevron-left"></span>
+        <span tabIndex="-1" class="close-info glyphicon glyphicon-remove"></span>
         <span class="info-lieu">Beaux-Arts de&nbsp;Paris</span>
         <div class="info-bordureleft"></div>
     </div>
@@ -249,7 +249,7 @@
 <!--Pompidou-->
 <div id="info-pompidou" class="info-container bloc">
     <div class="info-sidebar col-sm-3 lieu44057765">
-        <span tabIndex="-1" class="close-info glyphicon glyphicon-chevron-left"></span>
+        <span tabIndex="-1" class="close-info glyphicon glyphicon-remove"></span>
         <span class="info-lieu">Centre<br>Pompidou</span>
         <div class="info-bordureleft"></div>
     </div>
@@ -303,7 +303,7 @@
 <!--Archives-->
 <div id="info-archives" class="info-container bloc">
     <div class="info-sidebar col-sm-3 lieu74030026">
-        <span tabIndex="-1" class="close-info glyphicon glyphicon-chevron-left"></span>
+        <span tabIndex="-1" class="close-info glyphicon glyphicon-remove"></span>
         <span class="info-lieu">Archives<br>nationales</span>
         <div class="info-bordureleft"></div>
     </div>
@@ -367,7 +367,7 @@
 <!--BnF-->
 <div id="info-bnf" class="info-container bloc">
     <div class="info-sidebar col-sm-3 lieu96612516">
-        <span tabIndex="-1" class="close-info glyphicon glyphicon-chevron-left"></span>
+        <span tabIndex="-1" class="close-info glyphicon glyphicon-remove"></span>
         <span id='info-lieu-bnf' class="info-lieu">Bibliothèque<br>nationale<br>de&nbsp;France</span>
         <div class="info-bordureleft"></div>
     </div>
@@ -423,7 +423,7 @@
 <!--Cinematheque-->
 <div id="info-cinematheque" class="info-container bloc">
     <div class="info-sidebar col-sm-3 lieu33873846">
-        <span tabIndex="-1" class="close-info glyphicon glyphicon-chevron-left"></span>
+        <span tabIndex="-1" class="close-info glyphicon glyphicon-remove"></span>
         <span class="info-lieu">La Cinémathèque<br>française</span>
         <div class="info-bordureleft"></div>
     </div>
