@@ -214,5 +214,20 @@ TOUT DOUX
         <br> Copyright soixantehuit © 2018
     </footer>
 </body>
-
+<script type="text/javascript">
+    function replaceImage( src, id ) {
+        $('#'+id+' .image').css('background-image', 'url('+src+')');
+    };
+    
+    for (var x = 0; x < events.length - 1; x++) {
+        if (events[x].image) {
+            var image = new Image;
+            image.src = events[x].image;
+            if (image.complete)
+                replaceImage(events[x].image, events[x].uid);
+            else
+                image.addEventListener('load', replaceImage(events[x].image, events[x].uid));            
+        };
+    }    
+</script>
 </html>
