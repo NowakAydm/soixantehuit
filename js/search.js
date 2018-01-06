@@ -3,13 +3,13 @@ function searchReady() {
         placement: 'bottom',
         html: 'true',
         content: "<ul class='list-group list-lieux'>\
-                      <li class='list-group-item lieu74030026' onclick='addPlace(74030026)'>Archives Nationales</li>\
-                      <li class='list-group-item lieu37250659' onclick='addPlace(37250659)'>Beaux-arts de Paris</li>\
+                      <li class='list-group-item lieu74030026' onclick='addPlace(74030026)'>Archives nationales</li>\
+                      <li class='list-group-item lieu37250659' onclick='addPlace(37250659)'>Beaux-Arts de Paris</li>\
                       <li class='list-group-item lieu96612516' onclick='addPlace(96612516)'>BnF</li>\
                       <li class='list-group-item lieu44057765' onclick='addPlace(44057765)'>Centre Pompidou</li>\
-                      <li class='list-group-item lieu33873846' onclick='addPlace(33873846)'>Cinémathèque</li>\
+                      <li class='list-group-item lieu33873846' onclick='addPlace(33873846)'>La Cinémathèque</li>\
                       <li class='list-group-item lieu97092341' onclick='addPlace(97092341)'>Cité de l'Architecture</li>\
-                      <li class='list-group-item lieu47774204' onclick='addPlace(47774204)'>Nanterre Amandiers</li>\
+                      <li class='list-group-item lieu47774204' onclick='addPlace(47774204)'>Nanterre-Amandiers</li>\
                       <li class='list-group-item lieu49592631' onclick='addPlace(49592631)'>Université Paris Nanterre</li>\
                     </ul>"
     });
@@ -149,6 +149,24 @@ function searchReady() {
 var curPlace;
 function addPlace( a ) {
     $('.info-open .close-info').click();
+    $('.search-lieu').html('<i class="glyphicon glyphicon-remove clear-categorie"></i>');
+    if (a == 49592631)
+        $('.search-lieu').append('<span>Université Paris Nanterre</span>');
+    else if (a == 47774204)
+        $('.search-lieu').append('<span>Nanterre-Amandiers</span>');
+    else if (a == 97092341)
+        $('.search-lieu').append("<span>Cité de l'Architecture</span>");
+    else if (a == 37250659)
+        $('.search-lieu').append('<span>Beaux-Arts de Paris</span>');
+    else if (a == 44057765)
+        $('.search-lieu').append('<span>Centre Pompidou</span>');
+    else if (a == 74030026)
+        $('.search-lieu').append('<span>Archives nationales</span>');
+    else if (a == 96612516)
+        $('.search-lieu').append('<span>BnF</span>');
+    else if (a == 33873846)
+        $('.search-lieu').append('<span>La Cinémathèque</span>');
+    
     $('.search-lieu .glyphicon').css('color', 'inherit');
     $('.search-lieu').css('display', 'block');
     $('.search-lieu').css('cursor', 'pointer');
@@ -175,9 +193,9 @@ function addCategory( a ) {
     if (a == 1)
         $('.search-categorie').html('<i class="glyphicon glyphicon-remove clear-categorie"></i>Projection');
     else if (a == 2)
-        $('.search-categorie').html('<i class="glyphicon glyphicon-remove clear-categorie"></i>Spectacle');
+        $('.search-categorie').html('<i class="glyphicon glyphicon-remove clear-categorie"></i>Performance/Spectacle');
     else if (a == 3)
-        $('.search-categorie').html('<i class="glyphicon glyphicon-remove clear-categorie"></i>Conférence');
+        $('.search-categorie').html('<i class="glyphicon glyphicon-remove clear-categorie"></i>Colloque/Conférence/Débat');
     else if (a == 4)
         $('.search-categorie').html('<i class="glyphicon glyphicon-remove clear-categorie"></i>Exposition');
 

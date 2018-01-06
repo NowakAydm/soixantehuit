@@ -2,26 +2,29 @@
     <div class="agenda-header">
         <h1>Agenda</h1>
         <div class="agenda-filtres">
-            Trier par :
-            <button id="filtre-categorie" class="btn btn-blank" data-toggle="popover">
-                Catégorie 
-                <i class="glyphicon glyphicon-chevron-right"></i>
-            </button>
-            <button id="filtre-lieu" class="btn btn-blank" data-toggle="popover">
-                Lieu
-                <i class="glyphicon glyphicon-chevron-right"></i>
-            </button>
-            <div class="col-sm-6">
-                <input type='text' class="btn btn-blank" id='datetimepicker' placeholder="Date" readonly="readonly" />
-                <i class="glyphicon glyphicon-chevron-right" id='glyphicon'></i>
+            <div class="row">
+                Trier par :
+                <button id="filtre-categorie" class="btn btn-blank" data-toggle="popover">
+                    Catégorie 
+                    <i class="glyphicon glyphicon-chevron-right"></i>
+                </button>
+                <button id="filtre-lieu" class="btn btn-blank" data-toggle="popover">
+                    Lieu
+                    <i class="glyphicon glyphicon-chevron-right"></i>
+                </button>
+                <div class="col-sm-6">
+                    <input type='text' class="btn btn-blank" id='datetimepicker' placeholder="Date" readonly="readonly" />
+                    <i class="glyphicon glyphicon-chevron-right" id='glyphicon'></i>
+                </div>
             </div>
-
-            <br>
-            <div class="search search-date clear-date"><i class="glyphicon glyphicon-remove"></i></div>
-            <div class="search search-lieu clear-lieu"><i class="glyphicon glyphicon-remove"></i></div>
-            <div class="search search-categorie clear-categorie"></div>
+            <div class="row">
+                <div class="search search-date clear-date"><i class="glyphicon glyphicon-remove"></i></div>
+                <div class="search search-lieu clear-lieu"><i class="glyphicon glyphicon-remove"></i></div>
+                <div class="search search-categorie clear-categorie"></div>
+            </div>
         </div>
     </div>
+    
     <div id="recherche" onClick="showRecherche()">
         <div id="show-recherche"><i class="glyphicon glyphicon-chevron-right"></i></div>
         
@@ -38,7 +41,7 @@
                             echo "4 ";
                        ?>" id="<?php echo $e[$x]->uid; ?>">
             <div class="image" style="background-image: url('<?php echo $e[$x]->thumbnail ?>')"></div>
-            <div class="infos lieu<?php echo $e[$x]->location->uid; ?>">
+            <div class="infos lieu lieu<?php echo $e[$x]->location->uid; ?>">
                 <h3> <?php echo preg_replace('/\, \d\d\w\d\d/', '', $e[$x]->range->fr); ?></h3>
                 <h1> <?php echo $e[$x]->title->fr; ?></h1>
                 <h3> <?php 
@@ -63,7 +66,6 @@
 
         <?php } ?>
     </div>
-
     <div id="timeline" onClick="showTimeline()">
         <div id="show-timeline"><i class="glyphicon glyphicon-chevron-left"></i></div>
         <?php
@@ -74,7 +76,7 @@
                 $e[$x]->title->fr = mb_strtoupper($e[$x]->title->fr, "utf-8");
         ?>
 
-            <div class="details lieu<?php echo $e[$x]->location->uid." ".$e[$x]->uid; ?>">
+            <div class="details lieu lieu<?php echo $e[$x]->location->uid." ".$e[$x]->uid; ?>">
 
                 <h2>
                     <?php echo $e[$x]->range->fr; ?>
