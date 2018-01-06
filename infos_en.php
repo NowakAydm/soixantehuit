@@ -42,43 +42,6 @@
                     echo '<span>'.($e[$x]->title->en ? $e[$x]->title->en : $e[$x]->title->fr).'</span><br>';
                     echo '<div class="info-eventdesc">'.($e[$x]->description->en ? $e[$x]->description->en : $e[$x]->description->fr).'</div><br>';
                     echo '</div>';
-                    
-                    echo '<div class="info-event"><b>'.str_replace("2018", "", $e[$x]->range->en).'</b><br>';
-                    echo '<span>'.($e[$x]->title->en ? $e[$x]->title->en : $e[$x]->title->fr).'</span><br>';
-                    echo '<div class="info-eventdesc">'.($e[$x]->description->en ? $e[$x]->description->en : $e[$x]->description->fr).'</div><br>';
-                    echo '</div>';
-                    echo '<div class="info-event"><b>'.str_replace("2018", "", $e[$x]->range->en).'</b><br>';
-                    echo '<span>'.($e[$x]->title->en ? $e[$x]->title->en : $e[$x]->title->fr).'</span><br>';
-                    echo '<div class="info-eventdesc">'.($e[$x]->description->en ? $e[$x]->description->en : $e[$x]->description->fr).'</div><br>';
-                    echo '</div>';
-                    echo '<div class="info-event"><b>'.str_replace("2018", "", $e[$x]->range->en).'</b><br>';
-                    echo '<span>'.($e[$x]->title->en ? $e[$x]->title->en : $e[$x]->title->fr).'</span><br>';
-                    echo '<div class="info-eventdesc">'.($e[$x]->description->en ? $e[$x]->description->en : $e[$x]->description->fr).'</div><br>';
-                    echo '</div>';
-                    echo '<div class="info-event"><b>'.str_replace("2018", "", $e[$x]->range->en).'</b><br>';
-                    echo '<span>'.($e[$x]->title->en ? $e[$x]->title->en : $e[$x]->title->fr).'</span><br>';
-                    echo '<div class="info-eventdesc">'.($e[$x]->description->en ? $e[$x]->description->en : $e[$x]->description->fr).'</div><br>';
-                    echo '</div>';
-                    echo '<div class="info-event"><b>'.str_replace("2018", "", $e[$x]->range->en).'</b><br>';
-                    echo '<span>'.($e[$x]->title->en ? $e[$x]->title->en : $e[$x]->title->fr).'</span><br>';
-                    echo '<div class="info-eventdesc">'.($e[$x]->description->en ? $e[$x]->description->en : $e[$x]->description->fr).'</div><br>';
-                    echo '</div>';
-                    echo '<div class="info-event"><b>'.str_replace("2018", "", $e[$x]->range->en).'</b><br>';
-                    echo '<span>'.($e[$x]->title->en ? $e[$x]->title->en : $e[$x]->title->fr).'</span><br>';
-                    echo '<div class="info-eventdesc">'.($e[$x]->description->en ? $e[$x]->description->en : $e[$x]->description->fr).'</div><br>';
-                    echo '</div>';
-                    echo '<div class="info-event"><b>'.str_replace("2018", "", $e[$x]->range->en).'</b><br>';
-                    echo '<span>'.($e[$x]->title->en ? $e[$x]->title->en : $e[$x]->title->fr).'</span><br>';
-                    echo '<div class="info-eventdesc">'.($e[$x]->description->en ? $e[$x]->description->en : $e[$x]->description->fr).'</div><br>';
-                    echo '</div>';
-                    echo '<div class="info-event"><b>'.str_replace("2018", "", $e[$x]->range->en).'</b><br>';
-                    echo '<span>'.($e[$x]->title->en ? $e[$x]->title->en : $e[$x]->title->fr).'</span><br>';
-                    echo '<div class="info-eventdesc">'.($e[$x]->description->en ? $e[$x]->description->en : $e[$x]->description->fr).'</div><br>';
-                    echo '</div>';
-                    echo '<div class="info-event"><b>'.str_replace("2018", "", $e[$x]->range->en).'</b><br>';
-                    echo '<span>'.($e[$x]->title->en ? $e[$x]->title->en : $e[$x]->title->fr).'</span><br>';
-                    echo '<div class="info-eventdesc">'.($e[$x]->description->en ? $e[$x]->description->en : $e[$x]->description->fr).'</div><br>';
-                    echo '</div>';
                 }
             }
         ?>
@@ -148,7 +111,7 @@
     </div>
     <div class="info-midbar col-sm-5">
         <div class="info-presentation">
-            “MAY ’68: ARCHITECTURE AS WELL!”
+            "May' 68. Architecture as well!" 1968, student revolt, trade union, social and artistic revolt, of the way of thinking or making cities, of simply living. Teach and do architecture differently.
         </div>
         <div class="info-description">
             The Cité de l’architecture & du patrimoine offers its visitors an exceptionally diverse cultural experience organised in a single, unique location occupying 22,000m² in the heart of Paris. From urban renewal to the revitalisation of our cultural heritage, questions of the city occupy us daily. A public entity under the umbrella of the Ministry of Culture and Communications, the role of the Cité is to be a source of information and knowledge in all questions related to the quality of architecture, from the upgrading of our cultural heritage to the preservation of the urban environment. Aimed at both the general public and a more specialist audience, the programme of the Cité is highly diversified: permanent and temporary exhibitions, teaching and workshops, symposia, debates, projections...<br>

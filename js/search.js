@@ -5,12 +5,13 @@ function searchReady() {
         content: "<ul class='list-group list-lieux'>\
                       <li class='list-group-item lieu74030026' onclick='addPlace(74030026)'>Archives nationales</li>\
                       <li class='list-group-item lieu37250659' onclick='addPlace(37250659)'>Beaux-Arts de Paris</li>\
-                      <li class='list-group-item lieu96612516' onclick='addPlace(96612516)'>BnF</li>\
+                      <li class='list-group-item lieu96612516' onclick='addPlace(96612516)'>Bibliothèque nationale de France</li>\
                       <li class='list-group-item lieu44057765' onclick='addPlace(44057765)'>Centre Pompidou</li>\
-                      <li class='list-group-item lieu33873846' onclick='addPlace(33873846)'>La Cinémathèque</li>\
-                      <li class='list-group-item lieu97092341' onclick='addPlace(97092341)'>Cité de l'Architecture</li>\
+                      <li class='list-group-item lieu33873846' onclick='addPlace(33873846)'>La Cinémathèque française</li>\
+                      <li class='list-group-item lieu97092341' onclick='addPlace(97092341)'>Cité de l’architecture & du patrimoine</li>\
                       <li class='list-group-item lieu47774204' onclick='addPlace(47774204)'>Nanterre-Amandiers</li>\
                       <li class='list-group-item lieu49592631' onclick='addPlace(49592631)'>Université Paris Nanterre</li>\
+                      <li class='list-group-item lieu' onclick='addPlace()'>"+($('.agenda-header h1').html() == 'Agenda' ? 'Autres lieux' : 'Other places')+"</li>\
                     </ul>"
     });
     $('#filtre-lieu').on('show.bs.popover', function() {
@@ -155,7 +156,7 @@ function addPlace( a ) {
     else if (a == 47774204)
         $('.search-lieu').append('<span>Nanterre-Amandiers</span>');
     else if (a == 97092341)
-        $('.search-lieu').append("<span>Cité de l'Architecture</span>");
+        $('.search-lieu').append("<span>Cité de l’architecture & du patrimoine</span>");
     else if (a == 37250659)
         $('.search-lieu').append('<span>Beaux-Arts de Paris</span>');
     else if (a == 44057765)
@@ -163,18 +164,35 @@ function addPlace( a ) {
     else if (a == 74030026)
         $('.search-lieu').append('<span>Archives nationales</span>');
     else if (a == 96612516)
-        $('.search-lieu').append('<span>BnF</span>');
+        $('.search-lieu').append('<span>Bibliothèque nationale de France</span>');
     else if (a == 33873846)
-        $('.search-lieu').append('<span>La Cinémathèque</span>');
-    
+        $('.search-lieu').append('<span>La Cinémathèque française</span>');
+    else
+        $('.search-lieu').append(($('.agenda-header h1').html() == 'Agenda' ? '<span>Autres lieux</span>' : '<span>Other places</span>'));
+
     $('.search-lieu .glyphicon').css('color', 'inherit');
     $('.search-lieu').css('display', 'block');
     $('.search-lieu').css('cursor', 'pointer');
     $('.search-lieu').removeClass(curPlace); 
-    $('.search-lieu').addClass('lieu'+a); 
-    curPlace = 'lieu'+a;
-    $('.evenement').addClass('hide-lieu');
-    $('.infos.'+curPlace).parent().removeClass('hide-lieu');
+    if (a) {
+        $('.search-lieu').addClass('lieu'+a); 
+        curPlace = 'lieu'+a;
+        $('.evenement').addClass('hide-lieu');
+        $('.infos.'+curPlace).parent().removeClass('hide-lieu');
+    }
+    else {
+        $('.search-lieu').addClass('lieu'); 
+        curPlace = 'lieu';
+        $('.infos.lieu49592631').parent().addClass('hide-lieu');
+        $('.infos.lieu47774204').parent().addClass('hide-lieu');
+        $('.infos.lieu97092341').parent().addClass('hide-lieu');
+        $('.infos.lieu37250659').parent().addClass('hide-lieu');
+        $('.infos.lieu44057765').parent().addClass('hide-lieu');
+        $('.infos.lieu74030026').parent().addClass('hide-lieu');
+        $('.infos.lieu96612516').parent().addClass('hide-lieu');
+        $('.infos.lieu33873846').parent().addClass('hide-lieu');
+        
+    };  
     $('#filtre-lieu').click();
     if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {  
         window.scrollTo(0, $('#agenda').position().top);
@@ -193,11 +211,11 @@ function addCategory( a ) {
     if (a == 1)
         $('.search-categorie').html('<i class="glyphicon glyphicon-remove clear-categorie"></i>Projection');
     else if (a == 2)
-        $('.search-categorie').html('<i class="glyphicon glyphicon-remove clear-categorie"></i>Performance/Spectacle');
+        $('.search-categorie').html('<i class="glyphicon glyphicon-remove clear-categorie"></i>'+($('.agenda-header h1').html() == 'Agenda' ? 'Performance/Spectacle' : 'Performance/Show'));
     else if (a == 3)
-        $('.search-categorie').html('<i class="glyphicon glyphicon-remove clear-categorie"></i>Colloque/Conférence/Débat');
+        $('.search-categorie').html('<i class="glyphicon glyphicon-remove clear-categorie"></i>'+($('.agenda-header h1').html() == 'Agenda' ? 'Colloque/Conférence/Débat' : 'Seminar/Conference/Debate'));
     else if (a == 4)
-        $('.search-categorie').html('<i class="glyphicon glyphicon-remove clear-categorie"></i>Exposition');
+        $('.search-categorie').html('<i class="glyphicon glyphicon-remove clear-categorie"></i>'+($('.agenda-header h1').html() == 'Agenda' ? 'Exposition' : 'Exhibition'));
 
     curCategorie = 'cat'+a;
     $('.evenement').addClass('hide-categorie');

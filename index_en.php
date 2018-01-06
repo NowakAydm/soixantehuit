@@ -6,7 +6,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>SoixanteHuit</title>
     <meta name="viewport" content="target-densitydpi=device-dpi; width=device-width; initial-scale=0.8; maximum-scale=0.8; user-scalable=no">
-    <meta name="description" content="" />
+    
+    <meta name="title" content="Anniversaire Mai 68 : programme à Paris et en Ile-de- France">
+    <meta name="description" content="Mai 68, 50 ans après : Découvrez la programmation anniversaire de plusieurs institutions majeures à Paris et en Ile-de-France (expositions, rencontres, spectacles, ateliers…) : Archives nationales, Beaux-Arts, BNF, Cinémathèque, Cité de l’architecture, Centre Pompidou, Nanterre-Amandiers, Université Paris Nanterre">
+    <meta name="author" content="Adam Nowak">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
@@ -66,7 +69,7 @@
             <h1>soixante-huit</h1>
             <p>Fifty years ago, the demonstrations of May 68 turned the streets of Paris and Nanterre upside down, and shook France to its very core. Linked with a vast international protest movement, it brought about profound changes in French society.</p>
             <p>Fifty years on, various cultural institutions explore the history and legacy of May 68 through get-togethers, exhibitions, newly-opened archives, participatory workshops, theatre, music, debates and talks casting fresh light on the events. </p>
-            <p>Uniting the programmes of eight cultural partners in Paris and the surrounding region, this site is designed to share these rich and varied tributes with a broad public.</p>
+            <p>Uniting the programmes of several cultural partners in Paris and the surrounding region, this site is designed to share these rich and varied tributes with a broad public.</p>
             <div class="langues">
                 <a href="index.php">FR</a> <a><u>EN</u></a>
             </div>
@@ -98,12 +101,12 @@
                 <div class="carte-label">
                     <div class="carte-lieu carte-nanterre">Université<br>Paris<br>Nanterre</div>
                     <div class="carte-lieu carte-amandiers">Nanterre-Amandiers</div>
-                    <div class="carte-lieu carte-archi">Cité<br>de&nbsp;l’architecture<br>et&nbsp;du&nbsp;patrimoine</div>
+                    <div class="carte-lieu carte-archi">Cité<br>de&nbsp;l’architecture<br>&&nbsp;du&nbsp;patrimoine</div>
                     <div class="carte-lieu carte-beauxarts">Beaux&#8209;Arts<br>de&nbsp;Paris</div>
                     <div class="carte-lieu carte-pompidou">Centre<br>Pompidou</div>
                     <div class="carte-lieu carte-archives">Archives<br>nationales</div>
                     <div class="carte-lieu carte-bnf">Bibliothèque<br>nationale<br>de&nbsp;France</div>
-                    <div class="carte-lieu carte-cinematheque">La&nbsp;Cinémathèque<br>francaise</div>
+                    <div class="carte-lieu carte-cinematheque">La&nbsp;Cinémathèque<br>française</div>
                 </div>
             </div>
         </div>
@@ -126,7 +129,7 @@
     <footer class="center">
         <div class='col-xs-4'><a data-toggle='modal' href='#Credits'>Credits</a></div>
         <div class='col-xs-4'><a data-toggle='modal' href='#Presse'>Press</a></div>
-        <div class='col-xs-4'><a href="mailto:claire.galibert@centrepompidou.fr">Contact</a></div>
+        <div class='col-xs-4'><a href="mailto:soixantehuit@centrepompidou.fr">Contact</a></div>
 
         <div id="Credits" class="modal fade" role="dialog">
             <div class="modal-dialog">
@@ -171,7 +174,9 @@
                     <div class="modal-body">
                         <p><a>Télécharger le dossier de presse</a></p>
                         <p>
-                            Contacts presse :<br>
+                            Contacts presse :
+                        </p>
+                        <p>
                             Centre Pompidou<br>
                             Direction de la communication et des partenariats<br>
                             75191 Paris cedex 04

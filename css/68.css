@@ -108,12 +108,12 @@ header {
 
 @media (max-width: 850px) {
   /* line 88, /var/www/html/soixantehuit/sass/68.sass */
-  header {
+  header, .header-en {
     height: 65px;
     width: 100.1%;
     border-bottom-left-radius: 0; }
     /* line 92, /var/www/html/soixantehuit/sass/68.sass */
-    header .btn {
+    header .btn, .header-en .btn {
       font-size: 19px;
       width: 28%;
       margin-left: 3%;

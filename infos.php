@@ -42,52 +42,6 @@
                     echo '<span>'.$e[$x]->title->fr.'</span><br>';
                     echo '<div class="info-eventdesc">'.$e[$x]->description->fr.'</div><br>';
                     echo '</div>';
-
-                    echo '<div class="info-event"><b>'.str_replace("2018", "", $e[$x]->range->fr).'</b><br>';
-                    echo '<span>'.$e[$x]->title->fr.'</span><br>';
-                    echo '<div class="info-eventdesc">'.$e[$x]->description->fr.'</div><br>';
-                    echo '</div>';
-
-                    echo '<div class="info-event"><b>'.str_replace("2018", "", $e[$x]->range->fr).'</b><br>';
-                    echo '<span>'.$e[$x]->title->fr.'</span><br>';
-                    echo '<div class="info-eventdesc">'.$e[$x]->description->fr.'</div><br>';
-                    echo '</div>';
-
-                    echo '<div class="info-event"><b>'.str_replace("2018", "", $e[$x]->range->fr).'</b><br>';
-                    echo '<span>'.$e[$x]->title->fr.'</span><br>';
-                    echo '<div class="info-eventdesc">'.$e[$x]->description->fr.'</div><br>';
-                    echo '</div>';
-
-                    echo '<div class="info-event"><b>'.str_replace("2018", "", $e[$x]->range->fr).'</b><br>';
-                    echo '<span>'.$e[$x]->title->fr.'</span><br>';
-                    echo '<div class="info-eventdesc">'.$e[$x]->description->fr.'</div><br>';
-                    echo '</div>';
-
-                    echo '<div class="info-event"><b>'.str_replace("2018", "", $e[$x]->range->fr).'</b><br>';
-                    echo '<span>'.$e[$x]->title->fr.'</span><br>';
-                    echo '<div class="info-eventdesc">'.$e[$x]->description->fr.'</div><br>';
-                    echo '</div>';
-
-                    echo '<div class="info-event"><b>'.str_replace("2018", "", $e[$x]->range->fr).'</b><br>';
-                    echo '<span>'.$e[$x]->title->fr.'</span><br>';
-                    echo '<div class="info-eventdesc">'.$e[$x]->description->fr.'</div><br>';
-                    echo '</div>';
-
-                    echo '<div class="info-event"><b>'.str_replace("2018", "", $e[$x]->range->fr).'</b><br>';
-                    echo '<span>'.$e[$x]->title->fr.'</span><br>';
-                    echo '<div class="info-eventdesc">'.$e[$x]->description->fr.'</div><br>';
-                    echo '</div>';
-
-                    echo '<div class="info-event"><b>'.str_replace("2018", "", $e[$x]->range->fr).'</b><br>';
-                    echo '<span>'.$e[$x]->title->fr.'</span><br>';
-                    echo '<div class="info-eventdesc">'.$e[$x]->description->fr.'</div><br>';
-                    echo '</div>';
-
-                    echo '<div class="info-event"><b>'.str_replace("2018", "", $e[$x]->range->fr).'</b><br>';
-                    echo '<span>'.$e[$x]->title->fr.'</span><br>';
-                    echo '<div class="info-eventdesc">'.$e[$x]->description->fr.'</div><br>';
-                    echo '</div>';
-
                 }
             }
         ?>
@@ -326,7 +280,7 @@
             </b></p>
             <p>
                 Créées pendant la Révolution française, les Archives nationales conservent les archives publiques des différents régimes politiques du VIIe siècle jusqu’à nos jours, ainsi que les minutes des notaires parisiens et des fonds d’archives privées.<br>
-                Avec la loi du 7 messidor an II (1794), l’accès gratuit aux archives de l’État est établie comme une garantie du régime démocratique et de la transparence de l’État. Ce sont près de 350 kilomètres linéaires d’archives sur tous supports, qui sont conservés, ainsi que des millions de fichiers nativement numériques.
+                Avec la loi du 7 messidor an II (1794), l’accès gratuit aux archives de l’État est établi comme une garantie du régime démocratique et de la transparence de l’État. Ce sont près de 350 kilomètres linéaires d’archives sur tous supports, qui sont conservés, ainsi que des millions de fichiers nativement numériques.
             </p>
             <p>
                 Parmi ces documents, certains symbolisent des étapes majeures de l’histoire de France : les papyri mérovingiens, le procès des Templiers, le journal de Louis XVI, le serment du Jeu de paume, la Déclaration des Droits de l’Homme et du Citoyen, le testament de Napoléon, les Constitutions successives de la France, ou encore le premier recensement numérique de la population en 1962.
