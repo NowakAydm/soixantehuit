@@ -16,6 +16,7 @@ function isScrolledIntoView(elem) {
 var animated = 0;
 
 function startAnimation() {
+    $('.evenement:not(.past-date)').first().click();
     $('.modules .module').each(function () {
         var that = $('.' + $(this).attr('class').split(' ').pop() + ':not(.module-mobile)');
         setTimeout(function () {
@@ -75,11 +76,6 @@ doc.ready(function () {
             $('.close-info').click();
         });
         $('#header-agenda').click(function () {
-            if (doc.scrollTop() < 10) {
-                prevScroll = 100;
-                window.scrollTo(0, 100);
-                prevScroll = 100;
-            };
             window.scrollTo(0, $('#agenda').position().top);
             document.activeElement.blur();
         });
@@ -99,7 +95,6 @@ doc.ready(function () {
             body.stop().animate({
                 scrollTop: $('#68').position().top
             }, 1000);
-            $('.close-info').click();
             scrolling = 1;
             setTimeout(function () {
                 scrolling = 0;
@@ -158,12 +153,12 @@ doc.ready(function () {
                 }, 1000);
             };
             
-            if (doc.scrollTop() < prevScroll && ($('#68').position().top - doc.scrollTop()) < 10 && ($('#68').position().top - doc.scrollTop()) > 0) {
+            if (doc.scrollTop() < prevScroll && ($('#68').position().top - doc.scrollTop()) < 10 && ($('#68').position().top - doc.scrollTop()) > 0 && !scrolling) {
                 body.stop().animate({
                     scrollTop: 0
                 }, 1000);                
             }
-            if (doc.scrollTop() < prevScroll && ($('#agenda').position().top - doc.scrollTop()) < 10 && ($('#agenda').position().top - doc.scrollTop()) > 0) {
+            if (doc.scrollTop() < prevScroll && ($('#agenda').position().top - doc.scrollTop()) < 10 && ($('#agenda').position().top - doc.scrollTop()) > 0 && !scrolling) {
                 body.stop().animate({
                     scrollTop: $('#68').position().top
                 }, 1000);                
@@ -250,6 +245,9 @@ doc.ready(function () {
     $('.close-info').click(function () {
         $('.info-open').addClass('info-transition');
         $('.info-open').removeClass('info-open');
+        body.stop().animate({
+            scrollTop: $('#68').position().top
+        }, 500);                
         window.scrollTo(0, $('#68').position().top);
     });
 
@@ -268,7 +266,6 @@ doc.ready(function () {
     $('.evenement').click(function () {
         var id = $(this).attr('id');
         var pos = $('.' + id).offset().top - $('#timeline').offset().top;
-        console.log($('.' + id));
         if (window.innerWidth < 850) {
             if (!agendaTab) {
                 setTimeout(function () {
@@ -301,7 +298,7 @@ window.onresize = function (event) {
         agendaTab = 1;
         showRecherche();
     } else {
-        $('#timeline').css('left', '51%');
+        $('#timeline').css('right', '1px');
         $('#timeline').css('cursor', 'initial');
         $('#timeline').css('overflow-y', 'scroll');
         $('#timeline a').css('pointer-events', 'auto');

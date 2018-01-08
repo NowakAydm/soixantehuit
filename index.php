@@ -39,7 +39,7 @@ TOUT DOUX
     <script type='text/javascript'>
         window.scrollTo(0, 0);
         var events = <?php 
-            $OA = json_decode(file_get_contents("https://openagenda.com/agendas/31783764/events.json?limit=300"));
+            $OA = json_decode(file_get_contents("https://openagenda.com/agendas/31783764/events.json?limit=300&oaq[passed]=1"));
             $e = $OA->events;
             echo json_encode($OA); ?>.events;
     </script>

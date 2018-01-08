@@ -391,7 +391,7 @@ header {
       left: 70%;
       bottom: 14%; } }
 
-@media (max-width: 595px) {
+@media (max-width: 420px) {
   /* line 302, /var/www/html/soixantehuit/sass/68.sass */
   .carte-label .carte-lieu {
     font-size: 12px; } }
@@ -740,7 +740,7 @@ header {
     color: white; }
 
 /* line 594, /var/www/html/soixantehuit/sass/68.sass */
-.hide-lieu, .hide-categorie, .hide-date {
+.hide-lieu, .hide-categorie, .hide-date, .past-date {
   display: none !important; }
 
 @media (max-width: 850px) {

@@ -102,6 +102,7 @@ function searchReady() {
         $('#glyphicon').css('transform', 'none');
 
         curDate = $('#datetimepicker').val();
+        console.log(curDate);
         $('.search-date').css('display', 'block');
         $('.search-date').css('background', 'black');
         $('.search-date').html('<i class="glyphicon glyphicon-remove clear-date"></i>'+$('#datetimepicker').val());
@@ -125,7 +126,15 @@ function searchReady() {
         });
         setTimeout(function(){showRecherche()}, 100);                
     });
+    var now = new Date;
+    var eDate;
     
+    for (var x = 0; x < events.length ; x++) {
+        eDate = new Date(events[x].timings[events[x].timings.length-1].start);
+        if (now >= eDate)
+            $('#'+events[x].uid).addClass('past-date');
+    }
+
     $('.search-lieu .glyphicon').css('color', 'white');
     $('.search-categorie .glyphicon').css('color', 'white');
 

@@ -68,6 +68,7 @@
     </div>
     <div id="timeline" onClick="showTimeline()">
         <div id="show-timeline"><i class="glyphicon glyphicon-chevron-left"></i></div>
+
         <?php
             setlocale(LC_CTYPE, "fr");
         
