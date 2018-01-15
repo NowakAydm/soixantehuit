@@ -54,7 +54,7 @@
 <div id="info-amandiers" class="info-container bloc">
     <div class="info-sidebar col-sm-3 lieu47774204">
         <span tabIndex="-1" class="close-info glyphicon glyphicon-remove"></span>
-        <span class="info-lieu">Nanterre-Amandiers</span>
+        <span class="info-lieu">Nanterre-<br>Amandiers</span>
         <div class="info-bordureleft"></div>
     </div>
     <div class="info-midbar col-sm-5">
@@ -158,7 +158,7 @@
 <div id="info-beauxarts" class="info-container bloc">
     <div class="info-sidebar col-sm-3 lieu37250659">
         <span tabIndex="-1" class="close-info glyphicon glyphicon-remove"></span>
-        <span class="info-lieu">Beaux-Arts de&nbsp;Paris</span>
+        <span class="info-lieu">Beaux-Arts<br>de&nbsp;Paris</span>
         <div class="info-bordureleft"></div>
     </div>
     <div class="info-midbar col-sm-5">
@@ -166,8 +166,7 @@
             FRUIT DES REGARDS CROISÉS DE DEUX DISCIPLINES SOUVENT OPPOSÉES, L’HISTOIRE DE L’ART ET L’HISTOIRE, L’EXPOSITION « IMAGES EN LUTTE » PROPOSE UNE LECTURE DOCUMENTÉE DE CE MOMENT PARTICULIER DE L’HISTOIRE CONTEMPORAINE, LES ANNÉES 1968-1974, OÙ L’ART ET LE POLITIQUE, LA CRÉATION ET LES LUTTES SOCIALES ET POLITIQUES FURENT INTIMEMENT MÊLÉS. 
         </div>
         <div class="info-description">
-            L’exposition n’est pas une histoire visuelle du politique mais une histoire politique du visuel.<br>
-            Elle dévoile un long cortège, qui commence dans les grandes manifestations contre la guerre du Vietnam, s’attarde dans l’Atelier populaire des Beaux-Arts en mai et juin 1968 pour, dans les années suivantes, parcourir les boulevards parisiens, occuper les usines, les mines, les universités, les prisons et tant d’autres lieux dans toute la France. La mémoire collective des événements de mai 68 est largement liée aux affiches produites par l’Atelier Populaire, émanation de l’occupation de l’École des Beaux-arts de Paris à partir du 14 mai par ses étudiants et ses enseignants, bientôt rejoints par de nombreux artistes. 
+            Beaux-Arts is located in the heart of Saint-Germain-des- Prés in Paris, steps away from the Louvre Museum. The first mission of Beaux-Arts is to educate and train students planning to devote themselves to high-level artistic creation. The school has a history spanning more than 350 years, training many of the great artists in Europe. The origins of the school go back to 1648 when the Académie des Beaux-Arts was founded. Since then the institution has maintained its original studio teaching method. Beaux-Arts, which spreads over five acres between the rue Bonaparte and the Quai Malaquais, houses prestigious historical collections and holds exhibitions in the Quai Malaquais and Chapel throughout the year. 
             <br><br>
             <b>Address</b><br>
             Palais des Beaux-Arts<br>
@@ -222,7 +221,6 @@
  
         </div>
         <div class="info-description">
-            The Centre Pompidou is a French public institution with an administrative role, supervised by the Ministry of Culture and Communication. <br>
             Boasting iconic architecture designed by Renzo Piano and Richard Rogers, the Centre Pompidou was inaugurated in 1977. In a single building, it houses one of the world's top museums, containing Europe's leading collection of modern and contemporary art, as well as cinemas, theatres, educational activity areas and a research library for 20th and 21st century art. It also has partnerships with a public reading library and a music research institute (IRCAM).<br>
             As a platform creating links between society and contemporary creation, the Centre Pompidou is a place for the people. It welcomes over 3 million visitors each year, and its mission is to reach out to an ever-broader public, offering them the means to explore the most recent and active contemporary creation by establishing close relations with artists.
             <br><br>
@@ -314,7 +312,7 @@
         <div class="info-agenda">
         <?php
             for($x=0; $x<$OA->total; $x++) { 
-                if ($e[$x]->location->uid == 74030026) {
+                if ($e[$x]->location->uid == 74030026 || $e[$x]->location->uid == 64232241) {
                     echo '<div class="info-event"><b>'.str_replace("2018", "", $e[$x]->range->en).'</b><br>';
                     echo '<span>'.($e[$x]->title->en ? $e[$x]->title->en : $e[$x]->title->fr).'</span><br>';
                     echo '<div class="info-eventdesc">'.($e[$x]->description->en ? $e[$x]->description->en : $e[$x]->description->fr).'</div><br>';

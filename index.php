@@ -74,14 +74,14 @@ TOUT DOUX
 
     <!--============= EDITO ===============-->
 
-    <div class="container bloc" id="home">
+    <div class="container bloc" id="home">    
         <div class="edito center">
             <h1>soixante-huit</h1>
             <p>Il y a cinquante ans, le mouvement protestataire de Mai 68 retournait les rues de Paris, de Nanterre, et les esprits de la France entière. En lien avec un vaste mouvement de contestation international, il transformait profondément la société française.</p>
             <p>50 ans après, plusieurs institutions culturelles interrogent l’histoire et l’héritage de Mai 68 à travers des rencontres, des expositions, des ouvertures d’archives, des ateliers participatifs, du théâtre, de la musique, des débats, des interventions inédites.</p>
             <p>Fédérant le programme de plusieurs partenaires culturels, à Paris et en Ile-de-France, ce site partage avec le public le plus large toute la richesse et la diversité de ces hommages.</p>
             <div class="langues">
-                <a><u>FR</u></a> <a href="index_en.php">EN</a>
+                <a><u>FR</u></a> <a href="en.php">EN</a>
             </div>
         </div>
     </div>
@@ -182,7 +182,7 @@ TOUT DOUX
                         <h4 class="modal-title">Presse</h4>
                     </div>
                     <div class="modal-body">
-                        <p><a>Télécharger le dossier de presse</a></p>
+                        <p><a href="https://www.centrepompidou.fr/mediation/mai68/dossierdepresse" download>Télécharger le dossier de presse</a></p>
                         <p>
                             Contacts presse :
                         </p>

@@ -26,13 +26,12 @@
     </div>
     
     <div id="recherche" onClick="showRecherche()">
-        <div id="show-recherche"><i class="glyphicon glyphicon-chevron-right"></i></div>
         
         <?php for($x=0; $x<$OA->total; $x++){ ?>
 
         <button class="btn btn-blank evenement cat<?php 
                         if ($e[$x]->category->id == 5050)
-                            echo " 1 ";
+                            echo "1 ";
                         else if ($e[$x]->category->id == 5149)
                             echo "2 ";
                         else if ($e[$x]->category->id == 5051)
@@ -42,32 +41,25 @@
                        ?>" id="<?php echo $e[$x]->uid; ?>">
             <div class="image" style="background-image: url('<?php echo $e[$x]->thumbnail ?>')"></div>
             <div class="infos lieu lieu<?php echo $e[$x]->location->uid; ?>">
-                <h3> <?php echo preg_replace('/\, \d\d\w\d\d/', '', $e[$x]->range->fr); ?></h3>
+                <h3 class="evenement-time"> 
+                    <?php echo preg_replace('/\, \d\d\w\d\d/', '', $e[$x]->range->fr); ?>
+                </h3>
                 <h1> <?php echo $e[$x]->title->fr; ?></h1>
-                <h3> <?php 
-                    if ($e[$x]->location->uid == 74030026)
-                        echo "Archives nationales";
-                    else if ($e[$x]->location->uid == 47774204)
-                        echo "Nanterre Amandiers";
-                    else if ($e[$x]->location->uid == 97092341)
-                        echo "Cité de l'architecture";
-                    else if ($e[$x]->location->uid == 37250659)
-                        echo "Beaux-arts de Paris";
-                    else if ($e[$x]->location->uid == 96612516)
-                        echo "BnF";
-                    else if ($e[$x]->location->uid == 33873846)
-                        echo "Cinémathèque française";
-                    else
-                        echo $e[$x]->locationName; 
-                    ?></h3>
+                <h3>
+                <?php echo preg_replace('/\(/', '<br>(', $e[$x]->locationName); ?>
+                </h3>
                 <h2> <?php echo $e[$x]->category->label; ?></h2>
             </div>
         </button>
 
         <?php } ?>
+        <div class="btn btn-blank evenement-padding"></div>
+        <div class="btn btn-blank evenement-padding"></div>
+        
+        <div id="show-timeline"><i class="glyphicon glyphicon-chevron-left"></i></div>
     </div>
     <div id="timeline" onClick="showTimeline()">
-        <div id="show-timeline"><i class="glyphicon glyphicon-chevron-left"></i></div>
+        <div id="show-recherche"><i class="glyphicon glyphicon-remove"></i></div>
 
         <?php
             setlocale(LC_CTYPE, "fr");
@@ -80,7 +72,7 @@
             <div class="details lieu lieu<?php echo $e[$x]->location->uid." ".$e[$x]->uid; ?>">
 
                 <h2>
-                    <?php echo $e[$x]->range->fr; ?>
+                    <?php echo preg_replace('/\, \d\d\w\d\d/', '', $e[$x]->range->fr); ?>
                 </h2>
                 <h1>
                     <?php echo $e[$x]->title->fr; ?>
@@ -88,6 +80,8 @@
                 <h3>
                     <?php echo $e[$x]->locationName; ?>
                 </h3>
+                <h4> <?php echo $e[$x]->category->label; ?></h4>
+                
                 <hr>
                 <div class="description">
                     <?php 
@@ -125,6 +119,8 @@
             </div>
 
             <?php } ?>
+        <div class="details-padding"></div>
+
     </div>
 
     <div class='scroll-footer'><span class="glyphicon glyphicon-chevron-up"></span></div>

@@ -54,7 +54,7 @@
 <div id="info-amandiers" class="info-container bloc">
     <div class="info-sidebar col-sm-3 lieu47774204">
         <span tabIndex="-1" class="close-info glyphicon glyphicon-remove"></span>
-        <span class="info-lieu">Nanterre-Amandiers</span>
+        <span class="info-lieu">Nanterre-<br>Amandiers</span>
         <div class="info-bordureleft"></div>
     </div>
     <div class="info-midbar col-sm-5">
@@ -158,7 +158,7 @@
 <div id="info-beauxarts" class="info-container bloc">
     <div class="info-sidebar col-sm-3 lieu37250659">
         <span tabIndex="-1" class="close-info glyphicon glyphicon-remove"></span>
-        <span class="info-lieu">Beaux-Arts de&nbsp;Paris</span>
+        <span class="info-lieu">Beaux-Arts<br>de&nbsp;Paris</span>
         <div class="info-bordureleft"></div>
     </div>
     <div class="info-midbar col-sm-5">
@@ -166,8 +166,7 @@
             FRUIT DES REGARDS CROISÉS DE DEUX DISCIPLINES SOUVENT OPPOSÉES, L’HISTOIRE DE L’ART ET L’HISTOIRE, L’EXPOSITION « IMAGES EN LUTTE » PROPOSE UNE LECTURE DOCUMENTÉE DE CE MOMENT PARTICULIER DE L’HISTOIRE CONTEMPORAINE, LES ANNÉES 1968-1974, OÙ L’ART ET LE POLITIQUE, LA CRÉATION ET LES LUTTES SOCIALES ET POLITIQUES FURENT INTIMEMENT MÊLÉS. 
         </div>
         <div class="info-description">
-            L’exposition n’est pas une histoire visuelle du politique mais une histoire politique du visuel.<br>
-            Elle dévoile un long cortège, qui commence dans les grandes manifestations contre la guerre du Vietnam, s’attarde dans l’Atelier populaire des Beaux-Arts en mai et juin 1968 pour, dans les années suivantes, parcourir les boulevards parisiens, occuper les usines, les mines, les universités, les prisons et tant d’autres lieux dans toute la France. La mémoire collective des événements de mai 68 est largement liée aux affiches produites par l’Atelier Populaire, émanation de l’occupation de l’École des Beaux-arts de Paris à partir du 14 mai par ses étudiants et ses enseignants, bientôt rejoints par de nombreux artistes. 
+            Les Beaux-Arts de Paris sont tout à la fois un lieu de formation et d’expérimentations artistiques, un lieu d’exposition et de conservation de collections historiques et contemporaines et une maison d’édition. L’École a pour mission l’enseignement des arts plastiques, la conservation et la diffusion de son patrimoine artistique. Établissement public administratif sous tutelle du Ministère de la Culture et de la Communication, elle forme en cinq ans des étudiants se destinant à la création artistique de haut niveau. Héritiers des collections des Académies royales, Les Beaux-Arts de Paris dispose d’un fonds de plus de 450 000 œuvres dont elle assure la présentation au public au travers d’expositions et de prêts. Elle occupe un vaste ensemble architectural de deux hectares, classé monument historique.
             <br><br>
             <b>Adresse</b><br>
             Palais des Beaux-Arts<br>
@@ -221,7 +220,6 @@
             « MAI 68 – ASSEMBLÉE GÉNÉRALE » EST UNE MANIFESTATION VIVANTE QUI CÉLÈBRE ET INTERROGE LA CONTEMPORANÉITÉ DE MAI 68, EN ACCÈS LIBRE PENDANT TROIS SEMAINES DANS LE FORUM -1 DU CENTRE POMPIDOU. 
         </div>
         <div class="info-description">
-            Le Centre Pompidou est un établissement public français à caractère administratif, placé sous la tutelle du ministère de la Culture et de la Communication. <br>
             Doté d’une architecture emblématique conçue par Renzo Piano et Richard Rogers, le Centre Pompidou a été inauguré en 1977. Il réunit en un lieu unique l’un des plus importants musées au monde possédant la première collection d’art moderne et contemporain d’Europe, des salles de cinéma et de spectacles, des espaces d’activités éducatives, une bibliothèque de recherche sur l’art des 20e et 21e siècles. Il est associé à une bibliothèque de lecture publique et à un institut de recherche musicale (Ircam).<br>
             Plateforme d’échanges entre la société et la création contemporaine, le Centre Pompidou est un lieu populaire, qui reçoit plus de 3 millions de visiteurs chaque année, et dont la mission est de s’adresser à un public toujours plus large pour lui offrir les clés d’accès à la création contemporaine la plus récente et active, en nouant des liens étroits avec les artistes.
             <br><br>
@@ -280,7 +278,7 @@
             </b></p>
             <p>
                 Créées pendant la Révolution française, les Archives nationales conservent les archives publiques des différents régimes politiques du VIIe siècle jusqu’à nos jours, ainsi que les minutes des notaires parisiens et des fonds d’archives privées.<br>
-                Avec la loi du 7 messidor an II (1794), l’accès gratuit aux archives de l’État est établi comme une garantie du régime démocratique et de la transparence de l’État. Ce sont près de 350 kilomètres linéaires d’archives sur tous supports, qui sont conservés, ainsi que des millions de fichiers nativement numériques.
+                Avec la loi du 7 messidor an II (27 juin 1794), l’accès gratuit aux archives de l’État est établi comme une garantie du régime démocratique et de la transparence de l’État. Ce sont près de 350 kilomètres linéaires d’archives sur tous supports, qui sont conservés, ainsi que des millions de fichiers nativement numériques.
             </p>
             <p>
                 Parmi ces documents, certains symbolisent des étapes majeures de l’histoire de France : les papyri mérovingiens, le procès des Templiers, le journal de Louis XVI, le serment du Jeu de paume, la Déclaration des Droits de l’Homme et du Citoyen, le testament de Napoléon, les Constitutions successives de la France, ou encore le premier recensement numérique de la population en 1962.
@@ -312,7 +310,7 @@
         <div class="info-agenda">
         <?php
             for($x=0; $x<$OA->total; $x++) { 
-                if ($e[$x]->location->uid == 74030026) {
+                if ($e[$x]->location->uid == 74030026 || $e[$x]->location->uid == 64232241) {
                     echo '<div class="info-event"><b>'.str_replace("2018", "", $e[$x]->range->fr).'</b><br>';
                     echo '<span>'.$e[$x]->title->fr.'</span><br>';
                     echo '<div class="info-eventdesc">'.$e[$x]->description->fr.'</div><br>';
@@ -329,7 +327,7 @@
 <div id="info-bnf" class="info-container bloc">
     <div class="info-sidebar col-sm-3 lieu96612516">
         <span tabIndex="-1" class="close-info glyphicon glyphicon-remove"></span>
-        <span id='info-lieu-bnf' class="info-lieu">Bibliothèque<br> nationale<br>de&nbsp;France</span>
+        <span id='info-lieu-bnf' class="info-lieu">Bibliothèque<br> nationale de&nbsp;France</span>
         <div class="info-bordureleft"></div>
     </div>
     <div class="info-midbar col-sm-5">

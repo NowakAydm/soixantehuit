@@ -102,7 +102,6 @@ function searchReady() {
         $('#glyphicon').css('transform', 'none');
 
         curDate = $('#datetimepicker').val();
-        console.log(curDate);
         $('.search-date').css('display', 'block');
         $('.search-date').css('background', 'black');
         $('.search-date').html('<i class="glyphicon glyphicon-remove clear-date"></i>'+$('#datetimepicker').val());
@@ -134,6 +133,7 @@ function searchReady() {
         if (now >= eDate)
             $('#'+events[x].uid).addClass('past-date');
     }
+    setTimeout(function() {$('.evenement:not(.past-date)').first().click();}, 200);
 
     $('.search-lieu .glyphicon').css('color', 'white');
     $('.search-categorie .glyphicon').css('color', 'white');
@@ -183,7 +183,14 @@ function addPlace( a ) {
     $('.search-lieu').css('display', 'block');
     $('.search-lieu').css('cursor', 'pointer');
     $('.search-lieu').removeClass(curPlace); 
-    if (a) {
+    if (a == 74030026) {
+        $('.search-lieu').addClass('lieu'+a); 
+        curPlace = 'lieu'+a;
+        $('.evenement').addClass('hide-lieu');
+        $('.infos.lieu74030026').parent().removeClass('hide-lieu');
+        $('.infos.lieu64232241').parent().removeClass('hide-lieu');
+    }
+    else if (a) {
         $('.search-lieu').addClass('lieu'+a); 
         curPlace = 'lieu'+a;
         $('.evenement').addClass('hide-lieu');
@@ -198,6 +205,7 @@ function addPlace( a ) {
         $('.infos.lieu37250659').parent().addClass('hide-lieu');
         $('.infos.lieu44057765').parent().addClass('hide-lieu');
         $('.infos.lieu74030026').parent().addClass('hide-lieu');
+        $('.infos.lieu64232241').parent().addClass('hide-lieu');
         $('.infos.lieu96612516').parent().addClass('hide-lieu');
         $('.infos.lieu33873846').parent().addClass('hide-lieu');
         

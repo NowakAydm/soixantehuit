@@ -150,7 +150,7 @@ header {
     padding: 25px;
     width: 95%;
     font-size: 17px;
-    margin-top: 20vh; }
+    margin-top: 80px; }
     /* line 126, /var/www/html/soixantehuit/sass/68.sass */
     .edito h1 {
       font-size: 40px;
@@ -332,9 +332,14 @@ header {
   .modules-mobile, .carte-label {
     display: table; }
   /* line 254, /var/www/html/soixantehuit/sass/68.sass */
+  .modules-mobile svg {
+    max-width: 85%;
+    max-height: 80vh;
+    margin-top: 80px; }
+  /* line 258, /var/www/html/soixantehuit/sass/68.sass */
   .carte svg {
     opacity: 0 !important; }
-  /* line 256, /var/www/html/soixantehuit/sass/68.sass */
+  /* line 260, /var/www/html/soixantehuit/sass/68.sass */
   .module {
     -webkit-transform: none;
     -moz-transform: none;
@@ -342,61 +347,56 @@ header {
     -o-transform: none;
     transform: none;
     transition: none; }
-  /* line 263, /var/www/html/soixantehuit/sass/68.sass */
+  /* line 267, /var/www/html/soixantehuit/sass/68.sass */
   .carte-label {
-    width: 64vh;
-    max-width: 100vw;
-    height: 100vh;
-    max-height: 154vw;
-    -webkit-transform: translateY(-3%);
-    -moz-transform: translateY(-3%);
-    -ms-transform: translateY(-3%);
-    -o-transform: translateY(-3%);
-    transform: translateY(-3%);
+    width: 59vh;
+    max-width: 89vw;
+    height: 91vh;
+    max-height: 160vw;
     transition: none;
     opacity: 0.7 !important; }
-    /* line 275, /var/www/html/soixantehuit/sass/68.sass */
+    /* line 274, /var/www/html/soixantehuit/sass/68.sass */
     .carte-label .carte-lieu {
       font-size: 1.8vh; }
-    /* line 277, /var/www/html/soixantehuit/sass/68.sass */
+    /* line 276, /var/www/html/soixantehuit/sass/68.sass */
     .carte-label .carte-nanterre {
-      top: 17%;
-      left: 20%; }
-    /* line 280, /var/www/html/soixantehuit/sass/68.sass */
+      top: 13%;
+      left: 11%; }
+    /* line 279, /var/www/html/soixantehuit/sass/68.sass */
     .carte-label .carte-amandiers {
-      top: 50%;
-      left: 6%; }
-    /* line 283, /var/www/html/soixantehuit/sass/68.sass */
+      top: 48%;
+      left: 5%; }
+    /* line 282, /var/www/html/soixantehuit/sass/68.sass */
     .carte-label .carte-archi {
-      top: 34%;
-      left: 22%; }
-    /* line 286, /var/www/html/soixantehuit/sass/68.sass */
+      top: 33%;
+      left: 20%; }
+    /* line 285, /var/www/html/soixantehuit/sass/68.sass */
     .carte-label .carte-beauxarts {
       left: 50%;
-      top: 46%; }
-    /* line 289, /var/www/html/soixantehuit/sass/68.sass */
+      top: 44%; }
+    /* line 288, /var/www/html/soixantehuit/sass/68.sass */
     .carte-label .carte-pompidou {
       left: 43%;
-      top: 62%; }
-    /* line 292, /var/www/html/soixantehuit/sass/68.sass */
+      top: 60%; }
+    /* line 291, /var/www/html/soixantehuit/sass/68.sass */
     .carte-label .carte-archives {
       top: 65%;
       left: 72%; }
-    /* line 295, /var/www/html/soixantehuit/sass/68.sass */
+    /* line 294, /var/www/html/soixantehuit/sass/68.sass */
     .carte-label .carte-bnf {
       left: 35%;
       bottom: 8%; }
-    /* line 298, /var/www/html/soixantehuit/sass/68.sass */
+    /* line 297, /var/www/html/soixantehuit/sass/68.sass */
     .carte-label .carte-cinematheque {
-      left: 70%;
+      left: 72%;
       bottom: 14%; } }
 
 @media (max-width: 420px) {
-  /* line 302, /var/www/html/soixantehuit/sass/68.sass */
+  /* line 301, /var/www/html/soixantehuit/sass/68.sass */
   .carte-label .carte-lieu {
-    font-size: 12px; } }
+    font-size: 12.5px; } }
 
-/* line 308, /var/www/html/soixantehuit/sass/68.sass */
+/* line 307, /var/www/html/soixantehuit/sass/68.sass */
 .info-container {
   position: fixed;
   top: 0;
@@ -412,15 +412,16 @@ header {
   transform: translateX(100%);
   background: white;
   overflow-x: hidden; }
-  /* line 323, /var/www/html/soixantehuit/sass/68.sass */
+  /* line 322, /var/www/html/soixantehuit/sass/68.sass */
   .info-container a {
     tabindex: -1; }
-  /* line 325, /var/www/html/soixantehuit/sass/68.sass */
+  /* line 324, /var/www/html/soixantehuit/sass/68.sass */
   .info-container .close-info {
     font-size: 55px;
     margin: 40px 30px;
     float: left;
-    cursor: pointer; }
+    cursor: pointer;
+    z-index: 300; }
   /* line 330, /var/www/html/soixantehuit/sass/68.sass */
   .info-container .info-sidebar {
     min-height: 100vh; }
@@ -431,18 +432,17 @@ header {
       left: 12vw;
       bottom: -4vh;
       width: 80vh;
-      font-size: 80px;
+      font-size: 7vh;
       -webkit-transform: rotate(-90deg);
       -moz-transform: rotate(-90deg);
       -o-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
       transform: rotate(-90deg);
-      transform-origin: left;
-      line-height: 9vh; }
-    /* line 346, /var/www/html/soixantehuit/sass/68.sass */
+      transform-origin: left; }
+    /* line 345, /var/www/html/soixantehuit/sass/68.sass */
     .info-container .info-sidebar #info-lieu-bnf {
-      font-size: 60px; }
-    /* line 348, /var/www/html/soixantehuit/sass/68.sass */
+      font-size: 7vh; }
+    /* line 347, /var/www/html/soixantehuit/sass/68.sass */
     .info-container .info-sidebar .info-bordureleft {
       border-left: 3px dotted black;
       width: 2px;
@@ -450,13 +450,13 @@ header {
       position: absolute;
       right: -1px;
       top: 5%; }
-  /* line 355, /var/www/html/soixantehuit/sass/68.sass */
+  /* line 354, /var/www/html/soixantehuit/sass/68.sass */
   .info-container .info-midbar {
     height: 100vh;
     margin: -2px;
     padding: 0 3%;
     overflow-y: auto; }
-    /* line 360, /var/www/html/soixantehuit/sass/68.sass */
+    /* line 359, /var/www/html/soixantehuit/sass/68.sass */
     .info-container .info-midbar .info-bordureright {
       border-left: 3px dotted black;
       width: 2px;
@@ -464,50 +464,50 @@ header {
       position: absolute;
       left: 3px;
       top: 5%; }
-    /* line 367, /var/www/html/soixantehuit/sass/68.sass */
+    /* line 366, /var/www/html/soixantehuit/sass/68.sass */
     .info-container .info-midbar .info-presentation {
       font-size: 23px;
       font-weight: 300;
       margin: 5% auto; }
-    /* line 371, /var/www/html/soixantehuit/sass/68.sass */
+    /* line 370, /var/www/html/soixantehuit/sass/68.sass */
     .info-container .info-midbar .info-description {
       font-size: 16px;
       font-weight: 500; }
-      /* line 375, /var/www/html/soixantehuit/sass/68.sass */
+      /* line 374, /var/www/html/soixantehuit/sass/68.sass */
       .info-container .info-midbar .info-description .info-logo img {
         position: relative;
         max-width: 80%;
         max-height: 200px;
         top: 27px;
         margin-bottom: 65px; }
-      /* line 381, /var/www/html/soixantehuit/sass/68.sass */
+      /* line 380, /var/www/html/soixantehuit/sass/68.sass */
       .info-container .info-midbar .info-description .info-logo:hover {
         text-decoration: none; }
-      /* line 383, /var/www/html/soixantehuit/sass/68.sass */
+      /* line 382, /var/www/html/soixantehuit/sass/68.sass */
       .info-container .info-midbar .info-description #logo-ministere {
         max-width: 20%;
         max-height: 200px; }
-      /* line 386, /var/www/html/soixantehuit/sass/68.sass */
+      /* line 385, /var/www/html/soixantehuit/sass/68.sass */
       .info-container .info-midbar .info-description #logo-archives {
         margin-left: 5%;
         max-width: 55%;
         max-height: 150px;
         vertical-align: bottom; }
-      /* line 392, /var/www/html/soixantehuit/sass/68.sass */
+      /* line 391, /var/www/html/soixantehuit/sass/68.sass */
       .info-container .info-midbar .info-description .info-rs:hover, .info-container .info-midbar .info-description .info-rs:active, .info-container .info-midbar .info-description .info-rs:focus {
         text-decoration: none; }
-      /* line 394, /var/www/html/soixantehuit/sass/68.sass */
+      /* line 393, /var/www/html/soixantehuit/sass/68.sass */
       .info-container .info-midbar .info-description .info-rs img {
         margin: 10px;
         margin-bottom: 45px;
         height: 40px;
         width: 40px; }
-  /* line 399, /var/www/html/soixantehuit/sass/68.sass */
+  /* line 398, /var/www/html/soixantehuit/sass/68.sass */
   .info-container .info-programme {
     font-size: 24px;
     font-weight: 300;
     margin: 5%; }
-    /* line 403, /var/www/html/soixantehuit/sass/68.sass */
+    /* line 402, /var/www/html/soixantehuit/sass/68.sass */
     .info-container .info-programme .info-programmefond {
       width: 155px;
       height: 25px;
@@ -515,28 +515,28 @@ header {
       bottom: 19px;
       right: 9px;
       z-index: -1; }
-  /* line 410, /var/www/html/soixantehuit/sass/68.sass */
+  /* line 409, /var/www/html/soixantehuit/sass/68.sass */
   .info-container .info-agenda {
     max-height: 75vh;
     overflow-x: hidden;
     overflow-y: auto;
     margin-right: -10%;
     margin-bottom: 75px; }
-    /* line 416, /var/www/html/soixantehuit/sass/68.sass */
+    /* line 415, /var/www/html/soixantehuit/sass/68.sass */
     .info-container .info-agenda .info-event {
       padding-right: 5px; }
-      /* line 418, /var/www/html/soixantehuit/sass/68.sass */
+      /* line 417, /var/www/html/soixantehuit/sass/68.sass */
       .info-container .info-agenda .info-event b {
         line-height: 35px; }
-      /* line 420, /var/www/html/soixantehuit/sass/68.sass */
+      /* line 419, /var/www/html/soixantehuit/sass/68.sass */
       .info-container .info-agenda .info-event span {
         font-size: 18px;
         font-weight: 500; }
-      /* line 423, /var/www/html/soixantehuit/sass/68.sass */
+      /* line 422, /var/www/html/soixantehuit/sass/68.sass */
       .info-container .info-agenda .info-event .info-eventdesc {
         font-size: 16px;
         margin-top: 10px; }
-  /* line 426, /var/www/html/soixantehuit/sass/68.sass */
+  /* line 425, /var/www/html/soixantehuit/sass/68.sass */
   .info-container .info-goagenda {
     font-size: 24px;
     font-weight: 300;
@@ -549,24 +549,24 @@ header {
     height: 90px;
     width: 400px;
     padding: 25px; }
-    /* line 438, /var/www/html/soixantehuit/sass/68.sass */
+    /* line 437, /var/www/html/soixantehuit/sass/68.sass */
     .info-container .info-goagenda .glyphicon {
       font-size: 18px;
       left: 6px; }
 
-/* line 442, /var/www/html/soixantehuit/sass/68.sass */
+/* line 441, /var/www/html/soixantehuit/sass/68.sass */
 .info-open {
-  -webkit-transform: none;
-  -moz-transform: none;
-  -ms-transform: none;
-  transform: none; }
+  -webkit-transform: translateX(0%) !important;
+  -moz-transform: translateX(0%) !important;
+  -ms-transform: translateX(0%) !important;
+  transform: translateX(0%) !important; }
 
-/* line 447, /var/www/html/soixantehuit/sass/68.sass */
+/* line 446, /var/www/html/soixantehuit/sass/68.sass */
 .info-transition {
   transition: all 500ms ease-in-out; }
 
 @media (max-width: 850px) {
-  /* line 451, /var/www/html/soixantehuit/sass/68.sass */
+  /* line 450, /var/www/html/soixantehuit/sass/68.sass */
   .info-container {
     position: fixed;
     top: 0;
@@ -574,23 +574,23 @@ header {
     bottom: 0;
     min-height: 100%;
     height: auto; }
-    /* line 458, /var/www/html/soixantehuit/sass/68.sass */
+    /* line 457, /var/www/html/soixantehuit/sass/68.sass */
     .info-container .info-sidebar, .info-container .info-midbar {
       min-height: 150px;
       height: auto;
       max-width: 100%;
       width: 100%; }
-      /* line 463, /var/www/html/soixantehuit/sass/68.sass */
+      /* line 462, /var/www/html/soixantehuit/sass/68.sass */
       .info-container .info-sidebar .info-bordureleft, .info-container .info-sidebar .info-bordureright, .info-container .info-midbar .info-bordureleft, .info-container .info-midbar .info-bordureright {
         display: none; }
-      /* line 465, /var/www/html/soixantehuit/sass/68.sass */
+      /* line 464, /var/www/html/soixantehuit/sass/68.sass */
       .info-container .info-sidebar .close-info, .info-container .info-midbar .close-info {
         font-size: 45px;
         margin: 0;
         position: absolute;
         top: 35%;
         left: 3%; }
-      /* line 471, /var/www/html/soixantehuit/sass/68.sass */
+      /* line 470, /var/www/html/soixantehuit/sass/68.sass */
       .info-container .info-sidebar .info-lieu, .info-container .info-midbar .info-lieu {
         position: absolute;
         top: 22%;
@@ -604,47 +604,47 @@ header {
         -ms-transform: none;
         transform: none;
         bottom: 0; }
-      /* line 484, /var/www/html/soixantehuit/sass/68.sass */
+      /* line 483, /var/www/html/soixantehuit/sass/68.sass */
       .info-container .info-sidebar #info-lieu-bnf, .info-container .info-midbar #info-lieu-bnf {
         line-height: 35px;
         top: 20px; }
-      /* line 487, /var/www/html/soixantehuit/sass/68.sass */
+      /* line 486, /var/www/html/soixantehuit/sass/68.sass */
       .info-container .info-sidebar #info-lieu-archi, .info-container .info-midbar #info-lieu-archi {
         font-size: 30px !important; }
-      /* line 489, /var/www/html/soixantehuit/sass/68.sass */
+      /* line 488, /var/www/html/soixantehuit/sass/68.sass */
       .info-container .info-sidebar .info-agenda, .info-container .info-midbar .info-agenda {
         margin-right: 0; }
-      /* line 491, /var/www/html/soixantehuit/sass/68.sass */
+      /* line 490, /var/www/html/soixantehuit/sass/68.sass */
       .info-container .info-sidebar .info-presentation, .info-container .info-sidebar .info-goagenda, .info-container .info-midbar .info-presentation, .info-container .info-midbar .info-goagenda {
         font-size: 18px; }
-      /* line 493, /var/www/html/soixantehuit/sass/68.sass */
+      /* line 492, /var/www/html/soixantehuit/sass/68.sass */
       .info-container .info-sidebar .info-description, .info-container .info-midbar .info-description {
         font-size: 15px; }
-      /* line 495, /var/www/html/soixantehuit/sass/68.sass */
+      /* line 494, /var/www/html/soixantehuit/sass/68.sass */
       .info-container .info-sidebar .info-goagenda, .info-container .info-midbar .info-goagenda {
         bottom: 0;
         height: 70px; } }
 
-/* line 502, /var/www/html/soixantehuit/sass/68.sass */
+/* line 501, /var/www/html/soixantehuit/sass/68.sass */
 #agenda {
   background: white;
   position: relative;
   width: 100%;
-  overflow-x: hidden; }
+  overflow: hidden; }
 
-/* line 507, /var/www/html/soixantehuit/sass/68.sass */
+/* line 506, /var/www/html/soixantehuit/sass/68.sass */
 .agenda-header {
-  height: 210px;
+  height: 215px;
   text-align: left;
   position: relative; }
-  /* line 511, /var/www/html/soixantehuit/sass/68.sass */
+  /* line 510, /var/www/html/soixantehuit/sass/68.sass */
   .agenda-header h1 {
     display: inline-block;
     width: 35%;
     font-size: 70px;
     font-weight: 600;
     margin: 60px 4% 0; }
-  /* line 517, /var/www/html/soixantehuit/sass/68.sass */
+  /* line 516, /var/www/html/soixantehuit/sass/68.sass */
   .agenda-header .agenda-filtres {
     display: inline-block;
     float: right;
@@ -654,68 +654,68 @@ header {
     position: absolute;
     width: 95%;
     left: 0; }
-    /* line 526, /var/www/html/soixantehuit/sass/68.sass */
+    /* line 525, /var/www/html/soixantehuit/sass/68.sass */
     .agenda-header .agenda-filtres .glyphicon {
       transition: transform 300ms ease-in-out; }
-    /* line 528, /var/www/html/soixantehuit/sass/68.sass */
+    /* line 527, /var/www/html/soixantehuit/sass/68.sass */
     .agenda-header .agenda-filtres button {
       font-size: inherit;
       padding: 0 7px;
       vertical-align: bottom; }
-      /* line 532, /var/www/html/soixantehuit/sass/68.sass */
+      /* line 531, /var/www/html/soixantehuit/sass/68.sass */
       .agenda-header .agenda-filtres button:focus {
         -webkit-box-shadow: 0 0 1px;
         box-shadow: 0 0 1px; }
-      /* line 535, /var/www/html/soixantehuit/sass/68.sass */
+      /* line 534, /var/www/html/soixantehuit/sass/68.sass */
       .agenda-header .agenda-filtres button .glyphicon {
         font-size: 15px; }
-    /* line 537, /var/www/html/soixantehuit/sass/68.sass */
+    /* line 536, /var/www/html/soixantehuit/sass/68.sass */
     .agenda-header .agenda-filtres .col-sm-6 {
       width: 70px !important;
       float: inherit;
       padding: 0;
       display: inline-block; }
-      /* line 542, /var/www/html/soixantehuit/sass/68.sass */
+      /* line 541, /var/www/html/soixantehuit/sass/68.sass */
       .agenda-header .agenda-filtres .col-sm-6 input {
         width: 100%;
         height: 28px;
         font-size: 19.5px;
         padding-right: 18px; }
-        /* line 547, /var/www/html/soixantehuit/sass/68.sass */
+        /* line 546, /var/www/html/soixantehuit/sass/68.sass */
         .agenda-header .agenda-filtres .col-sm-6 input:focus {
           -webkit-box-shadow: 0 0 1px;
           box-shadow: 0 0 1px; }
-      /* line 550, /var/www/html/soixantehuit/sass/68.sass */
+      /* line 549, /var/www/html/soixantehuit/sass/68.sass */
       .agenda-header .agenda-filtres .col-sm-6 #glyphicon {
         position: absolute;
         top: 10px;
         right: 0px;
         font-size: 15px;
         transition: transform 300ms ease-in-out; }
-  /* line 556, /var/www/html/soixantehuit/sass/68.sass */
+  /* line 555, /var/www/html/soixantehuit/sass/68.sass */
   .agenda-header .popover, .agenda-header .popover-content {
     padding: 0;
     border: none;
     border-radius: 4px;
     font-family: inherit; }
-    /* line 561, /var/www/html/soixantehuit/sass/68.sass */
+    /* line 560, /var/www/html/soixantehuit/sass/68.sass */
     .agenda-header .popover .list-group, .agenda-header .popover-content .list-group {
       margin: 0; }
-    /* line 563, /var/www/html/soixantehuit/sass/68.sass */
+    /* line 562, /var/www/html/soixantehuit/sass/68.sass */
     .agenda-header .popover .list-group-item, .agenda-header .popover-content .list-group-item {
       border: 0;
       padding: 7px 15px;
       font-weight: 500;
       font-size: 17px;
       cursor: pointer; }
-    /* line 569, /var/www/html/soixantehuit/sass/68.sass */
+    /* line 568, /var/www/html/soixantehuit/sass/68.sass */
     .agenda-header .popover .list-categorie li, .agenda-header .popover-content .list-categorie li {
       background: white;
       color: black; }
-      /* line 572, /var/www/html/soixantehuit/sass/68.sass */
+      /* line 571, /var/www/html/soixantehuit/sass/68.sass */
       .agenda-header .popover .list-categorie li:hover, .agenda-header .popover-content .list-categorie li:hover {
         background: rgba(26, 26, 26, 0.1); }
-  /* line 574, /var/www/html/soixantehuit/sass/68.sass */
+  /* line 573, /var/www/html/soixantehuit/sass/68.sass */
   .agenda-header .search {
     height: 32px;
     display: inline-block;
@@ -723,95 +723,113 @@ header {
     float: right;
     margin: 8px 0 0 8px;
     padding-right: 10px; }
-    /* line 581, /var/www/html/soixantehuit/sass/68.sass */
+    /* line 580, /var/www/html/soixantehuit/sass/68.sass */
     .agenda-header .search .glyphicon {
       padding: 5px;
       top: 3px; }
-  /* line 584, /var/www/html/soixantehuit/sass/68.sass */
+  /* line 583, /var/www/html/soixantehuit/sass/68.sass */
   .agenda-header .search-categorie {
     display: none;
     color: white; }
-  /* line 587, /var/www/html/soixantehuit/sass/68.sass */
+  /* line 586, /var/www/html/soixantehuit/sass/68.sass */
   .agenda-header .search-lieu {
     display: none; }
-  /* line 589, /var/www/html/soixantehuit/sass/68.sass */
+  /* line 588, /var/www/html/soixantehuit/sass/68.sass */
   .agenda-header .search-date {
     display: none;
     color: white; }
 
-/* line 594, /var/www/html/soixantehuit/sass/68.sass */
+/* line 593, /var/www/html/soixantehuit/sass/68.sass */
 .hide-lieu, .hide-categorie, .hide-date, .past-date {
   display: none !important; }
 
 @media (max-width: 850px) {
-  /* line 598, /var/www/html/soixantehuit/sass/68.sass */
+  /* line 597, /var/www/html/soixantehuit/sass/68.sass */
   .agenda-header {
-    height: 30vh;
-    min-height: 140px; }
-    /* line 601, /var/www/html/soixantehuit/sass/68.sass */
+    height: 170px; }
+    /* line 599, /var/www/html/soixantehuit/sass/68.sass */
     .agenda-header .agenda-filtres {
       font-size: 15px;
       margin: 75px 5% 0;
       width: 90%; }
-      /* line 606, /var/www/html/soixantehuit/sass/68.sass */
+      /* line 604, /var/www/html/soixantehuit/sass/68.sass */
       .agenda-header .agenda-filtres .col-sm-6 input {
         font-size: 15px;
         height: 21px; }
-      /* line 609, /var/www/html/soixantehuit/sass/68.sass */
+      /* line 607, /var/www/html/soixantehuit/sass/68.sass */
       .agenda-header .agenda-filtres .col-sm-6 #glyphicon {
         top: 4px;
         right: 8px; }
-    /* line 612, /var/www/html/soixantehuit/sass/68.sass */
+    /* line 610, /var/www/html/soixantehuit/sass/68.sass */
     .agenda-header h1 {
       display: none; }
-    /* line 614, /var/www/html/soixantehuit/sass/68.sass */
+    /* line 612, /var/www/html/soixantehuit/sass/68.sass */
     .agenda-header .search {
-      height: 30px; }
-      /* line 616, /var/www/html/soixantehuit/sass/68.sass */
+      height: 27px;
+      padding-right: 7px;
+      margin-top: 5px;
+      font-size: 13px; }
+      /* line 617, /var/www/html/soixantehuit/sass/68.sass */
       .agenda-header .search .glyphicon {
-        padding: 7px; }
-      /* line 618, /var/www/html/soixantehuit/sass/68.sass */
-      .agenda-header .search span {
-        display: none; } }
+        padding: 5px; }
+    /* line 619, /var/www/html/soixantehuit/sass/68.sass */
+    .agenda-header .popover .list-group-item, .agenda-header .agenda-header .popover-content .list-group-item {
+      font-size: 14px; } }
 
-/* line 621, /var/www/html/soixantehuit/sass/68.sass */
+@media (max-width: 400px) {
+  /* line 623, /var/www/html/soixantehuit/sass/68.sass */
+  .search {
+    font-size: 11px; } }
+
+/* line 626, /var/www/html/soixantehuit/sass/68.sass */
 #timeline, #recherche {
   overflow-x: hidden;
   overflow-y: scroll;
-  top: 25vh;
-  height: 75vh;
+  top: 200px;
+  height: 80vh;
   width: 49%;
   text-align: left !important;
   position: absolute; }
 
-/* line 629, /var/www/html/soixantehuit/sass/68.sass */
+/* line 634, /var/www/html/soixantehuit/sass/68.sass */
 #timeline {
   right: 1px; }
 
-/* line 631, /var/www/html/soixantehuit/sass/68.sass */
+/* line 636, /var/www/html/soixantehuit/sass/68.sass */
 #recherche {
   left: 0;
   padding-top: 4px;
-  background: white;
-  padding-bottom: 70px; }
+  background: white; }
 
-/* line 636, /var/www/html/soixantehuit/sass/68.sass */
+/* line 640, /var/www/html/soixantehuit/sass/68.sass */
 #show-timeline, #show-recherche {
-  display: none; }
+  display: none;
+  z-index: 3000; }
 
 @media (max-width: 850px) {
-  /* line 639, /var/www/html/soixantehuit/sass/68.sass */
+  /* line 644, /var/www/html/soixantehuit/sass/68.sass */
   #timeline, #recherche {
     position: absolute;
-    height: 74vh;
-    width: 90%;
-    top: 26vh;
+    min-height: 70vh;
+    height: 70vh;
+    width: 100%;
+    top: 170px;
     transition: all 100ms ease-in-out; }
-  /* line 645, /var/www/html/soixantehuit/sass/68.sass */
+  /* line 651, /var/www/html/soixantehuit/sass/68.sass */
   #timeline {
-    left: 90%;
+    left: 100%;
     cursor: pointer; }
-  /* line 648, /var/www/html/soixantehuit/sass/68.sass */
+    /* line 654, /var/www/html/soixantehuit/sass/68.sass */
+    #timeline a {
+      pointer-events: none; }
+  /* line 656, /var/www/html/soixantehuit/sass/68.sass */
+  .timeline-shown {
+    left: 0% !important;
+    cursor: initial !important; }
+    /* line 659, /var/www/html/soixantehuit/sass/68.sass */
+    .timeline-shown a {
+      pointer-events: auto !important; }
+  /* line 663, /var/www/html/soixantehuit/sass/68.sass */
   #show-timeline, #show-recherche {
     display: block;
     position: absolute;
@@ -819,23 +837,34 @@ header {
     background: white;
     height: 20vw;
     width: 10vw;
-    font-size: 5vw; }
-    /* line 656, /var/www/html/soixantehuit/sass/68.sass */
+    font-size: 5vw;
+    right: 1px;
+    padding: 0 2%;
+    cursor: pointer; }
+    /* line 674, /var/www/html/soixantehuit/sass/68.sass */
     #show-timeline .glyphicon, #show-recherche .glyphicon {
-      font-size: 8vw;
-      padding-top: 6vw; }
-  /* line 659, /var/www/html/soixantehuit/sass/68.sass */
+      font-size: 7vw;
+      padding-top: 6.5vw; }
+  /* line 677, /var/www/html/soixantehuit/sass/68.sass */
   #show-timeline {
-    border-top-right-radius: 300px;
-    border-bottom-right-radius: 300px; }
-  /* line 662, /var/www/html/soixantehuit/sass/68.sass */
+    top: 50%;
+    border-top-left-radius: 300px;
+    border-bottom-left-radius: 300px; }
+  /* line 681, /var/www/html/soixantehuit/sass/68.sass */
   #show-recherche {
+    top: 50%;
     display: none;
     border-top-left-radius: 300px;
     border-bottom-left-radius: 300px;
-    text-align: right; } }
+    text-align: right;
+    width: 12vw; } }
 
-/* line 670, /var/www/html/soixantehuit/sass/68.sass */
+/* line 689, /var/www/html/soixantehuit/sass/68.sass */
+.detail-padding {
+  background: white;
+  height: 2000px; }
+
+/* line 692, /var/www/html/soixantehuit/sass/68.sass */
 .details {
   padding: 2.7%;
   padding-right: 4%;
@@ -843,7 +872,7 @@ header {
   line-height: 21.5px;
   font-weight: 500;
   width: 100%; }
-  /* line 677, /var/www/html/soixantehuit/sass/68.sass */
+  /* line 699, /var/www/html/soixantehuit/sass/68.sass */
   .details h1 {
     font-size: 43px;
     font-weight: 700;
@@ -851,138 +880,170 @@ header {
     -moz-hyphens: auto;
     -ms-hyphens: auto;
     hyphens: auto; }
-  /* line 684, /var/www/html/soixantehuit/sass/68.sass */
+  /* line 706, /var/www/html/soixantehuit/sass/68.sass */
   .details h2 {
     font-size: 36px;
     line-height: 43.2px; }
-  /* line 687, /var/www/html/soixantehuit/sass/68.sass */
+  /* line 709, /var/www/html/soixantehuit/sass/68.sass */
   .details h3 {
     font-size: 30px;
     line-height: 36px; }
-  /* line 690, /var/www/html/soixantehuit/sass/68.sass */
+  /* line 712, /var/www/html/soixantehuit/sass/68.sass */
+  .details h4 {
+    margin: 25px 0px; }
+  /* line 714, /var/www/html/soixantehuit/sass/68.sass */
   .details hr {
     width: 20%;
     margin-left: 0%; }
-  /* line 693, /var/www/html/soixantehuit/sass/68.sass */
+  /* line 717, /var/www/html/soixantehuit/sass/68.sass */
   .details .description {
     margin-bottom: 50px;
     overflow: hidden;
     letter-spacing: 0.1px; }
-    /* line 697, /var/www/html/soixantehuit/sass/68.sass */
+    /* line 721, /var/www/html/soixantehuit/sass/68.sass */
     .details .description h2, .details .description h3, .details .description p {
       margin: 15px auto; }
-  /* line 699, /var/www/html/soixantehuit/sass/68.sass */
+  /* line 723, /var/www/html/soixantehuit/sass/68.sass */
   .details .col-6 {
     width: 48%;
     display: inline-grid;
     margin-bottom: 50px;
     padding-right: 20px; }
-  /* line 704, /var/www/html/soixantehuit/sass/68.sass */
+  /* line 728, /var/www/html/soixantehuit/sass/68.sass */
   .details a {
     color: inherit;
     text-decoration: dotted underline; }
-    /* line 707, /var/www/html/soixantehuit/sass/68.sass */
+    /* line 731, /var/www/html/soixantehuit/sass/68.sass */
     .details a:hover {
       text-decoration: underline; }
-  /* line 709, /var/www/html/soixantehuit/sass/68.sass */
+  /* line 733, /var/www/html/soixantehuit/sass/68.sass */
   .details .right {
     margin-bottom: 25px; }
-    /* line 711, /var/www/html/soixantehuit/sass/68.sass */
+    /* line 735, /var/www/html/soixantehuit/sass/68.sass */
     .details .right #site-officiel {
       text-decoration: none; }
 
 @media (max-width: 850px) {
-  /* line 714, /var/www/html/soixantehuit/sass/68.sass */
+  /* line 738, /var/www/html/soixantehuit/sass/68.sass */
   .details {
     font-size: 15px; }
-    /* line 716, /var/www/html/soixantehuit/sass/68.sass */
+    /* line 740, /var/www/html/soixantehuit/sass/68.sass */
     .details h1 {
       font-size: 39px; }
-    /* line 718, /var/www/html/soixantehuit/sass/68.sass */
+    /* line 742, /var/www/html/soixantehuit/sass/68.sass */
     .details h2 {
       font-size: 30px; }
-    /* line 720, /var/www/html/soixantehuit/sass/68.sass */
+    /* line 744, /var/www/html/soixantehuit/sass/68.sass */
     .details h3 {
       font-size: 24px; }
-    /* line 722, /var/www/html/soixantehuit/sass/68.sass */
+    /* line 746, /var/www/html/soixantehuit/sass/68.sass */
     .details .col-6 {
       width: 100%; } }
 
-/* line 725, /var/www/html/soixantehuit/sass/68.sass */
+/* line 749, /var/www/html/soixantehuit/sass/68.sass */
+.evenement-padding {
+  display: inline-block;
+  width: 42%;
+  height: 70px;
+  margin: 0 0 5% 5%; }
+
+/* line 755, /var/www/html/soixantehuit/sass/68.sass */
 .evenement {
   display: inline-block;
   width: 42%;
-  height: 315px;
+  height: 340px;
   margin: 0 0 5% 5%;
   cursor: pointer;
   text-align: left; }
-  /* line 732, /var/www/html/soixantehuit/sass/68.sass */
+  /* line 762, /var/www/html/soixantehuit/sass/68.sass */
   .evenement .image {
     width: 100%;
-    height: 200px;
+    height: 170px;
     background-size: cover;
-    background-position: center; }
-  /* line 737, /var/www/html/soixantehuit/sass/68.sass */
+    background-position: center;
+    transition: height 1000ms ease-in-out; }
+  /* line 768, /var/www/html/soixantehuit/sass/68.sass */
   .evenement .infos {
     width: 100%;
-    height: 115px;
+    height: 170px;
     display: inline-block;
     padding: 7px;
-    overflow: ellipsis; }
-    /* line 743, /var/www/html/soixantehuit/sass/68.sass */
+    overflow: ellipsis;
+    transition: height 1000ms ease-in-out; }
+    /* line 775, /var/www/html/soixantehuit/sass/68.sass */
     .evenement .infos * {
       margin: 0;
       overflow: hidden;
-      height: 20px; }
-    /* line 747, /var/www/html/soixantehuit/sass/68.sass */
+      height: 39px;
+      white-space: normal;
+      transition: height 1000ms ease-in-out; }
+    /* line 781, /var/www/html/soixantehuit/sass/68.sass */
+    .evenement .infos .evenement-time {
+      height: 21px; }
+    /* line 783, /var/www/html/soixantehuit/sass/68.sass */
     .evenement .infos h1 {
       font-size: 18px;
       line-height: 19.6px;
-      height: 40px;
+      height: 61px;
       font-weight: 600;
-      white-space: initial; }
-    /* line 753, /var/www/html/soixantehuit/sass/68.sass */
+      white-space: initial;
+      transition: height 1000ms ease-in-out; }
+    /* line 790, /var/www/html/soixantehuit/sass/68.sass */
     .evenement .infos h2 {
       font-size: 14px;
       line-height: 18.8px;
       font-weight: 600; }
-    /* line 757, /var/www/html/soixantehuit/sass/68.sass */
+    /* line 794, /var/www/html/soixantehuit/sass/68.sass */
     .evenement .infos h3 {
       font-size: 14px;
-      line-height: 18.8px;
+      line-height: 18.5px;
       font-weight: 300; }
-  /* line 761, /var/www/html/soixantehuit/sass/68.sass */
+  /* line 798, /var/www/html/soixantehuit/sass/68.sass */
   .evenement:focus {
     -webkit-box-shadow: 0 0 0 3px black;
     box-shadow: 0 0 0 3px black;
     border-radius: 0; }
 
-/* line 766, /var/www/html/soixantehuit/sass/68.sass */
+@media (min-width: 1100px) {
+  /* line 804, /var/www/html/soixantehuit/sass/68.sass */
+  .evenement .image {
+    height: 208px; }
+  /* line 806, /var/www/html/soixantehuit/sass/68.sass */
+  .evenement .infos {
+    height: 134px; }
+    /* line 808, /var/www/html/soixantehuit/sass/68.sass */
+    .evenement .infos h2 {
+      height: 21px; }
+    /* line 810, /var/www/html/soixantehuit/sass/68.sass */
+    .evenement .infos h1 {
+      height: 41px; } }
+
+/* line 813, /var/www/html/soixantehuit/sass/68.sass */
 footer {
   position: relative;
   background: #424242;
   color: white;
   height: 120px;
   display: none; }
-  /* line 772, /var/www/html/soixantehuit/sass/68.sass */
+  /* line 819, /var/www/html/soixantehuit/sass/68.sass */
   footer .col-xs-4 {
     height: 90px;
     font-size: 18px;
     padding: 25px; }
-    /* line 776, /var/www/html/soixantehuit/sass/68.sass */
+    /* line 823, /var/www/html/soixantehuit/sass/68.sass */
     footer .col-xs-4 a, footer .col-xs-4 a:hover {
       color: white; }
-  /* line 778, /var/www/html/soixantehuit/sass/68.sass */
+  /* line 825, /var/www/html/soixantehuit/sass/68.sass */
   footer .modal {
     color: black;
     text-align: left; }
 
-/* line 781, /var/www/html/soixantehuit/sass/68.sass */
+/* line 828, /var/www/html/soixantehuit/sass/68.sass */
 .scroll-footer {
   position: absolute;
   color: white;
   background: #424242;
-  bottom: 0;
+  bottom: 0%;
   left: 20px;
   height: 63px;
   width: 100px;
@@ -991,11 +1052,11 @@ footer {
   font-size: 40px;
   padding: 5px 0 0 30px;
   cursor: pointer; }
-  /* line 794, /var/www/html/soixantehuit/sass/68.sass */
+  /* line 841, /var/www/html/soixantehuit/sass/68.sass */
   .scroll-footer .glyphicon {
     transition: transform 150ms ease-in-out; }
 
-/* line 796, /var/www/html/soixantehuit/sass/68.sass */
+/* line 843, /var/www/html/soixantehuit/sass/68.sass */
 .footer-open .glyphicon {
   -webkit-transform: rotate(180deg) translateX(3px);
   -moz-transform: rotate(180deg) translateX(3px);
@@ -1003,75 +1064,75 @@ footer {
   -ms-transform: rotate(180deg) translateX(3px);
   transform: rotate(180deg) translateX(3px); }
 
-/* line 803, /var/www/html/soixantehuit/sass/68.sass */
+/* line 850, /var/www/html/soixantehuit/sass/68.sass */
 .lieu {
-  background: rgba(26, 26, 26, 0.1);
+  background: #c8c8c8;
   color: black; }
-  /* line 806, /var/www/html/soixantehuit/sass/68.sass */
+  /* line 853, /var/www/html/soixantehuit/sass/68.sass */
   .lieu hr {
     border-color: black; }
 
-/* line 810, /var/www/html/soixantehuit/sass/68.sass */
+/* line 857, /var/www/html/soixantehuit/sass/68.sass */
 .lieu49592631 {
   background: #ff2a00;
   color: white; }
-  /* line 813, /var/www/html/soixantehuit/sass/68.sass */
+  /* line 860, /var/www/html/soixantehuit/sass/68.sass */
   .lieu49592631 hr {
     border-color: white; }
 
-/* line 817, /var/www/html/soixantehuit/sass/68.sass */
+/* line 864, /var/www/html/soixantehuit/sass/68.sass */
 .lieu47774204 {
   background: #fff65e;
   color: black; }
-  /* line 820, /var/www/html/soixantehuit/sass/68.sass */
+  /* line 867, /var/www/html/soixantehuit/sass/68.sass */
   .lieu47774204 hr {
     border-color: black; }
 
-/* line 824, /var/www/html/soixantehuit/sass/68.sass */
+/* line 871, /var/www/html/soixantehuit/sass/68.sass */
 .lieu97092341 {
   background: #00ffff;
   color: black; }
-  /* line 827, /var/www/html/soixantehuit/sass/68.sass */
+  /* line 874, /var/www/html/soixantehuit/sass/68.sass */
   .lieu97092341 hr {
     border-color: black; }
 
-/* line 831, /var/www/html/soixantehuit/sass/68.sass */
+/* line 878, /var/www/html/soixantehuit/sass/68.sass */
 .lieu37250659 {
   background: #ffc6cf;
   color: black; }
-  /* line 834, /var/www/html/soixantehuit/sass/68.sass */
+  /* line 881, /var/www/html/soixantehuit/sass/68.sass */
   .lieu37250659 hr {
     border-color: black; }
 
-/* line 838, /var/www/html/soixantehuit/sass/68.sass */
+/* line 885, /var/www/html/soixantehuit/sass/68.sass */
 .lieu44057765 {
   background: #00e99d;
   color: white; }
-  /* line 841, /var/www/html/soixantehuit/sass/68.sass */
+  /* line 888, /var/www/html/soixantehuit/sass/68.sass */
   .lieu44057765 hr {
     border-color: white; }
 
-/* line 845, /var/www/html/soixantehuit/sass/68.sass */
-.lieu74030026 {
+/* line 892, /var/www/html/soixantehuit/sass/68.sass */
+.lieu74030026, .lieu64232241 {
   background: #0048dd;
   color: white; }
-  /* line 848, /var/www/html/soixantehuit/sass/68.sass */
-  .lieu74030026 hr {
+  /* line 895, /var/www/html/soixantehuit/sass/68.sass */
+  .lieu74030026 hr, .lieu64232241 hr {
     border-color: white; }
 
-/* line 852, /var/www/html/soixantehuit/sass/68.sass */
+/* line 899, /var/www/html/soixantehuit/sass/68.sass */
 .lieu96612516 {
   background: #9783ff;
   color: black; }
-  /* line 855, /var/www/html/soixantehuit/sass/68.sass */
+  /* line 902, /var/www/html/soixantehuit/sass/68.sass */
   .lieu96612516 hr {
     border-color: black; }
 
-/* line 859, /var/www/html/soixantehuit/sass/68.sass */
+/* line 906, /var/www/html/soixantehuit/sass/68.sass */
 .lieu33873846 {
   background: #ff6000;
   color: white; }
-  /* line 862, /var/www/html/soixantehuit/sass/68.sass */
+  /* line 909, /var/www/html/soixantehuit/sass/68.sass */
   .lieu33873846 hr {
     border-color: white; }
 

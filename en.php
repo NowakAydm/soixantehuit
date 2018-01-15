@@ -71,7 +71,7 @@
             <p>Fifty years on, various cultural institutions explore the history and legacy of May 68 through get-togethers, exhibitions, newly-opened archives, participatory workshops, theatre, music, debates and talks casting fresh light on the events. </p>
             <p>Uniting the programmes of several cultural partners in Paris and the surrounding region, this site is designed to share these rich and varied tributes with a broad public.</p>
             <div class="langues">
-                <a href="index.php">FR</a> <a><u>EN</u></a>
+                <a href="/">FR</a> <a><u>EN</u></a>
             </div>
         </div>
     </div>
@@ -172,7 +172,7 @@
                         <h4 class="modal-title">Presse</h4>
                     </div>
                     <div class="modal-body">
-                        <p><a>Télécharger le dossier de presse</a></p>
+                        <p><a href="https://www.centrepompidou.fr/mediation/mai68/dossierdepresse" download>Télécharger le dossier de presse</a></p>
                         <p>
                             Contacts presse :
                         </p>
