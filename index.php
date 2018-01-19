@@ -16,7 +16,7 @@ TOUT DOUX
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>SoixanteHuit</title>
     <meta name="viewport" content="target-densitydpi=device-dpi; width=device-width; initial-scale=0.8; maximum-scale=0.8; user-scalable=no">
-    
+
     <meta name="title" content="Anniversaire Mai 68 : programme à Paris et en Ile-de- France">
     <meta name="description" content="Mai 68, 50 ans après : Découvrez la programmation anniversaire de plusieurs institutions majeures à Paris et en Ile-de-France (expositions, rencontres, spectacles, ateliers…) : Archives nationales, Beaux-Arts, BNF, Cinémathèque, Cité de l’architecture, Centre Pompidou, Nanterre-Amandiers, Université Paris Nanterre">
     <meta name="author" content="Adam Nowak">
@@ -33,7 +33,7 @@ TOUT DOUX
     <meta name="msapplication-TileImage" content="/assets/favicon/mstile-144x144.png">
     <meta name="msapplication-config" content="/assets/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-    
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type='text/javascript'>
@@ -74,7 +74,7 @@ TOUT DOUX
 
     <!--============= EDITO ===============-->
 
-    <div class="container bloc" id="home">    
+    <div class="container bloc" id="home">
         <div class="edito center">
             <h1>soixante-huit</h1>
             <p>Il y a cinquante ans, le mouvement protestataire de Mai 68 retournait les rues de Paris, de Nanterre, et les esprits de la France entière. En lien avec un vaste mouvement de contestation international, il transformait profondément la société française.</p>
@@ -157,15 +157,14 @@ TOUT DOUX
                         <p>Direction de la communication et des partenariats<br>Benoît Parayre, directeur<br>Chef de projet : Claire Galibert<br>Gestion : Thomas Reby</p>
 
                         <p>Conception graphique:<br> Sabrine Sidki, Nora Duprat</p>
-                        
+
                         <p>Développement :<br>Adam Nowak</p>
 
                         <p>Hébergement :<br> OVH, Linkbynet
                         </p>
 
-                        <p>Reproduction du contenu :<br> L'agenda complet du site web soixantehuit.fr est librement téléchargeable sur OpenAgenda selon plusieurs formats (Google Calendar, iCal, RSS, ICS, CSV, xlsx, PDF, JSON).<br>
-                        Le code source du site est disponible à l'adresse suivante :<br>
-                        <a href="https://github.com/NowakAydm/soixantehuit" target="_blank">https://github.com/NowakAydm/soixantehuit</a>
+                        <p>Reproduction du contenu :<br> L'agenda complet du site web soixantehuit.fr est librement téléchargeable sur OpenAgenda selon plusieurs formats (Google Calendar, iCal, RSS, ICS, CSV, xlsx, PDF, JSON).<br> Le code source du site est disponible à l'adresse suivante :<br>
+                            <a href="https://github.com/NowakAydm/soixantehuit" target="_blank">https://github.com/NowakAydm/soixantehuit</a>
                         </p>
                     </div>
                     <div class="modal-footer">
@@ -187,21 +186,13 @@ TOUT DOUX
                             Contacts presse :
                         </p>
                         <p>
-                            Centre Pompidou<br>
-                            Direction de la communication et des partenariats<br>
-                            75191 Paris cedex 04
+                            Centre Pompidou<br> Direction de la communication et des partenariats<br> 75191 Paris cedex 04
                         </p>
                         <p>
-                            Directeur<br>
-                            Benoît Parayre<br>
-                            Téléphone : 00 33 (0)1 44 78 12 87<br>
-                            Courriel : <a href="mailto:benoit.parayre@centrepompidou.fr">benoit.parayre@centrepompidou.fr</a>
+                            Directeur<br> Benoît Parayre<br> Téléphone : 00 33 (0)1 44 78 12 87<br> Courriel : <a href="mailto:benoit.parayre@centrepompidou.fr">benoit.parayre@centrepompidou.fr</a>
                         </p>
                         <p>
-                            Attaché de presse<br>
-                            Timothée Nicot<br>
-                            Téléphone : 00 33 (0)1 44 78 45 79<br>
-                            Courriel : <a href="mailto:timothee.nicot@centrepompidou.fr">timothee.nicot@centrepompidou.fr</a>
+                            Attaché de presse<br> Timothée Nicot<br> Téléphone : 00 33 (0)1 44 78 45 79<br> Courriel : <a href="mailto:timothee.nicot@centrepompidou.fr">timothee.nicot@centrepompidou.fr</a>
                         </p>
                     </div>
                     <div class="modal-footer">
@@ -215,10 +206,10 @@ TOUT DOUX
     </footer>
 </body>
 <script type="text/javascript">
-    function replaceImage( src, id ) {
-        $('#'+id+' .image').css('background-image', 'url('+src+')');
+    function replaceImage(src, id) {
+        $('#' + id + ' .image').css('background-image', 'url(' + src + ')');
     };
-    
+
     for (var x = 0; x < events.length - 1; x++) {
         if (events[x].image) {
             var image = new Image;
@@ -226,8 +217,9 @@ TOUT DOUX
             if (image.complete)
                 replaceImage(events[x].image, events[x].uid);
             else
-                image.addEventListener('load', replaceImage(events[x].image, events[x].uid));            
+                image.addEventListener('load', replaceImage(events[x].image, events[x].uid));
         };
-    }    
+    }
 </script>
+
 </html>

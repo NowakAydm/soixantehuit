@@ -107,7 +107,7 @@ doc.ready(function () {
 
         doc.on('scroll', function () {
 
-    //----------- Header position detection --------------
+            //----------- Header position detection --------------
             if (isScrolledIntoView($('#home'))) {
                 prevPagePos = pagePos;
                 pagePos = 1;
@@ -133,29 +133,29 @@ doc.ready(function () {
             $('.header-background').parent().css('border-bottom', 'none');
             $('.header-background.hidden').parent().css('border-bottom', 'dotted 1px black');
 
-    //----------- Forced scroll --------------     
-                
-                if (pagePos == 2 && prevPagePos == 1 && !scrolling && !navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
-                    body.stop().animate({
-                        scrollTop: $('#68').position().top
-                    }, 1000);
-                } else if (pagePos == 3 && prevPagePos == 2 && !scrolling && !navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
-                    body.stop().animate({
-                        scrollTop: $('#agenda').position().top
-                    }, 1000);
-                };
-            
-                if (doc.scrollTop() < prevScroll && ($('#68').position().top - doc.scrollTop()) < 10 && ($('#68').position().top - doc.scrollTop()) > 0 && !scrolling && !navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
-                    body.stop().animate({
-                        scrollTop: 0
-                    }, 1000);                
-                }
-                if (doc.scrollTop() < prevScroll && ($('#agenda').position().top - doc.scrollTop()) < 10 && ($('#agenda').position().top - doc.scrollTop()) > 0 && !scrolling && !navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
-                    body.stop().animate({
-                        scrollTop: $('#68').position().top + 2
-                    }, 1000);                
-                }
-    //----------- Animation triggering --------------            
+            //----------- Forced scroll --------------     
+
+            if (pagePos == 2 && prevPagePos == 1 && !scrolling && !navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
+                body.stop().animate({
+                    scrollTop: $('#68').position().top
+                }, 1000);
+            } else if (pagePos == 3 && prevPagePos == 2 && !scrolling && !navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
+                body.stop().animate({
+                    scrollTop: $('#agenda').position().top
+                }, 1000);
+            };
+
+            if (doc.scrollTop() < prevScroll && ($('#68').position().top - doc.scrollTop()) < 10 && ($('#68').position().top - doc.scrollTop()) > 0 && !scrolling && !navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
+                body.stop().animate({
+                    scrollTop: 0
+                }, 1000);
+            }
+            if (doc.scrollTop() < prevScroll && ($('#agenda').position().top - doc.scrollTop()) < 10 && ($('#agenda').position().top - doc.scrollTop()) > 0 && !scrolling && !navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
+                body.stop().animate({
+                    scrollTop: $('#68').position().top + 2
+                }, 1000);
+            }
+            //----------- Animation triggering --------------            
             calc = prevScroll - $('#68').position().top;
             if (prevScroll + 10 < $('#68').position().top && animated == 0) {
                 $('.carte').css('-webkit-transform', 'translateY(' + calc + 'px)');
@@ -175,7 +175,7 @@ doc.ready(function () {
                 $('.carte-label').css('opacity', '0.7');
                 $('.carte svg').css('opacity', '0');
             };
-            
+
             prevScroll = doc.scrollTop();
         });
         calc = prevScroll - $('#68').position().top;
@@ -188,8 +188,7 @@ doc.ready(function () {
     //----------- Footer toggle --------------            
     $('.scroll-footer').click(function () {
         if ($('.scroll-footer').hasClass('footer-open')) {
-            if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
-            } else {
+            if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {} else {
                 body.stop().animate({
                     scrollTop: $('#agenda').position().top + 5
                 }, 300);
@@ -236,7 +235,7 @@ doc.ready(function () {
         $('.info-open').removeClass('info-open');
         body.stop().animate({
             scrollTop: $('#68').position().top + 5
-        }, 50);                
+        }, 50);
         window.scrollTo(0, $('#68').position().top + 5);
     });
 
@@ -246,13 +245,12 @@ doc.ready(function () {
 
     //----------- Agenda --------------
     searchReady();
-    if (window.innerWidth < 850) {    
-        $('#timeline').css('height', (window.innerHeight -170)+'px');
-        $('#recherche').css('height', (window.innerHeight -170)+'px');
-    }
-    else {
-        $('#timeline').css('height', (window.innerHeight - 200)+'px');
-        $('#recherche').css('height', (window.innerHeight - 200)+'px');        
+    if (window.innerWidth < 850) {
+        $('#timeline').css('height', (window.innerHeight - 170) + 'px');
+        $('#recherche').css('height', (window.innerHeight - 170) + 'px');
+    } else {
+        $('#timeline').css('height', (window.innerHeight - 200) + 'px');
+        $('#recherche').css('height', (window.innerHeight - 200) + 'px');
     }
     $('#timeline').stop().animate({
         scrollTop: -99999999
@@ -280,22 +278,22 @@ doc.ready(function () {
     $('#timeline').on('scroll', function () {
         prevPos = $('#timeline').scrollTop();
     });
-    $('#show-timeline').click(function() {
+    $('#show-timeline').click(function () {
         setTimeout(function () {
-                showTimeline()
-            }, 100);
+            showTimeline()
+        }, 100);
     });
-    $('#show-recherche').click(function() {
+    $('#show-recherche').click(function () {
         setTimeout(function () {
-                showRecherche()
-            }, 100);
+            showRecherche()
+        }, 100);
     });
 });
 
 window.onresize = function (event) {
     if (window.innerWidth < 850) {
         $('#show-timeline').css('display', 'block');
-        
+
     } else {
         $('#timeline').removeClass('timeline-shown');
         $('#show-timeline').css('display', 'none');
@@ -304,12 +302,11 @@ window.onresize = function (event) {
         $('#recherche').css('cursor', 'initial');
         $('#recherche').css('overflow-y', 'scroll');
     };
-    if (window.innerWidth < 850) {    
-        $('#timeline').css('height', (window.innerHeight -170)+'px');
-        $('#recherche').css('height', (window.innerHeight -170)+'px');
-    }
-    else {
-        $('#timeline').css('height', (window.innerHeight - 200)+'px');
-        $('#recherche').css('height', (window.innerHeight - 200)+'px');        
+    if (window.innerWidth < 850) {
+        $('#timeline').css('height', (window.innerHeight - 170) + 'px');
+        $('#recherche').css('height', (window.innerHeight - 170) + 'px');
+    } else {
+        $('#timeline').css('height', (window.innerHeight - 200) + 'px');
+        $('#recherche').css('height', (window.innerHeight - 200) + 'px');
     }
 };

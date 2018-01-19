@@ -404,7 +404,7 @@ header {
   bottom: 0;
   height: 100%;
   width: 100%;
-  z-index: 101;
+  z-index: 10000;
   -webkit-transform: translateX(100%);
   -moz-transform: translateX(100%);
   -ms-transform: translateX(100%);
@@ -546,7 +546,7 @@ header {
     cursor: pointer;
     text-align: center;
     max-width: 90%;
-    height: 90px;
+    height: 100px;
     width: 400px;
     padding: 25px; }
     /* line 437, /var/www/html/soixantehuit/sass/68.sass */
@@ -623,7 +623,7 @@ header {
       /* line 494, /var/www/html/soixantehuit/sass/68.sass */
       .info-container .info-sidebar .info-goagenda, .info-container .info-midbar .info-goagenda {
         bottom: 0;
-        height: 70px; } }
+        height: 90px; } }
 
 /* line 501, /var/www/html/soixantehuit/sass/68.sass */
 #agenda {

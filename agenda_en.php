@@ -2,7 +2,7 @@
     <div class="agenda-header">
         <h1>Events</h1>
         <div class="agenda-filtres">
-            <div class="row">            
+            <div class="row">
                 Sort by :
                 <button id="filtre-categorie" class="btn btn-blank" data-toggle="popover">
                     Category 
@@ -24,22 +24,22 @@
             </div>
         </div>
     </div>
-        <?php
+    <?php
             setlocale(LC_CTYPE, "fr");
                 ?>
 
 
-    <div id="recherche" onClick="showRecherche()">
-        
-        <?php for($x=0; $x<$OA->total; $x++){ 
+        <div id="recherche" onClick="showRecherche()">
+
+            <?php for($x=0; $x<$OA->total; $x++){ 
                 $e[$x]->range->en = str_replace("2018", "", $e[$x]->range->en);
                 $e[$x]->title->en = mb_strtoupper($e[$x]->title->en, "utf-8");
                 $e[$x]->title->fr = mb_strtoupper($e[$x]->title->fr, "utf-8");
         ?>
 
-        <button class="btn btn-blank evenement cat<?php 
+            <button class="btn btn-blank evenement cat<?php 
                         if ($e[$x]->category->id == 5050)
-                            echo "1 ";
+                            echo " 1 ";
                         else if ($e[$x]->category->id == 5149)
                             echo "2 ";
                         else if ($e[$x]->category->id == 5051)
@@ -73,36 +73,37 @@
                     ?></h2>
             </div>
         </button>
-        <?php } ?>
-        <div class="btn btn-blank evenement-padding"></div>
-        <div class="btn btn-blank evenement-padding"></div>
+            <?php } ?>
+            <div class="btn btn-blank evenement-padding"></div>
+            <div class="btn btn-blank evenement-padding"></div>
 
-    </div>
-    <div id="show-timeline"><i class="glyphicon glyphicon-chevron-left"></i></div>
-    <div id="show-recherche"><i class="glyphicon glyphicon-remove"></i></div>    
-    <div id="timeline" onClick="showTimeline()">
-        
-        <?php
+        </div>
+        <div id="show-timeline"><i class="glyphicon glyphicon-chevron-left"></i></div>
+        <div id="show-recherche"><i class="glyphicon glyphicon-remove"></i></div>
+        <div id="timeline" onClick="showTimeline()">
+
+            <?php
             for($x=0; $x<$OA->total; $x++) { 
         ?>
-        
-            <div class="details lieu lieu<?php echo $e[$x]->location->uid." ".$e[$x]->uid; ?>">
 
-                <h2>
-                    <?php echo preg_replace('/\, \d\d\:\d\d/', '', $e[$x]->range->en); ?>
-                </h2>
-                <h1>
-                    <?php 
+                <div class="details lieu lieu<?php echo $e[$x]->location->uid." ".$e[$x]->uid; ?>">
+
+                    <h2>
+                        <?php echo preg_replace('/\, \d\d\:\d\d/', '', $e[$x]->range->en); ?>
+                    </h2>
+                    <h1>
+                        <?php 
                         if ($e[$x]->title->en)
                             echo $e[$x]->title->en; 
                         else
                             echo $e[$x]->title->fr; 
                     ?>
-                </h1>
-                <h3>
-                    <?php echo $e[$x]->locationName; ?>
-                </h3>
-                <h4> <?php
+                    </h1>
+                    <h3>
+                        <?php echo $e[$x]->locationName; ?>
+                    </h3>
+                    <h4>
+                        <?php
                     if ($e[$x]->category->label == 'Performance/Spectacle')
                         echo 'Performance/Show';
                     else if ($e[$x]->category->label == 'Colloque/Conférence/Débat')
@@ -111,11 +112,12 @@
                         echo 'Exhibition';
                     else
                         echo $e[$x]->category->label; 
-                ?></h4>
+                ?>
+                    </h4>
 
-                <hr>
-                <div class="description">
-                    <?php 
+                    <hr>
+                    <div class="description">
+                        <?php 
                         if ($e[$x]->longDescription->en)
                             echo trim($e[$x]->html->en);
                         else if ($e[$x]->description->en)
@@ -125,19 +127,19 @@
                         else
                             echo trim($e[$x]->description->fr);
                     ?>
-                </div>
+                    </div>
 
-                <div class="col-6">
-                    <?php if ($e[$x]->location->website) {
+                    <div class="col-6">
+                        <?php if ($e[$x]->location->website) {
                     echo '<a  target="_blank" href="'.$e[$x]->location->website.'">'.$e[$x]->locationName.'</a><br>';
                     }
                 ?>
-                    <?php echo preg_replace('/\s\d\d\d\d\d\s\w*/', '', $e[$x]->address); ?><br>
-                    <?php echo $e[$x]->postalCode; ?>
-                    <?php echo $e[$x]->city; ?><br>
-                </div>
-                <div class="col-6">
-                    <?php 
+                        <?php echo preg_replace('/\s\d\d\d\d\d\s\w*/', '', $e[$x]->address); ?><br>
+                        <?php echo $e[$x]->postalCode; ?>
+                        <?php echo $e[$x]->city; ?><br>
+                    </div>
+                    <div class="col-6">
+                        <?php 
                         if ($e[$x]->conditions->en) {
                             echo '<b>PRICES</b><br>';
                             echo $e[$x]->conditions->en.'<br>';               
@@ -148,20 +150,20 @@
                         }
                         
                     ?>
-                </div>
-                <?php if ($e[$x]->registrationUrl) {?>
-                <div class="right">
-                    <a href="<?php echo $e[$x]->registrationUrl; ?>" id="site-officiel" target="_blank">
+                    </div>
+                    <?php if ($e[$x]->registrationUrl) {?>
+                    <div class="right">
+                        <a href="<?php echo $e[$x]->registrationUrl; ?>" id="site-officiel" target="_blank">
                     Official website
                     <i class="glyphicon glyphicon-chevron-right"></i>
                     </a><br>
+                    </div>
+                    <?php } ?>
                 </div>
+
                 <?php } ?>
-            </div>
 
-            <?php } ?>
-        
-    </div>
+        </div>
 
-    <div class='scroll-footer'><span class="glyphicon glyphicon-chevron-up"></span></div>
+        <div class='scroll-footer'><span class="glyphicon glyphicon-chevron-up"></span></div>
 </div>

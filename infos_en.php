@@ -35,7 +35,7 @@
             <div class="info-programmefond lieu49592631"></div>
         </div>
         <div class="info-agenda">
-        <?php
+            <?php
             for($x=0; $x<$OA->total; $x++) { 
                 if ($e[$x]->location->uid == 49592631) {
                     echo '<div class="info-event"><b>'.str_replace("2018", "", $e[$x]->range->en).'</b><br>';
@@ -59,11 +59,10 @@
     </div>
     <div class="info-midbar col-sm-5">
         <div class="info-presentation">
-            FROM APRIL TO MAY 2018, NANTERRE-AMANDIERS THEATRE HOSTS ITS OWN CELEBRATION OF THE 50TH ANNIVERSARY OF THE MAY 68 PROTESTS, WITH ART PIECES WHOSE COMMON THREAD IS TO PROBE THE UNCHARTED TERRITORY OF UTOPIA. 
+            FROM APRIL TO MAY 2018, NANTERRE-AMANDIERS THEATRE HOSTS ITS OWN CELEBRATION OF THE 50TH ANNIVERSARY OF THE MAY 68 PROTESTS, WITH ART PIECES WHOSE COMMON THREAD IS TO PROBE THE UNCHARTED TERRITORY OF UTOPIA.
         </div>
         <div class="info-description">
-            Departing from any nostalgic memorial, <b>“Mondes possibles”</b> interrogates the utopia of May 68 and brings together the creations of European artists and thinkers. While some projects trace the militant and libertarian legacy of the events, others look to the times ahead, envisioning possible worlds for the future: installations, open air shows, chronicle of the city of Nanterre, ABCs of philosophy, lecture, concert, films, or dance piece. <br><br>
-            Partners: Centre Culturel Suisse de Paris (Extra Ball Festival), Université Paris-Nanterre (Global 68), Centre national des arts plastiques
+            Departing from any nostalgic memorial, <b>“Mondes possibles”</b> interrogates the utopia of May 68 and brings together the creations of European artists and thinkers. While some projects trace the militant and libertarian legacy of the events, others look to the times ahead, envisioning possible worlds for the future: installations, open air shows, chronicle of the city of Nanterre, ABCs of philosophy, lecture, concert, films, or dance piece. <br><br> Partners: Centre Culturel Suisse de Paris (Extra Ball Festival), Université Paris-Nanterre (Global 68), Centre national des arts plastiques
             <br><br>
             <b>Address</b><br> Centre dramatique national<br> 7, avenue Pablo-Picasso<br> 92022 Nanterre Cedex<br>
             <br><a class="info-logo" target="_blank" target="_blank" href="http://www.nanterre-amandiers.com/">
@@ -87,7 +86,7 @@
             <div class="info-programmefond lieu47774204"></div>
         </div>
         <div class="info-agenda">
-        <?php
+            <?php
             for($x=0; $x<$OA->total; $x++) { 
                 if ($e[$x]->location->uid == 47774204) {
                     echo '<div class="info-event"><b>'.str_replace("2018", "", $e[$x]->range->en).'</b><br>';
@@ -114,8 +113,7 @@
             "May' 68. Architecture as well!" 1968, student revolt, trade union, social and artistic revolt, of the way of thinking or making cities, of simply living. Teach and do architecture differently.
         </div>
         <div class="info-description">
-            The Cité de l’architecture & du patrimoine offers its visitors an exceptionally diverse cultural experience organised in a single, unique location occupying 22,000m² in the heart of Paris. From urban renewal to the revitalisation of our cultural heritage, questions of the city occupy us daily. A public entity under the umbrella of the Ministry of Culture and Communications, the role of the Cité is to be a source of information and knowledge in all questions related to the quality of architecture, from the upgrading of our cultural heritage to the preservation of the urban environment. Aimed at both the general public and a more specialist audience, the programme of the Cité is highly diversified: permanent and temporary exhibitions, teaching and workshops, symposia, debates, projections...<br>
-            Specialists in the areas of architecture and urbanism are invited to take advantage of the courses offered by the École de Chaillot as well as the library and the archives of the Cité.
+            The Cité de l’architecture & du patrimoine offers its visitors an exceptionally diverse cultural experience organised in a single, unique location occupying 22,000m² in the heart of Paris. From urban renewal to the revitalisation of our cultural heritage, questions of the city occupy us daily. A public entity under the umbrella of the Ministry of Culture and Communications, the role of the Cité is to be a source of information and knowledge in all questions related to the quality of architecture, from the upgrading of our cultural heritage to the preservation of the urban environment. Aimed at both the general public and a more specialist audience, the programme of the Cité is highly diversified: permanent and temporary exhibitions, teaching and workshops, symposia, debates, projections...<br> Specialists in the areas of architecture and urbanism are invited to take advantage of the courses offered by the École de Chaillot as well as the library and the archives of the Cité.
             <br><br>
             <b>Address</b><br> Palais de Chaillot<br> 1 place du Trocadéro<br> 75016 Paris 16<br>
             <br><a class="info-logo" target="_blank" target="_blank" href="https://www.citedelarchitecture.fr/">
@@ -139,7 +137,7 @@
             <div class="info-programmefond lieu97092341"></div>
         </div>
         <div class="info-agenda">
-        <?php
+            <?php
             for($x=0; $x<$OA->total; $x++) { 
                 if ($e[$x]->location->uid == 97092341) {
                     echo '<div class="info-event"><b>'.str_replace("2018", "", $e[$x]->range->en).'</b><br>';
@@ -163,15 +161,12 @@
     </div>
     <div class="info-midbar col-sm-5">
         <div class="info-presentation">
-            FRUIT DES REGARDS CROISÉS DE DEUX DISCIPLINES SOUVENT OPPOSÉES, L’HISTOIRE DE L’ART ET L’HISTOIRE, L’EXPOSITION « IMAGES EN LUTTE » PROPOSE UNE LECTURE DOCUMENTÉE DE CE MOMENT PARTICULIER DE L’HISTOIRE CONTEMPORAINE, LES ANNÉES 1968-1974, OÙ L’ART ET LE POLITIQUE, LA CRÉATION ET LES LUTTES SOCIALES ET POLITIQUES FURENT INTIMEMENT MÊLÉS. 
+            FRUIT DES REGARDS CROISÉS DE DEUX DISCIPLINES SOUVENT OPPOSÉES, L’HISTOIRE DE L’ART ET L’HISTOIRE, L’EXPOSITION « IMAGES EN LUTTE » PROPOSE UNE LECTURE DOCUMENTÉE DE CE MOMENT PARTICULIER DE L’HISTOIRE CONTEMPORAINE, LES ANNÉES 1968-1974, OÙ L’ART ET LE POLITIQUE, LA CRÉATION ET LES LUTTES SOCIALES ET POLITIQUES FURENT INTIMEMENT MÊLÉS.
         </div>
         <div class="info-description">
-            Beaux-Arts is located in the heart of Saint-Germain-des- Prés in Paris, steps away from the Louvre Museum. The first mission of Beaux-Arts is to educate and train students planning to devote themselves to high-level artistic creation. The school has a history spanning more than 350 years, training many of the great artists in Europe. The origins of the school go back to 1648 when the Académie des Beaux-Arts was founded. Since then the institution has maintained its original studio teaching method. Beaux-Arts, which spreads over five acres between the rue Bonaparte and the Quai Malaquais, houses prestigious historical collections and holds exhibitions in the Quai Malaquais and Chapel throughout the year. 
+            Beaux-Arts is located in the heart of Saint-Germain-des- Prés in Paris, steps away from the Louvre Museum. The first mission of Beaux-Arts is to educate and train students planning to devote themselves to high-level artistic creation. The school has a history spanning more than 350 years, training many of the great artists in Europe. The origins of the school go back to 1648 when the Académie des Beaux-Arts was founded. Since then the institution has maintained its original studio teaching method. Beaux-Arts, which spreads over five acres between the rue Bonaparte and the Quai Malaquais, houses prestigious historical collections and holds exhibitions in the Quai Malaquais and Chapel throughout the year.
             <br><br>
-            <b>Address</b><br>
-            Palais des Beaux-Arts<br>
-            13 quai Malaquais<br>
-            75006 Paris<br>
+            <b>Address</b><br> Palais des Beaux-Arts<br> 13 quai Malaquais<br> 75006 Paris<br>
             <br><a class="info-logo" target="_blank" href="https://www.beauxartsparis.fr/">
                 <img src='assets/logo/logo-beauxarts.png'>
             </a>
@@ -193,7 +188,7 @@
             <div class="info-programmefond lieu37250659"></div>
         </div>
         <div class="info-agenda">
-        <?php
+            <?php
             for($x=0; $x<$OA->total; $x++) { 
                 if ($e[$x]->location->uid == 37250659) {
                     echo '<div class="info-event"><b>'.str_replace("2018", "", $e[$x]->range->en).'</b><br>';
@@ -218,11 +213,10 @@
     <div class="info-midbar col-sm-5">
         <div class="info-presentation">
             "MAI 68 – ASSEMBLÉE GÉNÉRALE" (MAY 68: GENERAL MEETING) IS A LIVE DEMONSTRATION THAT CELEBRATES AND EXPLORES THE TOPICALITY OF MAY 68, ACCESSIBLE AT NO CHARGE FOR THREE WEEKS IN THE CENTRE POMPIDOU'S FORUM -1.
- 
+
         </div>
         <div class="info-description">
-            Boasting iconic architecture designed by Renzo Piano and Richard Rogers, the Centre Pompidou was inaugurated in 1977. In a single building, it houses one of the world's top museums, containing Europe's leading collection of modern and contemporary art, as well as cinemas, theatres, educational activity areas and a research library for 20th and 21st century art. It also has partnerships with a public reading library and a music research institute (IRCAM).<br>
-            As a platform creating links between society and contemporary creation, the Centre Pompidou is a place for the people. It welcomes over 3 million visitors each year, and its mission is to reach out to an ever-broader public, offering them the means to explore the most recent and active contemporary creation by establishing close relations with artists.
+            Boasting iconic architecture designed by Renzo Piano and Richard Rogers, the Centre Pompidou was inaugurated in 1977. In a single building, it houses one of the world's top museums, containing Europe's leading collection of modern and contemporary art, as well as cinemas, theatres, educational activity areas and a research library for 20th and 21st century art. It also has partnerships with a public reading library and a music research institute (IRCAM).<br> As a platform creating links between society and contemporary creation, the Centre Pompidou is a place for the people. It welcomes over 3 million visitors each year, and its mission is to reach out to an ever-broader public, offering them the means to explore the most recent and active contemporary creation by establishing close relations with artists.
             <br><br>
             <b>Address</b><br>Place Georges Pompidou<br>75004 Paris<br>
             <br><a class="info-logo" target="_blank" href="https://www.centrepompidou.fr">
@@ -246,7 +240,7 @@
             <div class="info-programmefond lieu44057765"></div>
         </div>
         <div class="info-agenda">
-        <?php
+            <?php
             for($x=0; $x<$OA->total; $x++) { 
                 if ($e[$x]->location->uid == 44057765) {
                     echo '<div class="info-event"><b>'.str_replace("2018", "", $e[$x]->range->en).'</b><br>';
@@ -278,20 +272,16 @@
                 Collecting, conserving, communicating, explaining and showcasing its holdings, and promoting a sense of citizenship among young people are the fundamental roles of the Archives Nationales.
             </b></p>
             <p>
-                Created during the French Revolution, the Archives Nationales preserves the public archives of the various political regimes from the 7th century to the present day, as well as deeds of Parisian notaries and private archival holdings. <br>
-                The Law of 7 Messidor Year II (27 June 1794) established free access to the state’s archives as an assurance of democratic governance and state transparency.<br>
-                Around 350 linear kilometres of archives are conserved, in all formats, together with millions of native digital files. 
+                Created during the French Revolution, the Archives Nationales preserves the public archives of the various political regimes from the 7th century to the present day, as well as deeds of Parisian notaries and private archival holdings. <br> The Law of 7 Messidor Year II (27 June 1794) established free access to the state’s archives as an assurance of democratic governance and state transparency.<br> Around 350 linear kilometres of archives are conserved, in all formats, together with millions of native digital files.
             </p>
             <p>
                 Among these documents are items which symbolise key moments in French history such as Merovingian papyri, the trial of the Templars, Louis XVI’s journal, the Tennis Court Oath, the Declaration of the Rights of Man and of the Citizen, Napoleon’s will, the successive French Constitutions, and the first numerical census of the population in 1962.
             </p>
             <br><br>
             <b>Address</b><br>
-            <i>Site of Paris</i><br>
-            60, rue des Francs-Bourgeois<br> 75003 Paris<br>
+            <i>Site of Paris</i><br> 60, rue des Francs-Bourgeois<br> 75003 Paris<br>
             <br>
-            <i>Site of Pierrefitte-sur-Seine</i><br>
-            59, rue Guynemer<br> 93383 Pierrefitte-sur-Seine<br>
+            <i>Site of Pierrefitte-sur-Seine</i><br> 59, rue Guynemer<br> 93383 Pierrefitte-sur-Seine<br>
             <br><a class="info-logo" target="_blank" href="http://www.archives-nationales.culture.gouv.fr/">
                 <img id='logo-ministere' src='assets/logo/logo-ministere.png'>
                 <img id='logo-archives' src='assets/logo/logo-archives.png'>
@@ -314,7 +304,7 @@
             <div class="info-programmefond lieu74030026"></div>
         </div>
         <div class="info-agenda">
-        <?php
+            <?php
             for($x=0; $x<$OA->total; $x++) { 
                 if ($e[$x]->location->uid == 74030026 || $e[$x]->location->uid == 64232241) {
                     echo '<div class="info-event"><b>'.str_replace("2018", "", $e[$x]->range->en).'</b><br>';
@@ -370,7 +360,7 @@
             <div class="info-programmefond lieu96612516"></div>
         </div>
         <div class="info-agenda">
-        <?php
+            <?php
             for($x=0; $x<$OA->total; $x++) { 
                 if ($e[$x]->location->uid == 96612516) {
                     echo '<div class="info-event"><b>'.str_replace("2018", "", $e[$x]->range->en).'</b><br>';
@@ -421,7 +411,7 @@
             <div class="info-programmefond lieu33873846"></div>
         </div>
         <div class="info-agenda">
-        <?php
+            <?php
             for($x=0; $x<$OA->total; $x++) { 
                 if ($e[$x]->location->uid == 33873846) {
                     echo '<div class="info-event"><b>'.str_replace("2018", "", $e[$x]->range->en).'</b><br>';

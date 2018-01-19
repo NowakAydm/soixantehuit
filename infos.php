@@ -35,7 +35,7 @@
             <div class="info-programmefond lieu49592631"></div>
         </div>
         <div class="info-agenda">
-        <?php
+            <?php
             for($x=0; $x<$OA->total; $x++) { 
                 if ($e[$x]->location->uid == 49592631) {
                     echo '<div class="info-event"><b>'.str_replace("2018", "", $e[$x]->range->fr).'</b><br>';
@@ -86,7 +86,7 @@
             <div class="info-programmefond lieu47774204"></div>
         </div>
         <div class="info-agenda">
-        <?php
+            <?php
             for($x=0; $x<$OA->total; $x++) { 
                 if ($e[$x]->location->uid == 47774204) {
                     echo '<div class="info-event"><b>'.str_replace("2018", "", $e[$x]->range->fr).'</b><br>';
@@ -110,9 +110,7 @@
     </div>
     <div class="info-midbar col-sm-5">
         <div class="info-presentation">
-            « MAI 68. L’ARCHITECTURE AUSSI ! »<br>
-            1968, RÉVOLTE ÉTUDIANTE, SYNDICALE, SOCIALE ET ARTISTIQUE, DE LA MANIÈRE DE PENSER OU DE FAIRE DES VILLES, DE VIVRE TOUT SIMPLEMENT.<br>
-            ENSEIGNER ET FAIRE DE L’ARCHITECTURE AUTREMENT.
+            « MAI 68. L’ARCHITECTURE AUSSI ! »<br> 1968, RÉVOLTE ÉTUDIANTE, SYNDICALE, SOCIALE ET ARTISTIQUE, DE LA MANIÈRE DE PENSER OU DE FAIRE DES VILLES, DE VIVRE TOUT SIMPLEMENT.<br> ENSEIGNER ET FAIRE DE L’ARCHITECTURE AUTREMENT.
         </div>
         <div class="info-description">
             La Cité de l’architecture & du patrimoine, propose à ses visiteurs une diversité culturelle exceptionnelle, en un lieu unique, sur 22 000 m2 au cœur de Paris.<br> Du renouvellement urbain à la revitalisation du patrimoine, la question de la ville préoccupe chaque jour davantage nos contemporains. Établissement public sous tutelle du ministère de la Culture et de la Communication, la Cité se propose d’être un grand centre de diffusion de la connaissance pour tout ce qui touche à la qualité de l’architecture, à la valorisation du patrimoine et à la préservation de l’environnement urbain. S’adressant aussi bien au grand public qu’à des acteurs plus spécialisés, la programmation est diversifiée : expositions permanentes et temporaires, enseignements et ateliers, colloques, débats, projections...<br> Aux spécialistes des domaines de l’architecture et de la ville, la Cité offre les enseignements dispensés par l’École de Chaillot, une bibliothèque et un centre d’archives.
@@ -139,7 +137,7 @@
             <div class="info-programmefond lieu97092341"></div>
         </div>
         <div class="info-agenda">
-        <?php
+            <?php
             for($x=0; $x<$OA->total; $x++) { 
                 if ($e[$x]->location->uid == 97092341) {
                     echo '<div class="info-event"><b>'.str_replace("2018", "", $e[$x]->range->fr).'</b><br>';
@@ -163,15 +161,12 @@
     </div>
     <div class="info-midbar col-sm-5">
         <div class="info-presentation">
-            FRUIT DES REGARDS CROISÉS DE DEUX DISCIPLINES SOUVENT OPPOSÉES, L’HISTOIRE DE L’ART ET L’HISTOIRE, L’EXPOSITION « IMAGES EN LUTTE » PROPOSE UNE LECTURE DOCUMENTÉE DE CE MOMENT PARTICULIER DE L’HISTOIRE CONTEMPORAINE, LES ANNÉES 1968-1974, OÙ L’ART ET LE POLITIQUE, LA CRÉATION ET LES LUTTES SOCIALES ET POLITIQUES FURENT INTIMEMENT MÊLÉS. 
+            FRUIT DES REGARDS CROISÉS DE DEUX DISCIPLINES SOUVENT OPPOSÉES, L’HISTOIRE DE L’ART ET L’HISTOIRE, L’EXPOSITION « IMAGES EN LUTTE » PROPOSE UNE LECTURE DOCUMENTÉE DE CE MOMENT PARTICULIER DE L’HISTOIRE CONTEMPORAINE, LES ANNÉES 1968-1974, OÙ L’ART ET LE POLITIQUE, LA CRÉATION ET LES LUTTES SOCIALES ET POLITIQUES FURENT INTIMEMENT MÊLÉS.
         </div>
         <div class="info-description">
             Les Beaux-Arts de Paris sont tout à la fois un lieu de formation et d’expérimentations artistiques, un lieu d’exposition et de conservation de collections historiques et contemporaines et une maison d’édition. L’École a pour mission l’enseignement des arts plastiques, la conservation et la diffusion de son patrimoine artistique. Établissement public administratif sous tutelle du Ministère de la Culture et de la Communication, elle forme en cinq ans des étudiants se destinant à la création artistique de haut niveau. Héritiers des collections des Académies royales, Les Beaux-Arts de Paris dispose d’un fonds de plus de 450 000 œuvres dont elle assure la présentation au public au travers d’expositions et de prêts. Elle occupe un vaste ensemble architectural de deux hectares, classé monument historique.
             <br><br>
-            <b>Adresse</b><br>
-            Palais des Beaux-Arts<br>
-            13 quai Malaquais<br>
-            75006 Paris<br>
+            <b>Adresse</b><br> Palais des Beaux-Arts<br> 13 quai Malaquais<br> 75006 Paris<br>
             <br><a class="info-logo" target="_blank" href="https://www.beauxartsparis.fr/">
                 <img src='assets/logo/logo-beauxarts.png'>
             </a>
@@ -193,7 +188,7 @@
             <div class="info-programmefond lieu37250659"></div>
         </div>
         <div class="info-agenda">
-        <?php
+            <?php
             for($x=0; $x<$OA->total; $x++) { 
                 if ($e[$x]->location->uid == 37250659) {
                     echo '<div class="info-event"><b>'.str_replace("2018", "", $e[$x]->range->fr).'</b><br>';
@@ -217,11 +212,10 @@
     </div>
     <div class="info-midbar col-sm-5">
         <div class="info-presentation">
-            « MAI 68 – ASSEMBLÉE GÉNÉRALE » EST UNE MANIFESTATION VIVANTE QUI CÉLÈBRE ET INTERROGE LA CONTEMPORANÉITÉ DE MAI 68, EN ACCÈS LIBRE PENDANT TROIS SEMAINES DANS LE FORUM -1 DU CENTRE POMPIDOU. 
+            « MAI 68 – ASSEMBLÉE GÉNÉRALE » EST UNE MANIFESTATION VIVANTE QUI CÉLÈBRE ET INTERROGE LA CONTEMPORANÉITÉ DE MAI 68, EN ACCÈS LIBRE PENDANT TROIS SEMAINES DANS LE FORUM -1 DU CENTRE POMPIDOU.
         </div>
         <div class="info-description">
-            Doté d’une architecture emblématique conçue par Renzo Piano et Richard Rogers, le Centre Pompidou a été inauguré en 1977. Il réunit en un lieu unique l’un des plus importants musées au monde possédant la première collection d’art moderne et contemporain d’Europe, des salles de cinéma et de spectacles, des espaces d’activités éducatives, une bibliothèque de recherche sur l’art des 20e et 21e siècles. Il est associé à une bibliothèque de lecture publique et à un institut de recherche musicale (Ircam).<br>
-            Plateforme d’échanges entre la société et la création contemporaine, le Centre Pompidou est un lieu populaire, qui reçoit plus de 3 millions de visiteurs chaque année, et dont la mission est de s’adresser à un public toujours plus large pour lui offrir les clés d’accès à la création contemporaine la plus récente et active, en nouant des liens étroits avec les artistes.
+            Doté d’une architecture emblématique conçue par Renzo Piano et Richard Rogers, le Centre Pompidou a été inauguré en 1977. Il réunit en un lieu unique l’un des plus importants musées au monde possédant la première collection d’art moderne et contemporain d’Europe, des salles de cinéma et de spectacles, des espaces d’activités éducatives, une bibliothèque de recherche sur l’art des 20e et 21e siècles. Il est associé à une bibliothèque de lecture publique et à un institut de recherche musicale (Ircam).<br> Plateforme d’échanges entre la société et la création contemporaine, le Centre Pompidou est un lieu populaire, qui reçoit plus de 3 millions de visiteurs chaque année, et dont la mission est de s’adresser à un public toujours plus large pour lui offrir les clés d’accès à la création contemporaine la plus récente et active, en nouant des liens étroits avec les artistes.
             <br><br>
             <b>Adresse</b><br> Place Georges Pompidou<br>75004 Paris<br>
             <br><a class="info-logo" target="_blank" href="https://www.centrepompidou.fr">
@@ -245,7 +239,7 @@
             <div class="info-programmefond lieu44057765"></div>
         </div>
         <div class="info-agenda">
-        <?php
+            <?php
             for($x=0; $x<$OA->total; $x++) { 
                 if ($e[$x]->location->uid == 44057765) {
                     echo '<div class="info-event"><b>'.str_replace("2018", "", $e[$x]->range->fr).'</b><br>';
@@ -277,19 +271,16 @@
                 Collecter, conserver, communiquer, faire comprendre et mettre en valeur leurs fonds, favoriser l’apprentissage de la citoyenneté auprès des jeunes publics sont les missions fondamentales des Archives nationales.
             </b></p>
             <p>
-                Créées pendant la Révolution française, les Archives nationales conservent les archives publiques des différents régimes politiques du VIIe siècle jusqu’à nos jours, ainsi que les minutes des notaires parisiens et des fonds d’archives privées.<br>
-                Avec la loi du 7 messidor an II (27 juin 1794), l’accès gratuit aux archives de l’État est établi comme une garantie du régime démocratique et de la transparence de l’État. Ce sont près de 350 kilomètres linéaires d’archives sur tous supports, qui sont conservés, ainsi que des millions de fichiers nativement numériques.
+                Créées pendant la Révolution française, les Archives nationales conservent les archives publiques des différents régimes politiques du VIIe siècle jusqu’à nos jours, ainsi que les minutes des notaires parisiens et des fonds d’archives privées.<br> Avec la loi du 7 messidor an II (27 juin 1794), l’accès gratuit aux archives de l’État est établi comme une garantie du régime démocratique et de la transparence de l’État. Ce sont près de 350 kilomètres linéaires d’archives sur tous supports, qui sont conservés, ainsi que des millions de fichiers nativement numériques.
             </p>
             <p>
                 Parmi ces documents, certains symbolisent des étapes majeures de l’histoire de France : les papyri mérovingiens, le procès des Templiers, le journal de Louis XVI, le serment du Jeu de paume, la Déclaration des Droits de l’Homme et du Citoyen, le testament de Napoléon, les Constitutions successives de la France, ou encore le premier recensement numérique de la population en 1962.
             </p>
             <br><br>
             <b>Adresse</b><br>
-            <i>Site de Paris</i><br>
-            60, rue des Francs-Bourgeois<br> 75003 Paris<br>
+            <i>Site de Paris</i><br> 60, rue des Francs-Bourgeois<br> 75003 Paris<br>
             <br>
-            <i>Site de Pierrefitte-sur-Seine</i><br>
-            59, rue Guynemer<br> 93383 Pierrefitte-sur-Seine<br>
+            <i>Site de Pierrefitte-sur-Seine</i><br> 59, rue Guynemer<br> 93383 Pierrefitte-sur-Seine<br>
             <br><a class="info-logo" target="_blank" href="http://www.archives-nationales.culture.gouv.fr/">
                 <img id='logo-ministere' src='assets/logo/logo-ministere.png'>
                 <img id='logo-archives' src='assets/logo/logo-archives.png'>
@@ -312,7 +303,7 @@
             <div class="info-programmefond lieu74030026"></div>
         </div>
         <div class="info-agenda">
-        <?php
+            <?php
             for($x=0; $x<$OA->total; $x++) { 
                 if ($e[$x]->location->uid == 74030026 || $e[$x]->location->uid == 64232241) {
                     echo '<div class="info-event"><b>'.str_replace("2018", "", $e[$x]->range->fr).'</b><br>';
@@ -368,7 +359,7 @@
             <div class="info-programmefond lieu96612516"></div>
         </div>
         <div class="info-agenda">
-        <?php
+            <?php
             for($x=0; $x<$OA->total; $x++) { 
                 if ($e[$x]->location->uid == 96612516) {
                     echo '<div class="info-event"><b>'.str_replace("2018", "", $e[$x]->range->fr).'</b><br>';
@@ -419,7 +410,7 @@
             <div class="info-programmefond lieu33873846"></div>
         </div>
         <div class="info-agenda">
-        <?php
+            <?php
             for($x=0; $x<$OA->total; $x++) { 
                 if ($e[$x]->location->uid == 33873846) {
                     echo '<div class="info-event"><b>'.str_replace("2018", "", $e[$x]->range->fr).'</b><br>';
