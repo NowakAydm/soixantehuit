@@ -286,8 +286,12 @@
                 Among these documents are items which symbolise key moments in French history such as Merovingian papyri, the trial of the Templars, Louis XVI’s journal, the Tennis Court Oath, the Declaration of the Rights of Man and of the Citizen, Napoleon’s will, the successive French Constitutions, and the first numerical census of the population in 1962.
             </p>
             <br><br>
-            <b>Address</b><br> 59, rue Guynemer<br> 93383 Pierrefitte-sur-Seine<br>
-            <br> 60, rue des Francs-Bourgeois<br> 75003 Paris<br>
+            <b>Address</b><br>
+            <i>Site of Paris</i><br>
+            60, rue des Francs-Bourgeois<br> 75003 Paris<br>
+            <br>
+            <i>Site of Pierrefitte-sur-Seine</i><br>
+            59, rue Guynemer<br> 93383 Pierrefitte-sur-Seine<br>
             <br><a class="info-logo" target="_blank" href="http://www.archives-nationales.culture.gouv.fr/">
                 <img id='logo-ministere' src='assets/logo/logo-ministere.png'>
                 <img id='logo-archives' src='assets/logo/logo-archives.png'>
@@ -329,7 +333,7 @@
 <div id="info-bnf" class="info-container bloc">
     <div class="info-sidebar col-sm-3 lieu96612516">
         <span tabIndex="-1" class="close-info glyphicon glyphicon-remove"></span>
-        <span id='info-lieu-bnf' class="info-lieu">Bibliothèque<br>nationale<br>de&nbsp;France</span>
+        <span id='info-lieu-bnf' class="info-lieu">Bibliothèque<br> nationale de&nbsp;France</span>
         <div class="info-bordureleft"></div>
     </div>
     <div class="info-midbar col-sm-5">

@@ -24,10 +24,18 @@
             </div>
         </div>
     </div>
+        <?php
+            setlocale(LC_CTYPE, "fr");
+                ?>
+
 
     <div id="recherche" onClick="showRecherche()">
         
-        <?php for($x=0; $x<$OA->total; $x++){ ?>
+        <?php for($x=0; $x<$OA->total; $x++){ 
+                $e[$x]->range->en = str_replace("2018", "", $e[$x]->range->en);
+                $e[$x]->title->en = mb_strtoupper($e[$x]->title->en, "utf-8");
+                $e[$x]->title->fr = mb_strtoupper($e[$x]->title->fr, "utf-8");
+        ?>
 
         <button class="btn btn-blank evenement cat<?php 
                         if ($e[$x]->category->id == 5050)
@@ -42,7 +50,7 @@
             <div class="image" style="background-image: url('<?php echo $e[$x]->thumbnail ?>')"></div>
             <div class="infos lieu lieu<?php echo $e[$x]->location->uid; ?>">
                 <h3 class="evenement-time"> 
-                    <?php echo preg_replace('/\, \d\d\w\d\d/', '', $e[$x]->range->en); ?>
+                    <?php echo preg_replace('/\, \d\d\:\d\d/', '', $e[$x]->range->en); ?>
                 </h3>
                 <h1> <?php 
                         if ($e[$x]->title->en)
@@ -65,28 +73,23 @@
                     ?></h2>
             </div>
         </button>
+        <?php } ?>
         <div class="btn btn-blank evenement-padding"></div>
         <div class="btn btn-blank evenement-padding"></div>
 
-        <?php } ?>
-        <div id="show-timeline"><i class="glyphicon glyphicon-chevron-left"></i></div>
     </div>
+    <div id="show-timeline"><i class="glyphicon glyphicon-chevron-left"></i></div>
+    <div id="show-recherche"><i class="glyphicon glyphicon-remove"></i></div>    
     <div id="timeline" onClick="showTimeline()">
-        <div id="show-recherche"><i class="glyphicon glyphicon-remove"></i></div>
         
         <?php
-            setlocale(LC_CTYPE, "fr");
-        
             for($x=0; $x<$OA->total; $x++) { 
-                $e[$x]->range->en = str_replace("2018", "", $e[$x]->range->en);
-                $e[$x]->title->en = mb_strtoupper($e[$x]->title->en, "utf-8");
-                $e[$x]->title->fr = mb_strtoupper($e[$x]->title->fr, "utf-8");
         ?>
-
+        
             <div class="details lieu lieu<?php echo $e[$x]->location->uid." ".$e[$x]->uid; ?>">
 
                 <h2>
-                    <?php echo preg_replace('/\, \d\d\w\d\d/', '', $e[$x]->range->en); ?>
+                    <?php echo preg_replace('/\, \d\d\:\d\d/', '', $e[$x]->range->en); ?>
                 </h2>
                 <h1>
                     <?php 
@@ -157,7 +160,6 @@
             </div>
 
             <?php } ?>
-        <div class="details-padding"></div>
         
     </div>
 

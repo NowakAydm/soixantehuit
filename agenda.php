@@ -25,9 +25,16 @@
         </div>
     </div>
     
+        <?php
+            setlocale(LC_CTYPE, "fr");
+        ?>
+
     <div id="recherche" onClick="showRecherche()">
         
-        <?php for($x=0; $x<$OA->total; $x++){ ?>
+        <?php for($x=0; $x<$OA->total; $x++){ 
+            $e[$x]->range->fr = str_replace("2018", "", $e[$x]->range->fr);
+            $e[$x]->title->fr = mb_strtoupper($e[$x]->title->fr, "utf-8");
+        ?>
 
         <button class="btn btn-blank evenement cat<?php 
                         if ($e[$x]->category->id == 5050)
@@ -55,20 +62,14 @@
         <?php } ?>
         <div class="btn btn-blank evenement-padding"></div>
         <div class="btn btn-blank evenement-padding"></div>
-        
-        <div id="show-timeline"><i class="glyphicon glyphicon-chevron-left"></i></div>
     </div>
+<div id="show-timeline"><i class="glyphicon glyphicon-chevron-left"></i></div>
+<div id="show-recherche"><i class="glyphicon glyphicon-remove"></i></div>    
     <div id="timeline" onClick="showTimeline()">
-        <div id="show-recherche"><i class="glyphicon glyphicon-remove"></i></div>
 
         <?php
-            setlocale(LC_CTYPE, "fr");
-        
             for($x=0; $x<$OA->total; $x++) { 
-                $e[$x]->range->fr = str_replace("2018", "", $e[$x]->range->fr);
-                $e[$x]->title->fr = mb_strtoupper($e[$x]->title->fr, "utf-8");
         ?>
-
             <div class="details lieu lieu<?php echo $e[$x]->location->uid." ".$e[$x]->uid; ?>">
 
                 <h2>
@@ -119,7 +120,6 @@
             </div>
 
             <?php } ?>
-        <div class="details-padding"></div>
 
     </div>
 

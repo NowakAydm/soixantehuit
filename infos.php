@@ -284,8 +284,12 @@
                 Parmi ces documents, certains symbolisent des étapes majeures de l’histoire de France : les papyri mérovingiens, le procès des Templiers, le journal de Louis XVI, le serment du Jeu de paume, la Déclaration des Droits de l’Homme et du Citoyen, le testament de Napoléon, les Constitutions successives de la France, ou encore le premier recensement numérique de la population en 1962.
             </p>
             <br><br>
-            <b>Adresse</b><br> 59, rue Guynemer<br> 93383 Pierrefitte-sur-Seine<br>
-            <br> 60, rue des Francs-Bourgeois<br> 75003 Paris<br>
+            <b>Adresse</b><br>
+            <i>Site de Paris</i><br>
+            60, rue des Francs-Bourgeois<br> 75003 Paris<br>
+            <br>
+            <i>Site de Pierrefitte-sur-Seine</i><br>
+            59, rue Guynemer<br> 93383 Pierrefitte-sur-Seine<br>
             <br><a class="info-logo" target="_blank" href="http://www.archives-nationales.culture.gouv.fr/">
                 <img id='logo-ministere' src='assets/logo/logo-ministere.png'>
                 <img id='logo-archives' src='assets/logo/logo-archives.png'>
@@ -327,7 +331,7 @@
 <div id="info-bnf" class="info-container bloc">
     <div class="info-sidebar col-sm-3 lieu96612516">
         <span tabIndex="-1" class="close-info glyphicon glyphicon-remove"></span>
-        <span id='info-lieu-bnf' class="info-lieu">Bibliothèque<br> nationale de&nbsp;France</span>
+        <span id='info-lieu-bnf' class="info-lieu">Bibliothèque<br>nationale de&nbsp;France</span>
         <div class="info-bordureleft"></div>
     </div>
     <div class="info-midbar col-sm-5">

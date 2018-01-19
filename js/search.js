@@ -121,9 +121,26 @@ function searchReady() {
             $('.search-date').css('background', 'white');
             $('.search-date').css('display', 'none');
             $('.evenement').removeClass('hide-date');
-            setTimeout(function(){showRecherche()}, 100);                
+            setTimeout(function(){
+                if (!$('.hide-lieu').length && !$('.hide-categorie').length)
+                    $('.evenement:not(.past-date)').first().click();
+                else if (!$('.hide-categorie').length)
+                    $('.evenement:not(.past-date):not(.hide.lieu)').first().click();
+                else if (!$('.hide-lieu').length)
+                    $('.evenement:not(.past-date):not(.hide-categorie)').first().click();
+
+                showRecherche()
+             }, 100);                
         });
-        setTimeout(function(){showRecherche()}, 100);                
+        setTimeout(function(){
+            if (!$('.hide-lieu').length && !$('.hide-categorie').length)
+                $('.evenement:not(.past-date):not(.hide-date)').first().click();
+            else if (!$('.hide-categorie').length)
+                $('.evenement:not(.past-date):not(.hide-date):not(.hide.lieu)').first().click();
+            else if (!$('.hide-lieu').length)
+                $('.evenement:not(.past-date):not(.hide-date):not(.hide-categorie)').first().click();
+            showRecherche();
+        }, 100); 
     });
     var now = new Date;
     var eDate;
@@ -144,7 +161,16 @@ function searchReady() {
         $('.search-lieu .glyphicon').css('color', 'white');
         $('.search-lieu').removeClass(curPlace);  
         $('.evenement').removeClass('hide-lieu');
-        setTimeout(function(){showRecherche()}, 100);                
+        setTimeout(function(){
+            if (!$('.hide-categorie').length && !$('.hide-date').length)
+                $('.evenement:not(.past-date)').first().click();
+            else if (!$('.hide-date').length)
+                $('.evenement:not(.past-date):not(.hide-categorie)').first().click();
+            else if (!$('.hide-categorie').length)
+                $('.evenement:not(.past-date):not(.hide-date)').first().click();
+
+            showRecherche()
+        }, 100);                
     });
     
     $('body').on('click', function (e) {
@@ -217,7 +243,15 @@ function addPlace( a ) {
     else {
         body.stop().animate({scrollTop: $('#agenda').position().top}, 1000);
     };
-    setTimeout(function(){showRecherche()}, 100);                
+    setTimeout(function(){
+        if (!$('.hide-categorie').length && !$('.hide-date').length)
+            $('.evenement:not(.past-date):not(.hide-lieu)').first().click();
+        else if (!$('.hide-date').length)
+            $('.evenement:not(.past-date):not(.hide-lieu):not(.hide-categorie)').first().click();
+        else if (!$('.hide-categorie').length)
+            $('.evenement:not(.past-date):not(.hide-lieu):not(.hide-date)').first().click();
+        showRecherche();
+    }, 100); 
 };
 
 var curCategorie;
@@ -250,7 +284,24 @@ function addCategory( a ) {
         $('.search-categorie').css('display', 'none');
         $('.search-categorie').css('cursor', 'initial');
         $('.search-categorie').html("");
-        setTimeout(function(){showRecherche()}, 100);                
+        setTimeout(function(){
+            if (!$('.hide-lieu').length && !$('.hide-date').length)
+                $('.evenement:not(.past-date)').first().click();
+            else if (!$('.hide-date').length)
+                $('.evenement:not(.past-date):not(.hide-lieu)').first().click();
+            else if (!$('.hide-lieu').length)
+                $('.evenement:not(.past-date):not(.hide-date)').first().click();
+            showRecherche()
+        }, 100);                
     });
-    setTimeout(function(){showRecherche()}, 100);                
+    setTimeout(function(){
+        if (!$('.hide-lieu').length && !$('.hide-date').length)
+            $('.evenement:not(.past-date):not(.hide-categorie)').first().click();
+        else if (!$('.hide-date').length)
+            $('.evenement:not(.past-date):not(.hide-categorie):not(.hide-lieu)').first().click();
+        else if (!$('.hide-lieu').length)
+            $('.evenement:not(.past-date):not(.hide-categorie):not(.hide-date)').first().click();
+        showRecherche();
+    }, 100); 
+    
 };
