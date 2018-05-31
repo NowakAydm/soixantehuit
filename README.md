@@ -1,9 +1,9 @@
 
-#SoixanteHuit.fr
-####The source code of the website soixantehuit.fr
+# SoixanteHuit.fr
+#### The source code of the website soixantehuit.fr
 
 
-#####*File structure*
+##### *File structure*
 * **assets/**
 Contains various assets used on the website (images, icons and background)
 
