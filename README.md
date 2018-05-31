@@ -34,21 +34,21 @@ This folder contains the scripts used on the web page :
 The styles where written in sass, which was compiled using the built-in compiler of the Brackets IDE.
 
 
-* index.php
+    * index.php
 
-The main file, that includes the other php files. It has the global structure of the website.
+    The main file, that includes the other php files. It has the global structure of the website.
 
-* en.php
+    * en.php
 
-The translated version of index.php
+    The translated version of index.php
 
-* infos.php and infos_en.php
+    * infos.php and infos_en.php
 
-This file contains the information section of the website.
+    This file contains the information section of the website.
 
-* agenda.php and agenda_php
+    * agenda.php and agenda_php
 
-This file contains the agenda section of the website with its research features.
+    This file contains the agenda section of the website with its research features.
 
 
 
