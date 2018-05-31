@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>SoixanteHuit</title>
     <meta name="viewport" content="target-densitydpi=device-dpi; width=device-width; initial-scale=0.8; maximum-scale=0.8; user-scalable=no">
-    
+
     <meta name="title" content="Anniversaire Mai 68 : programme à Paris et en Ile-de- France">
     <meta name="description" content="Mai 68, 50 ans après : Découvrez la programmation anniversaire de plusieurs institutions majeures à Paris et en Ile-de-France (expositions, rencontres, spectacles, ateliers…) : Archives nationales, Beaux-Arts, BNF, Cinémathèque, Cité de l’architecture, Centre Pompidou, Nanterre-Amandiers, Université Paris Nanterre">
     <meta name="author" content="Adam Nowak">
@@ -23,12 +23,12 @@
     <meta name="msapplication-TileImage" content="/assets/favicon/mstile-144x144.png">
     <meta name="msapplication-config" content="/assets/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-    
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type='text/javascript'>
         window.scrollTo(0, 0);
-        var events = <?php 
+        var events = <?php
             $OA = json_decode(file_get_contents("https://openagenda.com/agendas/31783764/events.json?limit=300"));
             $e = $OA->events;
             echo json_encode($OA); ?>.events;
@@ -125,7 +125,6 @@
     <!--============= Agenda ===============-->
     <?php include 'agenda_en.php'?>
 
-    <!--============= Agenda ===============-->
     <footer class="center">
         <div class='col-xs-4'><a data-toggle='modal' href='#Credits'>Credits</a></div>
         <div class='col-xs-4'><a data-toggle='modal' href='#Presse'>Press</a></div>
@@ -147,7 +146,7 @@
                         <p>Direction de la communication et des partenariats<br> Benoît Parayre, directeur<br> Chef de projet : Claire Galibert<br> Gestion : Thomas Reby</p>
 
                         <p>Conception graphique:<br> Sabrine Sidki, Nora Duprat</p>
-                        
+
                         <p>Développement :<br>Adam Nowak</p>
 
                         <p>Hébergement :<br> OVH, Linkbynet
@@ -204,5 +203,20 @@
         <br> Copyright soixantehuit © 2018
     </footer>
 </body>
+<script type="text/javascript">
+    function replaceImage(src, id) {
+        $('#' + id + ' .image').css('background-image', 'url(' + src + ')');
+    };
 
+    for (var x = 0; x < events.length - 1; x++) {
+        if (events[x].image) {
+            var image = new Image;
+            image.src = events[x].image;
+            if (image.complete)
+                replaceImage(events[x].image, events[x].uid);
+            else
+                image.addEventListener('load', replaceImage(events[x].image, events[x].uid));
+        };
+    }
+</script>
 </html>

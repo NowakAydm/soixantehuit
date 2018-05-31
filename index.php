@@ -1,13 +1,3 @@
-<!--
-TOUT DOUX
-
-- Responsiveness
-    = logo 68 decale
-- description metadata
-
--->
-
-
 <!DOCTYPE html>
 
 <html lang="fr">
@@ -38,7 +28,7 @@ TOUT DOUX
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type='text/javascript'>
         window.scrollTo(0, 0);
-        var events = <?php 
+        var events = <?php
             $OA = json_decode(file_get_contents("https://openagenda.com/agendas/31783764/events.json?limit=300&oaq[passed]=1"));
             $e = $OA->events;
             echo json_encode($OA); ?>.events;
@@ -135,7 +125,7 @@ TOUT DOUX
     <!--============= Agenda ===============-->
     <?php include 'agenda.php'?>
 
-    <!--============= Agenda ===============-->
+    <!--============= Footer ===============-->
     <footer class="center">
         <div class='col-xs-4'><a data-toggle='modal' href='#Credits'>Crédits</a></div>
         <div class='col-xs-4'><a data-toggle='modal' href='#Presse'>Presse</a></div>
